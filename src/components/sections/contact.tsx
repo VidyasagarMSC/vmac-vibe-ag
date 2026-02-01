@@ -21,7 +21,7 @@ export function Contact() {
                         Connect with me on social media or explore my work on GitHub.
                     </p>
 
-                    <div className="flex flex-wrap justify-center gap-4">
+                    <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-3 sm:gap-4">
                         {Object.entries(portfolioData.personal.social).map(([platform, link]) => (
                             link && (
                                 <a
@@ -29,7 +29,7 @@ export function Contact() {
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 capitalize"
+                                    className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-4 sm:px-6 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 capitalize"
                                 >
                                     {platform}
                                 </a>

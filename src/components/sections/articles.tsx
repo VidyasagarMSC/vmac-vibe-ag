@@ -31,7 +31,7 @@ export function Articles() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16"
                 >
                     {portfolioData.articles.platforms.map((platform, index) => (
                         <a
@@ -117,25 +117,6 @@ export function Articles() {
                             </motion.a>
                         ))}
                     </div>
-                </motion.div>
-
-                {/* CTA */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-12 text-center"
-                >
-                    <a
-                        href="https://dzone.com/users/1152328/vidyasagarmsc.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
-                    >
-                        View all articles on DZone
-                        <ExternalLink className="h-4 w-4" />
-                    </a>
                 </motion.div>
             </div>
         </section>

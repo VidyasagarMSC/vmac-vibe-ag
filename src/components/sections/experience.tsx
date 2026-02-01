@@ -42,7 +42,7 @@ export function Experience() {
                                     </span>
                                 </div>
 
-                                <div className="bg-secondary/20 p-6 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
+                                <div className="bg-secondary/20 p-5 md:p-6 rounded-lg border border-border/50 hover:border-primary/30 transition-colors">
                                     <h3 className="text-xl font-bold text-foreground font-heading">{job.role}</h3>
                                     <h4 className="text-base font-medium text-foreground/80 mb-3 flex items-center gap-2">
                                         @ {job.company}

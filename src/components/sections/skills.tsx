@@ -47,7 +47,7 @@ export function Skills() {
                     </div>
 
                     {/* Awards Column */}
-                    <div className="bg-secondary/10 border border-border/60 rounded-xl p-8 h-fit">
+                    <div className="bg-secondary/10 border border-border/60 rounded-xl p-6 md:p-8 h-fit">
                         <h3 className="text-xl font-bold font-heading mb-6 flex items-center gap-2">
                             <Award className="h-5 w-5 text-primary" />
                             Recognition

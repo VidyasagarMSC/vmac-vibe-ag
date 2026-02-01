@@ -17,10 +17,10 @@ export function Projects() {
                     className="mb-12"
                 >
                     <h2 className="text-3xl font-bold font-heading text-foreground mb-4 flex items-center gap-3">
-                        <Terminal className="h-8 w-8 text-primary" />
+                        <Terminal className="h-8 w-8 text-primary shrink-0" />
                         Selected Repositories
                     </h2>
-                    <p className="text-muted-foreground text-lg ml-11 border-l-2 border-primary/20 pl-4">
+                    <p className="text-muted-foreground text-lg ml-0 md:ml-11 border-l-2 border-primary/20 pl-4">
                         Open source contributions and architectural concepts.
                     </p>
                 </motion.div>

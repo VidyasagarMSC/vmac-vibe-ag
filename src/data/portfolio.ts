@@ -11,12 +11,11 @@ export const portfolioData = {
       linkedin: "https://www.linkedin.com/in/vidyasagarmsc",
       github: "https://github.com/vidyasagarmsc",
       twitter: "https://twitter.com/vidyasagarmsc",
-      website: "https://vidyasagarmsc.github.io",
-      dzone: "https://dzone.com/users/1152328/vidyasagarmsc.html"
+      website: "https://vidyasagarmsc.github.io"
     }
   },
   about: {
-    description: "I am an Executive IT Architect, Thought Leader, Senior Product Manager, and Developer Advocate at IBM, a role I've held since 2015. I specialize in AI, Quantum Computing, Cloud Architecture, and Developer Experience. With a proven track record in solution architecture and hands-on software engineering, I translate complex technical concepts into actionable strategies. I actively share knowledge through speaking engagements at international conferences, technical blogging on DZone and Dev.to, and contributing to open-source projects. I have a deep reverence for the theoretical foundations of technology, fueling my constant research into Mathematics and Quantum Computing.",
+    description: "I am an Executive IT Architect, Thought Leader, Senior Product Manager, and Developer Advocate at IBM, a role I've held since 2015. I specialize in AI, Quantum Computing, Cloud Architecture, and Developer Experience. With a proven track record in solution architecture and hands-on software engineering, I translate complex technical concepts into actionable strategies. I actively share knowledge through speaking engagements at international conferences, technical blogging on Dev.to, and contributing to open-source projects. I have a deep reverence for the theoretical foundations of technology, fueling my constant research into Mathematics and Quantum Computing.",
     interests: ["Artificial Intelligence", "Quantum Computing", "Cloud Architecture", "Developer Experience", "Open Source"]
   },
   experience: [
@@ -129,11 +128,6 @@ export const portfolioData = {
       year: "2024"
     },
     {
-      title: "DZone Most Valuable Blogger (MVB)",
-      issuer: "DZone",
-      year: "Ongoing"
-    },
-    {
       title: "Microsoft MVP Alumni",
       issuer: "Microsoft",
       year: "Previous"
@@ -146,12 +140,6 @@ export const portfolioData = {
   ],
   articles: {
     platforms: [
-      {
-        name: "DZone",
-        url: "https://dzone.com/users/1152328/vidyasagarmsc.html",
-        role: "MVB & Core Member",
-        stats: { posts: "50+", views: "550K+" }
-      },
       {
         name: "Dev.to",
         url: "https://dev.to/vidyasagarmsc",
