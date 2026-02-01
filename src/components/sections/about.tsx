@@ -60,7 +60,8 @@ export function About() {
                                 </p>
 
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Beyond my day job at IBM, I&apos;m an active open-source contributor with <span className="text-foreground font-medium">87+ repositories</span> on GitHub,
+                                    Beyond my day job at IBM, I&apos;m a <span className="text-foreground font-medium">DZone Most Valuable Blogger</span>,
+                                    an active open-source contributor with <span className="text-foreground font-medium">87+ repositories</span> on GitHub,
                                     and a frequent speaker at international tech conferences. I believe in the power of community and giving back
                                     through mentorship, blogging, and knowledge sharing.
                                 </p>

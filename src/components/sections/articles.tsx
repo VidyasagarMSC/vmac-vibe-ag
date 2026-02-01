@@ -118,6 +118,25 @@ export function Articles() {
                         ))}
                     </div>
                 </motion.div>
+
+                {/* CTA */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="mt-12 text-center"
+                >
+                    <a
+                        href="https://dzone.com/authors/vidyasagarmsc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+                    >
+                        View all articles on DZone
+                        <ExternalLink className="h-4 w-4" />
+                    </a>
+                </motion.div>
             </div>
         </section>
     )
