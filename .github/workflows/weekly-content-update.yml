@@ -1,0 +1,123 @@
+name: Weekly Content Update
+
+on:
+  schedule:
+    # Runs every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch latest articles from Dev.to
+        id: fetch-devto
+        run: |
+          echo "Fetching latest articles from Dev.to..."
+          curl -s "https://dev.to/api/articles?username=vidyasagarmsc&per_page=6" > devto_articles.json
+          cat devto_articles.json
+
+      - name: Update portfolio data
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          
+          // Read Dev.to articles
+          let devtoArticles = [];
+          try {
+            devtoArticles = JSON.parse(fs.readFileSync('devto_articles.json', 'utf8'));
+          } catch (e) {
+            console.log('Could not read Dev.to articles:', e.message);
+          }
+          
+          // Format the articles for our data file
+          const formattedArticles = devtoArticles.slice(0, 6).map(article => ({
+            title: article.title,
+            platform: 'Dev.to',
+            date: new Date(article.published_at).toLocaleDateString('en-US', { 
+              month: 'short', 
+              day: 'numeric', 
+              year: 'numeric' 
+            }),
+            url: article.url
+          }));
+          
+          // Read current portfolio data
+          const portfolioPath = 'src/data/portfolio.ts';
+          let portfolioContent = fs.readFileSync(portfolioPath, 'utf8');
+          
+          // Update the featured articles section
+          if (formattedArticles.length > 0) {
+            const articlesJson = JSON.stringify(formattedArticles, null, 6)
+              .replace(/"(\w+)":/g, '$1:')  // Remove quotes from keys
+              .replace(/"/g, '"');           // Use double quotes for values
+            
+            // Create new featured array content
+            const newFeatured = `featured: ${articlesJson.replace(/"/g, '"')}`;
+            
+            // Replace the featured section using regex
+            portfolioContent = portfolioContent.replace(
+              /featured:\s*\[[\s\S]*?\n\s*\]/,
+              newFeatured
+            );
+            
+            fs.writeFileSync(portfolioPath, portfolioContent);
+            console.log('Updated portfolio with', formattedArticles.length, 'articles');
+          } else {
+            console.log('No articles to update');
+          }
+          EOF
+
+      - name: Cleanup temp files
+        run: rm -f devto_articles.json
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet src/data/portfolio.ts || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update portfolio content with latest articles'
+          title: '🔄 Weekly Content Update'
+          body: |
+            ## Automated Content Update
+            
+            This PR updates the portfolio with the latest content:
+            - ✅ Fetched latest articles from Dev.to
+            - ✅ Updated featured articles section
+            
+            **Review the changes and merge if everything looks good.**
+            
+            ---
+            *This PR was automatically created by the Weekly Content Update workflow.*
+          branch: automated/content-update
+          delete-branch: true
+          labels: |
+            automated
+            content-update
+
+      - name: Build verification
+        run: npm run build

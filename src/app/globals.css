@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* Architect/Dev Grid Background Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+/* Custom Utilities for Tailwind v4 if needed, but variables work with @theme */
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* Slate 900 */
+
+  --primary: #4338ca;
+  /* Indigo 700 */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1f5f9;
+  /* Slate 100 */
+  --secondary-foreground: #0f172a;
+
+  --muted: #f8fafc;
+  /* Slate 50 */
+  --muted-foreground: #64748b;
+  /* Slate 500 */
+
+  --accent: #06b6d4;
+  /* Cyan 500 */
+  --accent-foreground: #ffffff;
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --border: #e2e8f0;
+  /* Slate 200 */
+}
+
+/* Dark mode overrides using data-attribute from next-themes or .dark class */
+/* next-themes typically adds 'dark' class to html or data-theme */
+.dark {
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #f8fafc;
+  /* Slate 50 */
+
+  --primary: #818cf8;
+  /* Indigo 400 */
+  --primary-foreground: #0f172a;
+
+  --secondary: #1e293b;
+  /* Slate 800 */
+  --secondary-foreground: #f8fafc;
+
+  --muted: #0f172a;
+  /* Slate 900 */
+  --muted-foreground: #94a3b8;
+  /* Slate 400 */
+
+  --accent: #22d3ee;
+  /* Cyan 400 */
+  --accent-foreground: #0f172a;
+
+  --card: #0f172a;
+  /* Slate 900 */
+  --card-foreground: #f8fafc;
+
+  --border: #1e293b;
+  /* Slate 800 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
