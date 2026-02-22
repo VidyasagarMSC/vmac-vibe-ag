@@ -185,41 +185,41 @@ export const portfolioData = {
     ],
     featured: [
       {
-        title: "Reflecting on My 2024 Journey: Achievements and Growth",
-        platform: "Dev.to",
-        date: "Jan 1, 2025",
-        url: "https://dev.to/vidyasagarmsc/reflecting-on-my-2024-journey-achievements-and-growth-1joj"
+            title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
+            platform: "Dev.to",
+            date: "Nov 3, 2025",
+            url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
       },
       {
-        title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
-        platform: "Dev.to",
-        date: "Nov 3, 2024",
-        url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
+            title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
+            platform: "Dev.to",
+            date: "Aug 8, 2025",
+            url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
       },
       {
-        title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
-        platform: "Dev.to",
-        date: "Aug 9, 2024",
-        url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
+            title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
+            platform: "Dev.to",
+            date: "May 12, 2025",
+            url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
       },
       {
-        title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
-        platform: "Dev.to",
-        date: "May 16, 2024",
-        url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
+            title: "Podman: Detailed Overview, Advantages, Disadvantages, and Setup",
+            platform: "Dev.to",
+            date: "May 4, 2025",
+            url: "https://dev.to/vidyasagarmsc/podman-detailed-overview-advantages-disadvantages-and-setup-31gg"
       },
       {
-        title: "Podman: Detailed Overview, Advantages, Disadvantages, and Setup",
-        platform: "Dev.to",
-        date: "May 4, 2024",
-        url: "https://dev.to/vidyasagarmsc/podman-detailed-overview-advantages-disadvantages-and-setup-31gg"
+            title: "S3cmd: CLI for Object Storage",
+            platform: "Dev.to",
+            date: "Mar 5, 2025",
+            url: "https://dev.to/vidyasagarmsc/s3cmd-cli-for-object-storage-2j02"
       },
       {
-        title: "Awesome-AI: The guide to master artificial intelligence",
-        platform: "Dev.to",
-        date: "2023",
-        url: "https://dev.to/vidyasagarmsc/awesome-ai-the-guide-to-master-artificial-intelligence-35k3"
+            title: "An Introduction to SymPy: A Python Library for Symbolic Mathematics",
+            platform: "Dev.to",
+            date: "Jan 6, 2025",
+            url: "https://dev.to/vidyasagarmsc/an-introduction-to-sympy-a-python-library-for-symbolic-mathematics-4gig"
       }
-    ]
+]
   }
 };
