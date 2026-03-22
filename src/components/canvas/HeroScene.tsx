@@ -1,11 +1,12 @@
 "use client"
 
-import { useRef, useMemo } from "react"
+import { useRef, useMemo, useState, useEffect } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { Stars, Sparkles, Float, MeshDistortMaterial } from "@react-three/drei"
 import * as THREE from "three"
+import { useTheme } from "next-themes"
 
-function MouseReactiveSphere() {
+function MouseReactiveSphere({ color }: { color: string }) {
     const meshRef = useRef<THREE.Mesh>(null)
     const { pointer } = useThree()
 
@@ -22,7 +23,7 @@ function MouseReactiveSphere() {
             <mesh ref={meshRef}>
                 <sphereGeometry args={[1.8, 128, 128]} />
                 <MeshDistortMaterial
-                    color="#5046e5"
+                    color={color}
                     distort={0.45}
                     speed={2.5}
                     roughness={0}
@@ -33,15 +34,15 @@ function MouseReactiveSphere() {
     )
 }
 
-function ParticleRing({ count = 200 }: { count?: number }) {
+function ParticleRing({ count = 200, colorA, colorB }: { count?: number, colorA: string, colorB: string }) {
     const { pointer } = useThree()
     const pointsRef = useRef<THREE.Points>(null)
 
     const { positions, colors } = useMemo(() => {
         const positions = new Float32Array(count * 3)
         const colors = new Float32Array(count * 3)
-        const colorA = new THREE.Color("#5046e5")
-        const colorB = new THREE.Color("#06b6d4")
+        const cA = new THREE.Color(colorA)
+        const cB = new THREE.Color(colorB)
         for (let i = 0; i < count; i++) {
             const theta = (i / count) * Math.PI * 2
             const r = 3 + (Math.random() - 0.5) * 2
@@ -49,11 +50,11 @@ function ParticleRing({ count = 200 }: { count?: number }) {
             positions[i * 3 + 1] = Math.sin(theta) * r * 0.3 + (Math.random() - 0.5) * 2
             positions[i * 3 + 2] = (Math.random() - 0.5) * 4
             const t = i / count
-            const c = colorA.clone().lerp(colorB, t)
+            const c = cA.clone().lerp(cB, t)
             colors[i * 3] = c.r; colors[i * 3 + 1] = c.g; colors[i * 3 + 2] = c.b
         }
         return { positions, colors }
-    }, [count])
+    }, [count, colorA, colorB])
 
     const posAttr = useMemo(() => new THREE.BufferAttribute(positions, 3), [positions])
     const colAttr = useMemo(() => new THREE.BufferAttribute(colors, 3), [colors])
@@ -76,7 +77,7 @@ function ParticleRing({ count = 200 }: { count?: number }) {
     )
 }
 
-function FloatingParticles({ count = 80 }: { count?: number }) {
+function FloatingParticles({ count = 80, color }: { count?: number, color: string }) {
     const { pointer } = useThree()
     const groupRef = useRef<THREE.Group>(null)
 
@@ -104,13 +105,31 @@ function FloatingParticles({ count = 80 }: { count?: number }) {
                 <bufferGeometry>
                     <primitive object={posAttr} attach="attributes-position" />
                 </bufferGeometry>
-                <pointsMaterial size={0.04} color="#a78bfa" sizeAttenuation transparent opacity={0.6} />
+                <pointsMaterial size={0.04} color={color} sizeAttenuation transparent opacity={0.6} />
             </points>
         </group>
     )
 }
 
 export function HeroScene() {
+    const { resolvedTheme } = useTheme()
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const isLight = mounted && resolvedTheme === "light"
+
+    // Colors
+    const sphereColor = isLight ? "#e0e7ff" : "#b600f8"
+    const ringColorA = isLight ? "#3b82f6" : "#00f0ff"
+    const ringColorB = isLight ? "#8b5cf6" : "#b600f8"
+    const particleColor = isLight ? "#3b82f6" : "#00f0ff"
+    const light1 = isLight ? "#8b5cf6" : "#b600f8"
+    const light2 = isLight ? "#3b82f6" : "#00f0ff"
+    const light3 = isLight ? "#ddd6fe" : "#ebb2ff"
+
     return (
         <Canvas
             camera={{ position: [0, 0, 6], fov: 55 }}
@@ -118,16 +137,17 @@ export function HeroScene() {
             dpr={[1, 2]}
             style={{ background: "transparent" }}
         >
-            <ambientLight intensity={0.2} />
-            <pointLight position={[5, 5, 5]} color="#5046e5" intensity={3} distance={20} />
-            <pointLight position={[-5, -5, -5]} color="#06b6d4" intensity={2} distance={20} />
-            <pointLight position={[0, 8, 2]} color="#a78bfa" intensity={1.5} distance={15} />
+            <ambientLight intensity={isLight ? 0.6 : 0.2} />
+            <pointLight position={[5, 5, 5]} color={light1} intensity={isLight ? 2 : 3} distance={20} />
+            <pointLight position={[-5, -5, -5]} color={light2} intensity={isLight ? 1.5 : 2} distance={20} />
+            <pointLight position={[0, 8, 2]} color={light3} intensity={isLight ? 1 : 1.5} distance={15} />
 
-            <Stars radius={80} depth={60} count={2500} factor={5} saturation={0.3} speed={0.5} />
-            <MouseReactiveSphere />
-            <ParticleRing count={200} />
-            <FloatingParticles count={80} />
-            <Sparkles count={60} scale={10} size={3} speed={0.4} opacity={0.7} color="#818cf8" />
+            <Stars radius={80} depth={60} count={2500} factor={isLight ? 3 : 5} saturation={0.3} speed={0.5} fade={!isLight} />
+            <MouseReactiveSphere color={sphereColor} />
+            <ParticleRing count={200} colorA={ringColorA} colorB={ringColorB} />
+            <FloatingParticles count={80} color={particleColor} />
+            <Sparkles count={60} scale={10} size={isLight ? 2 : 3} speed={0.4} opacity={isLight ? 0.4 : 0.7} color={particleColor} />
         </Canvas>
     )
 }
+

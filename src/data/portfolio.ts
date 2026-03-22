@@ -24,7 +24,7 @@ export const portfolioData = {
       company: "IBM",
       role: "Executive IT Architect, Thought Leader & Developer Advocate",
       period: "2015 - Present",
-      description: "Leading product strategy and developer advocacy for IBM Cloud and AI services. Architecting scalable solutions, mentoring teams, and representing IBM at global conferences. Certified Distinguished Architect by The Open Group."
+      description: "Leading product strategy and developer advocacy for IBM Cloud and AI services. Architecting scalable solutions, mentoring teams, and representing IBM at global conferences. Certified Distinguished Architect by The Open Group. Contributed to Think 2025."
     },
     {
       company: "Dell",
@@ -109,24 +109,39 @@ export const portfolioData = {
   ],
   awards: [
     {
-      title: "BCS Fellowship",
+      title: "BCS Fellowship (FBCS)",
       issuer: "The Chartered Institute for IT",
-      year: "2024"
+      year: "June 2024"
     },
     {
       title: "Distinguished Architect Certification",
       issuer: "The Open Group",
-      year: "2024"
+      year: "March 2024"
+    },
+    {
+      title: "IBM Quantum-Safe Cryptography Certified",
+      issuer: "IBM",
+      year: "April 2024"
     },
     {
       title: "The Most Admired Global Indian",
-      issuer: "Industry Recognition",
-      year: "2024"
+      issuer: "Passion Vista",
+      year: "July 2024"
     },
     {
-      title: "Globee Awards Judge - Technology",
+      title: "Globee® Awards Judge — Technology",
       issuer: "Globee Awards",
-      year: "2024"
+      year: "May 2024"
+    },
+    {
+      title: "Marquis Who's Who Honored Listee",
+      issuer: "Marquis Who's Who",
+      year: "Nov 2023"
+    },
+    {
+      title: "IBM Outstanding Technical Achievement Award",
+      issuer: "IBM",
+      year: "Nov 2022"
     },
     {
       title: "DZone Most Valuable Blogger (MVB)",
@@ -136,12 +151,12 @@ export const portfolioData = {
     {
       title: "Microsoft MVP Alumni",
       issuer: "Microsoft",
-      year: "Previous"
+      year: "2014–2017"
     },
     {
       title: "Intel Software Innovator",
       issuer: "Intel",
-      year: "Previous"
+      year: "2015"
     }
   ],
   articles: {
@@ -185,41 +200,45 @@ export const portfolioData = {
     ],
     featured: [
       {
-            title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
-            platform: "Dev.to",
-            date: "Nov 3, 2025",
-            url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
+        title: "The Ultimate Terminal Stack in 2026: A Cross-Platform Guide for macOS, Linux & Windows",
+        platform: "Medium",
+        date: "Mar 2026",
+        url: "https://medium.com/vmacwrites/the-ultimate-terminal-stack-in-2026-a-cross-platform-guide-for-macos-linux-and-windows-c0d1f93cd9cc"
       },
       {
-            title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
-            platform: "Dev.to",
-            date: "Aug 8, 2025",
-            url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
+        title: "Quantum Security Governance: Building a Framework for the Post-Quantum World",
+        platform: "Hackernoon",
+        date: "Feb 2026",
+        url: "https://hackernoon.com/quantum-security-governance-building-a-framework-for-the-post-quantum-world"
       },
       {
-            title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
-            platform: "Dev.to",
-            date: "May 12, 2025",
-            url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
+        title: "Database Evolution: From Traditional RDBMS to AI-Native and Quantum-Ready Systems",
+        platform: "Hackernoon",
+        date: "Jan 2026",
+        url: "https://hackernoon.com/database-evolution-from-traditional-rdbms-to-ai-native-and-quantum-ready-systems"
       },
       {
-            title: "Podman: Detailed Overview, Advantages, Disadvantages, and Setup",
-            platform: "Dev.to",
-            date: "May 4, 2025",
-            url: "https://dev.to/vidyasagarmsc/podman-detailed-overview-advantages-disadvantages-and-setup-31gg"
+        title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
+        platform: "Dev.to",
+        date: "Nov 3, 2025",
+        url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
       },
       {
-            title: "S3cmd: CLI for Object Storage",
-            platform: "Dev.to",
-            date: "Mar 5, 2025",
-            url: "https://dev.to/vidyasagarmsc/s3cmd-cli-for-object-storage-2j02"
+        title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
+        platform: "Dev.to",
+        date: "Aug 8, 2025",
+        url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
       },
       {
-            title: "An Introduction to SymPy: A Python Library for Symbolic Mathematics",
-            platform: "Dev.to",
-            date: "Jan 6, 2025",
-            url: "https://dev.to/vidyasagarmsc/an-introduction-to-sympy-a-python-library-for-symbolic-mathematics-4gig"
+        title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
+        platform: "Dev.to",
+        date: "May 12, 2025",
+        url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
       }
-]
+    ]
+  },
+  stats: {
+    githubRepos: 88,
+    readers: 550
   }
 };

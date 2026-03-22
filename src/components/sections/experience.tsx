@@ -1,162 +1,119 @@
 "use client"
 
-import { useLayoutEffect, useRef } from "react"
+import { useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { Briefcase, Calendar, ChevronRight } from "lucide-react"
 import { portfolioData } from "@/data/portfolio"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Briefcase } from "lucide-react"
 
-gsap.registerPlugin(ScrollTrigger)
-
-const companyColors: Record<string, { color: string; grad: string }> = {
-    IBM: { color: "#0f62fe", grad: "linear-gradient(135deg,rgba(15,98,254,0.15),rgba(15,98,254,0.02))" },
-    Dell: { color: "#007db8", grad: "linear-gradient(135deg,rgba(0,125,184,0.15),rgba(0,125,184,0.02))" },
-    Indecomm: { color: "#7c3aed", grad: "linear-gradient(135deg,rgba(124,58,237,0.15),rgba(124,58,237,0.02))" },
-    "CDC Software": { color: "#10b981", grad: "linear-gradient(135deg,rgba(16,185,129,0.15),rgba(16,185,129,0.02))" },
-    "Mahindra Satyam": { color: "#f59e0b", grad: "linear-gradient(135deg,rgba(245,158,11,0.15),rgba(245,158,11,0.02))" },
-}
-function getCompany(name: string) {
-    const k = Object.keys(companyColors).find(k => name.includes(k))
-    return k ? companyColors[k] : { color: "#6b7280", grad: "none" }
+// Helper to determine brand colors for timeline dots
+const getCompany = (name: string) => {
+    switch (name.toLowerCase()) {
+        case "ibm": return { color: "var(--primary)", bg: "var(--primary-rgb)" }
+        case "mahindra satyam": return { color: "#ef4444", bg: "239, 68, 68" }
+        case "cdc software": return { color: "#3b82f6", bg: "59, 130, 246" }
+        case "indecomm global": return { color: "#10b981", bg: "16, 185, 129" }
+        case "dell": return { color: "#0ea5e9", bg: "14, 165, 233" }
+        default: return { color: "var(--secondary)", bg: "var(--secondary-rgb)" }
+    }
 }
 
 export function Experience() {
     const containerRef = useRef<HTMLElement>(null)
-    const trackRef = useRef<HTMLDivElement>(null)
-    const progressRef = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"]
+    })
 
-    useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            const track = trackRef.current
-            if (!track) return
+    const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
 
-            const totalSlide = track.scrollWidth - window.innerWidth
-
-            // Horizontal scroll pin
-            gsap.to(track, {
-                x: -totalSlide,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    pin: true,
-                    scrub: 0.8,
-                    end: () => `+=${totalSlide + 200}`,
-                    onUpdate: (self) => {
-                        if (progressRef.current) {
-                            progressRef.current.style.width = `${self.progress * 100}%`
-                        }
-                    },
-                },
-            })
-
-            // Each card pops in as it comes into horizontal view
-            track.querySelectorAll<HTMLElement>(".era-card").forEach((card, i) => {
-                gsap.fromTo(
-                    card,
-                    { opacity: 0, y: 40, scale: 0.92 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        ease: "back.out(1.4)",
-                        scrollTrigger: {
-                            trigger: containerRef.current,
-                            start: `top+=${i * 200} center`,
-                            end: `top+=${i * 200 + 200} center`,
-                            scrub: 0.5,
-                            containerAnimation: gsap.to(track, { x: -totalSlide, ease: "none" }),
-                        },
-                    }
-                )
-            })
-        }, containerRef)
-        return () => ctx.revert()
-    }, [])
+    const reversedExperience = [...portfolioData.experience].reverse()
 
     return (
-        <section id="experience" ref={containerRef} className="h-screen overflow-hidden relative">
-            {/* Section header — fixed while pinned */}
-            <div className="absolute top-10 left-0 right-0 flex items-center justify-between px-8 md:px-16 z-20 pointer-events-none">
-                <div>
-                    <span className="label"><Briefcase className="h-3 w-3" /> Journey</span>
-                    <h2 className="display text-4xl md:text-5xl mt-2">
-                        18 years of <span className="gradient-text">building</span>.
+        <section id="experience" ref={containerRef} className="py-24 sm:py-32 relative overflow-hidden">
+            {/* Background Typography */}
+            <motion.div style={{ y: bgY }}
+                className="absolute top-40 left-0 right-0 pointer-events-none select-none opacity-[0.015] whitespace-nowrap z-0 flex justify-center"
+                aria-hidden>
+                <span className="text-[15vw] font-black font-heading leading-none">JOURNEY</span>
+            </motion.div>
+
+            <div className="container mx-auto max-w-5xl relative z-10 px-4 sm:px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16 sm:mb-24 text-center md:text-left"
+                >
+                    <span className="label justify-center md:justify-start">
+                        <Briefcase className="h-3 w-3" /> Professional Journey
+                    </span>
+                    <h2 className="display text-3xl sm:text-4xl md:text-6xl mt-3">
+                        18 years of<br className="hidden md:block" />
+                        <span className="gradient-text"> Architecture</span>.
                     </h2>
-                </div>
-                {/* Progress rail */}
-                <div className="hidden md:block">
-                    <div className="text-xs font-mono text-foreground/30 mb-2">SCROLL TO EXPLORE →</div>
-                    <div className="h-0.5 w-40 bg-border rounded-full overflow-hidden">
-                        <div ref={progressRef} className="h-full rounded-full transition-none"
-                            style={{ background: "linear-gradient(90deg, var(--primary), var(--accent))", width: "0%" }} />
-                    </div>
-                </div>
-            </div>
+                </motion.div>
 
-            {/* Horizontal track */}
-            <div ref={trackRef} className="h-scroll-track absolute top-0 left-0 h-full flex items-center pt-32 gap-6 pl-8 md:pl-16 pr-[20vw]">
-                {/* Origin marker */}
-                <div className="era-card flex-shrink-0 flex flex-col justify-center h-60 w-28">
-                    <div className="text-xs font-mono text-foreground/20 mb-2">BORN</div>
-                    <div className="text-5xl font-black font-heading text-foreground/10">2007</div>
-                    <div className="mt-3 h-px w-16 bg-border" />
-                    <div className="text-xs text-foreground/30 mt-2 font-mono">Hyderabad, IN</div>
-                </div>
+                {/* Vertical Timeline container */}
+                <div className="relative border-l border-border/50 md:border-l-0 md:flex md:flex-col md:items-center ml-3 md:ml-0">
 
-                {[...portfolioData.experience].reverse().map((job, i) => {
-                    const c = getCompany(job.company)
-                    const year = job.period.split(" - ")[0]
-                    return (
-                        <div key={i} className="era-card h-scroll-card flex-shrink-0 w-[340px] md:w-[420px] relative">
-                            {/* Year label at top */}
-                            <div className="text-5xl font-black font-heading text-foreground/6 mb-4 pointer-events-none select-none">
-                                {year}
-                            </div>
+                    {/* Desktop Center Line */}
+                    <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-border/50 -translate-x-1/2" />
+                    <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-primary via-secondary to-transparent -translate-x-1/2 origin-top opacity-50" />
 
-                            <div className="glass border border-border rounded-3xl p-7 depth-shadow-lg"
-                                style={{ background: c.grad }}>
-                                {/* Company dot */}
-                                <div className="flex items-center gap-3 mb-4">
-                                    <div className="h-3 w-3 rounded-full" style={{ backgroundColor: c.color, boxShadow: `0 0 12px ${c.color}80` }} />
-                                    <span className="font-mono text-xs" style={{ color: c.color }}>{job.company}</span>
-                                    <span className="ml-auto font-mono text-xs text-foreground/30">{job.period}</span>
+                    {reversedExperience.map((job, i) => {
+                        const c = getCompany(job.company)
+                        const isEven = i % 2 === 0
+
+                        return (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.6, delay: i * 0.1 }}
+                                className={`relative pl-8 md:pl-0 pt-8 mt-4 md:mt-0 w-full flex flex-col md:flex-row md:items-center ${isEven ? 'md:justify-start' : 'md:justify-end'}`}
+                            >
+                                {/* Center Node (Desktop) */}
+                                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 items-center justify-center z-10 bg-background rounded-full border border-border/50">
+                                    <div className="w-3 h-3 rounded-full glow-pulse" style={{ backgroundColor: c.color, boxShadow: `0 0 10px ${c.color}` }} />
                                 </div>
 
-                                <h3 className="text-xl font-bold font-heading text-foreground mb-3 leading-tight">
-                                    {job.role}
-                                </h3>
+                                {/* Side Node (Mobile) */}
+                                <div className="md:hidden absolute left-[-5px] top-12 w-2.5 h-2.5 rounded-full z-10" style={{ backgroundColor: c.color, boxShadow: `0 0 8px ${c.color}` }} />
 
-                                <p className="text-sm text-foreground/55 leading-relaxed">
-                                    {job.description}
-                                </p>
+                                {/* Content Card */}
+                                <div className={`md:w-[45%] ${isEven ? 'md:pr-10' : 'md:pl-10'}`}>
+                                    <div
+                                        className="glass-card p-6 sm:p-8 depth-shadow relative group overflow-hidden transition-all duration-300 hover:scale-[1.02]"
+                                        style={{ borderTop: `1px solid rgba(${c.bg}, 0.5)` }}
+                                    >
+                                        {/* Subtle background glow */}
+                                        <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none"
+                                            style={{ background: `radial-gradient(circle at top right, ${c.color}, transparent 70%)` }} />
 
-                                {/* Vertical line decoration */}
-                                <div className="mt-5 flex items-center gap-2">
-                                    <div className="h-px flex-1" style={{ background: `linear-gradient(90deg, ${c.color}40, transparent)` }} />
-                                    <span className="text-[9px] font-mono text-foreground/20">#{i + 1} of {portfolioData.experience.length}</span>
+                                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-4">
+                                            <div>
+                                                <h3 className="text-xl font-bold font-heading text-foreground mb-1 group-hover:text-primary transition-colors">{job.role}</h3>
+                                                <div className="flex items-center gap-2 text-sm font-mono" style={{ color: c.color }}>
+                                                    <span className="font-semibold">{job.company}</span>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-1.5 text-[11px] font-mono text-foreground/40 shrink-0 bg-muted/30 px-2.5 py-1 rounded-full border border-border/50">
+                                                <Calendar className="h-3 w-3" />
+                                                {job.period}
+                                            </div>
+                                        </div>
+
+                                        <p className="text-sm text-foreground/60 leading-relaxed">
+                                            {job.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    )
-                })}
-
-                {/* Current marker */}
-                <div className="era-card flex-shrink-0 flex flex-col justify-center h-60 w-36">
-                    <div className="flex items-center gap-2 mb-2">
-                        <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                        </span>
-                        <span className="text-xs font-mono text-emerald-400">PRESENT</span>
-                    </div>
-                    <div className="text-5xl font-black font-heading text-foreground/10">2025</div>
-                    <div className="mt-3 h-px w-16 bg-border" />
-                    <div className="text-xs text-foreground/30 mt-2 font-mono">IBM, Global</div>
+                            </motion.div>
+                        )
+                    })}
                 </div>
             </div>
-
-            {/* Bottom gradient fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
         </section>
     )
 }

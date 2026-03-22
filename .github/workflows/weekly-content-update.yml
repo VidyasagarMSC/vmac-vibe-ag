@@ -199,17 +199,39 @@ jobs:
           const newFeatured = `featured: ${articlesJson}`;
 
           // Replace featured section using regex pattern
-          const updatedContent = portfolioContent.replace(
+          let updatedContent = portfolioContent.replace(
             /featured:\s*\[[\s\S]*?\n\s*\]/,
             newFeatured
           );
 
-          if (updatedContent === portfolioContent) {
-            console.log('Pattern not matched — portfolio not updated.');
-          } else {
-            fs.writeFileSync(portfolioPath, updatedContent);
-            console.log('\nPortfolio updated successfully!');
-          }
+          // Fetch GitHub Stats
+          const https = require('https');
+          https.get('https://api.github.com/users/vidyasagarmsc', { headers: { 'User-Agent': 'NodeJS' } }, (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+              try {
+                const ghData = JSON.parse(data);
+                if (ghData && ghData.public_repos) {
+                   const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n  }`;
+                   updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
+                   console.log(`Updated GitHub repos stat to ${ghData.public_repos}`);
+                }
+              } catch(e) { console.log('GitHub fetch error', e.message); }
+
+              if (updatedContent === portfolioContent) {
+                console.log('No updates required — portfolio unchanged.');
+              } else {
+                fs.writeFileSync(portfolioPath, updatedContent);
+                console.log('\nPortfolio updated successfully!');
+              }
+            });
+          }).on('error', (e) => {
+             console.log('GitHub fetch error', e.message);
+             if (updatedContent !== portfolioContent) {
+                fs.writeFileSync(portfolioPath, updatedContent);
+             }
+          });
           EOF
 
       - name: Cleanup temp files
