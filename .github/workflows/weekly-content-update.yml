@@ -192,11 +192,13 @@ jobs:
           const portfolioPath = 'src/data/portfolio.ts';
           let portfolioContent = fs.readFileSync(portfolioPath, 'utf8');
 
-          // Build new featured array string
-          const articlesJson = JSON.stringify(top, null, 6)
-            .replace(/"(\w+)":/g, '$1:');
-
-          const newFeatured = `featured: ${articlesJson}`;
+          // Build new featured array string with proper TypeScript formatting
+          const formatArticle = (a) => {
+            return `      {\n        title: ${JSON.stringify(a.title)},\n        platform: ${JSON.stringify(a.platform)},\n        date: ${JSON.stringify(a.date)},\n        url: ${JSON.stringify(a.url)}\n      }`;
+          };
+          
+          const articlesFormatted = top.map(formatArticle).join(',\n');
+          const newFeatured = `featured: [\n${articlesFormatted}\n    ]`;
 
           // Replace featured section using regex pattern
           let updatedContent = portfolioContent.replace(
