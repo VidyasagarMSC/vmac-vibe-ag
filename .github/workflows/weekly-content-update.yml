@@ -28,8 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install RSS parser
-        run: npm install --no-save rss-parser
+      - name: Install XML parser
+        run: npm install --no-save fast-xml-parser
 
       - name: Fetch articles from Dev.to API
         id: fetch-devto
