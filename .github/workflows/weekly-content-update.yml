@@ -200,9 +200,11 @@ jobs:
           const articlesFormatted = top.map(formatArticle).join(',\n');
           const newFeatured = `featured: [\n${articlesFormatted}\n    ]`;
 
-          // Replace featured section using regex pattern - match until the closing bracket followed by newline and closing brace or comma
+          // Replace featured section using a more robust regex
+          // This matches "featured: [" followed by any content until "]" that's followed by newline and whitespace and "}"
+          const featuredRegex = /featured:\s*\[[\s\S]*?\n\s*\](?=\s*\n\s*\},?\s*\n)/;
           let updatedContent = portfolioContent.replace(
-            /featured:\s*\[[\s\S]*?\n\s*\](?=\s*\n\s*\})/,
+            featuredRegex,
             newFeatured
           );
 
