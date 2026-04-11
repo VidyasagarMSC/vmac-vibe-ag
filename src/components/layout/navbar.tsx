@@ -124,8 +124,7 @@ export function Navbar() {
                                 whileTap={{ scale: 0.88, rotate: isDark ? -30 : 30 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 20 }}
                                 className="h-9 w-9 rounded-xl flex items-center justify-center glass-panel border border-border/60 hover:border-primary/30 transition-colors relative overflow-hidden"
-                                aria-label="Toggle theme"
-                                title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+                                aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
                             >
                                 <AnimatePresence mode="wait" initial={false}>
                                     {isDark ? (
@@ -181,7 +180,8 @@ export function Navbar() {
                         )}
                         <button
                             onClick={() => setOpen(!open)}
-                            aria-label="Toggle menu"
+                            aria-label="Toggle navigation menu"
+                            aria-expanded={open}
                             className="h-10 w-10 flex items-center justify-center rounded-xl glass-panel border border-border/50 transition-colors"
                         >
                             <AnimatePresence mode="wait">

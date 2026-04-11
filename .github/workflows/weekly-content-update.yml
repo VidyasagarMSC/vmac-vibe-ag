@@ -75,7 +75,7 @@ jobs:
           // Try to require fast-xml-parser, fallback to manual regex parsing
           let parser;
           try {
-            const { XMLParser: FXP } = require('/home/runner/work/vmac-vibe-ag/vmac-vibe-ag/node_modules/fast-xml-parser');
+            const { XMLParser: FXP } = require('fast-xml-parser');
             parser = new FXP({ ignoreAttributes: false, parseTagValue: true });
           } catch {
             // Inline minimal parser if not available - use regex
