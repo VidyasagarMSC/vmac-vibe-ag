@@ -200,27 +200,21 @@ export const portfolioData = {
     ],
     featured: [
       {
-        title: "The Ultimate Terminal Stack in 2026: A Cross-Platform Guide for macOS, Linux & Windows",
+        title: "The Ultimate Terminal Stack in 2026: A Cross-Platform Guide for macOS, Linux, and Windows",
         platform: "Medium",
-        date: "Mar 2026",
-        url: "https://medium.com/vmacwrites/the-ultimate-terminal-stack-in-2026-a-cross-platform-guide-for-macos-linux-and-windows-c0d1f93cd9cc"
+        date: "Mar 6, 2026",
+        url: "https://medium.com/vmacwrites/the-ultimate-terminal-stack-in-2026-a-cross-platform-guide-for-macos-linux-and-windows-c0d1f93cd9cc?source=rss-12bd87a23883------2"
       },
       {
-        title: "Quantum Security Governance: Building a Framework for the Post-Quantum World",
-        platform: "Hackernoon",
-        date: "Feb 2026",
-        url: "https://hackernoon.com/quantum-security-governance-building-a-framework-for-the-post-quantum-world"
-      },
-      {
-        title: "Database Evolution: From Traditional RDBMS to AI-Native and Quantum-Ready Systems",
-        platform: "Hackernoon",
-        date: "Jan 2026",
-        url: "https://hackernoon.com/database-evolution-from-traditional-rdbms-to-ai-native-and-quantum-ready-systems"
+        title: "Reflecting on My 2025 Journey: A Year of Innovation, Learning, and Technical Excellence",
+        platform: "VMacWrites",
+        date: "Nov 18, 2025",
+        url: "https://vmacwrites.wordpress.com/2025/11/19/reflecting-on-my-2025-journey-a-year-of-innovation-learning-and-technical-excellence/"
       },
       {
         title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
         platform: "Dev.to",
-        date: "Nov 3, 2025",
+        date: "Nov 2, 2025",
         url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
       },
       {
@@ -230,10 +224,28 @@ export const portfolioData = {
         url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
       },
       {
+        title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
+        platform: "Medium",
+        date: "Aug 8, 2025",
+        url: "https://medium.com/vmacwrites/resolving-ibm-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-631a90d47b7c?source=rss-12bd87a23883------2"
+      },
+      {
         title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
         platform: "Dev.to",
         date: "May 12, 2025",
         url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
+      },
+      {
+        title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
+        platform: "Medium",
+        date: "May 12, 2025",
+        url: "https://medium.com/vmacwrites/the-essential-role-of-process-monitoring-scripts-in-linux-environments-50d6a241f924?source=rss-12bd87a23883------2"
+      },
+      {
+        title: "Podman: Detailed Overview, Advantages, Disadvantages, and Setup",
+        platform: "Dev.to",
+        date: "May 4, 2025",
+        url: "https://dev.to/vidyasagarmsc/podman-detailed-overview-advantages-disadvantages-and-setup-31gg"
       }
     ]
   },

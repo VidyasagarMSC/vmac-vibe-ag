@@ -1,0 +1,2254 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/"
+	>
+
+<channel>
+	<title>VMacWrites </title>
+	<atom:link href="https://vmacwrites.wordpress.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://vmacwrites.wordpress.com</link>
+	<description>Tech Writings by Vidyasagar MAChupalli</description>
+	<lastBuildDate>Thu, 18 Dec 2025 14:12:49 +0000</lastBuildDate>
+	<language>en</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>http://wordpress.com/</generator>
+<site xmlns="com-wordpress:feed-additions:1">133654057</site><cloud domain='vmacwrites.wordpress.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />
+<image>
+		<url>https://s0.wp.com/i/buttonw-com.png</url>
+		<title>VMacWrites </title>
+		<link>https://vmacwrites.wordpress.com</link>
+	</image>
+	<atom:link rel="search" type="application/opensearchdescription+xml" href="https://vmacwrites.wordpress.com/osd.xml" title="VMacWrites " />
+	<atom:link rel='hub' href='https://vmacwrites.wordpress.com/?pushpress=hub'/>
+	<item>
+		<title>Reflecting on My 2025 Journey: A Year of Innovation, Learning, and Technical Excellence</title>
+		<link>https://vmacwrites.wordpress.com/2025/11/19/reflecting-on-my-2025-journey-a-year-of-innovation-learning-and-technical-excellence/</link>
+					<comments>https://vmacwrites.wordpress.com/2025/11/19/reflecting-on-my-2025-journey-a-year-of-innovation-learning-and-technical-excellence/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Tue, 18 Nov 2025 21:44:05 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[ai]]></category>
+		<category><![CDATA[cybersecurity]]></category>
+		<category><![CDATA[quantum-computing]]></category>
+		<category><![CDATA[reflection]]></category>
+		<category><![CDATA[technology]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2828</guid>
+
+					<description><![CDATA[Last updated: 18th December 2025 As I reflect on 2025, I&#8217;m filled with immense gratitude and excitement for what has been one of the most productive years in my technical writing journey. This year has been marked by deep dives into emerging technologies, extensive platform contributions, and an unwavering commitment to sharing knowledge with the [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>Last updated: 18th December 2025</p>
+</blockquote>
+
+
+
+<p>As I reflect on 2025, I&#8217;m filled with immense gratitude and excitement for what has been one of the most productive years in my technical writing journey. This year has been marked by deep dives into emerging technologies, extensive platform contributions, and an unwavering commitment to sharing knowledge with the tech community. Building on the momentum from <a href="https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/">2024</a>, I&#8217;ve significantly expanded my exploration into quantum computing, post-quantum cryptography, AI infrastructure, data architectures, cloud security, and infrastructure automation—publishing over 25 comprehensive technical articles across multiple platforms.</p>
+
+
+
+<h2 class="wp-block-heading">A Year of Unprecedented Technical Writing Output</h2>
+
+
+
+<p>In 2025, I published extensively across Substack, DZone, <a href="https://hackernoon.com/u/vidyasagarmsc">Hackernoon</a>. Dev.to, and Medium, with a strong focus on cutting-edge technologies shaping our digital future. Here&#8217;s a comprehensive look at all my technical articles this year, organized by theme and platform:</p>
+
+
+
+<h2 class="wp-block-heading">Quantum Computing and Cryptography</h2>
+
+
+
+<p><strong>Understanding Quantum Optimization: A Beginner&#8217;s Guide</strong><br><em>Published on Substack</em><br><a href="https://vmacwrites.substack.com/p/understanding-quantum-optimization">Read Article</a></p>
+
+
+
+<p>A simplified introduction to quantum optimization, QUBO formulations, and the mathematics behind breakthrough research from IBM Quantum. I explored how quantum computers might solve the world&#8217;s hardest problems, breaking down complex concepts for readers new to this revolutionary field.</p>
+
+
+
+<p><strong>Post-Quantum Cryptography: The Next Frontier in Cybersecurity</strong><br><em>Published on Substack | May 2025</em><br><a href="https://vmacwrites.substack.com/p/post-quantum-cryptography-the-next">Read Article</a></p>
+
+
+
+<p>Following my attendance at the Red Hat Summit 2025, I wrote extensively about the industry buzz around post-quantum cryptography (PQC). This piece explores why PQC matters, the latest NIST-approved algorithms, and how Red Hat is bringing quantum-resistant security to the enterprise with RHEL 10. The message was clear: the time to prepare for the quantum era is now.</p>
+
+
+
+<h2 class="wp-block-heading">Mathematics and Theoretical Foundations</h2>
+
+
+
+<p><strong>Understanding Transcendental Numbers: Their Role in Mathematics, AI, and Quantum Computing</strong><br><em>Published on Substack | March 2025</em><br><a href="https://vmacwrites.substack.com/p/understanding-transcendental-numbers">Read Article</a></p>
+
+
+
+<p>A deep dive into transcendental numbers and their profound implications in various fields, including Artificial Intelligence and Quantum Computing. I examined how these mathematical curiosities serve as fundamental tools for understanding exponential growth, waveforms, and rotations—making them indispensable for modeling both natural phenomena and computational processes.</p>
+
+
+
+<p><strong>An Introduction to SymPy: A Python Library for Symbolic Mathematics</strong><br><em>Published on Substack | January 2025</em><br><a href="https://vmacwrites.substack.com/p/an-introduction-to-sympy-a-python">Read Article</a></p>
+
+
+
+<p>Starting the year strong, I published a comprehensive guide to SymPy, Python&#8217;s powerful computer algebra system. This article demonstrates how SymPy can be used effectively for symbolic computation, performing algebraic manipulations, calculus operations, linear algebra, equation solving, and much more—all symbolically rather than numerically.</p>
+
+
+
+<h2 class="wp-block-heading">Artificial Intelligence Infrastructure and Tools</h2>
+
+
+
+<p class="is-style-default"><strong>AI Infrastructure Guide: Tools, Frameworks, and Architectures</strong><br><em>Published on DZone | October 2025</em><br><a href="https://dzone.com/articles/ai-infrastructure-guide-tools-frameworks-and-archi">Read Article</a></p>
+
+
+
+<p>Building robust AI infrastructure requires understanding both theoretical foundations and practical implementation details. This comprehensive guide explores the application gateway layer, load balancing, service orchestration, and AI service layer architecture—providing a definitive resource for architecting AI systems at any scale.</p>
+
+
+
+<p><strong>A Complete Guide to Modern AI Developer Tools</strong><br><em>Published on DZone | May 2025</em><br><a href="https://dzone.com/articles/a-complete-guide-to-modern-ai-developer-tools">Read Article</a></p>
+
+
+
+<p>Based on reader feedback from my previous AI articles, I created this extensive guide exploring the most impactful AI developer tools. From model development to deployment, this article helps developers choose the right tools for training models, deploying APIs, and debugging workflows.</p>
+
+
+
+<p><strong>AI Agent Architectures: Structural Blueprints for Intelligent Systems</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>AI agent architectures provide structural blueprints for designing intelligent systems that perceive environments, process information, and execute actions. This article explores architectural patterns for building robust and scalable AI agents that can operate autonomously in complex environments.</p>
+
+
+
+<p><strong>The Twelve-Factor Agent: An Architectural Pattern for Modern Applications</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>This article delves into the concept of the Twelve-Factor Agent, an architectural pattern designed to create robust, scalable, and maintainable applications in the era of AI-driven systems. Drawing inspiration from the twelve-factor app methodology, this pattern addresses the unique challenges of agent-based architectures.</p>
+
+
+
+<p><strong>AI Agent Observability Platforms</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>Exploring platforms that provide developers with powerful tools to monitor, debug, and optimize AI agents, ensuring their reliability, efficiency, and scalability in production environments. This article covers essential observability patterns for modern AI systems.</p>
+
+
+
+<p><strong>Logfire: An Observability Platform for Python Applications</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>An in-depth look at Logfire, an observability platform designed to provide developers with powerful insights into their Python applications, enabling better monitoring, debugging capabilities, and performance optimization.</p>
+
+
+
+<h2 class="wp-block-heading">AI Infrastructure &amp; Architecture</h2>
+
+
+
+<p>Building robust, scalable infrastructure for artificial intelligence has been one of my most consistent areas of inquiry throughout the year. These posts move beyond mere model development, focusing on the systems-level thinking required to make AI reliable, cost-effective, and operationally secure.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://dzone.com/articles/ai-infrastructure-compute-storage-observability-security-and-more" target="_blank" rel="noreferrer noopener">AI Infrastructure: Compute, Storage, Observability, Security, and More</a>&nbsp;(October 12)</li>
+
+
+
+<li><a href="https://dzone.com/articles/ai-infrastructure-for-agents-and-llms-options-tools-and-optimization" target="_blank" rel="noreferrer noopener">AI Infrastructure for Agents and LLMs: Options, Tools, and Optimization</a>&nbsp;(September 21)</li>
+
+
+
+<li><a href="https://dzone.com/articles/ai-infrastructure-guide-tools-frameworks-and-architecture-flows" target="_blank" rel="noreferrer noopener">AI Infrastructure Guide: Tools, Frameworks, and Architecture Flows</a>&nbsp;(October 1)</li>
+
+
+
+<li><a href="https://dzone.com/articles/a-complete-guide-to-modern-ai-developer-tools" target="_blank" rel="noreferrer noopener">A Complete Guide to Modern AI Developer Tools</a>&nbsp;(May 8)</li>
+</ul>
+
+
+
+<p>In these articles, I argue that while model sophistication and AI research are crucial, it’s the underlying systems—compute management, observability, secure data pipelines—that ultimately enable successful AI projects. Tools like MLflow, Bentoml, and LangChain feature in practical frameworks, highlighting my belief that operational readiness and scalability should always be front-of-mind for AI teams.</p>
+
+
+
+<h2 class="wp-block-heading">Data Architecture and Processing</h2>
+
+
+
+<p><strong>Emerging Data Architectures: The Future of Data Management</strong><br><em>Published on DZone | April 2025</em><br><a href="https://dzone.com/articles/data-architectures-future-of-data-management">Read Article</a></p>
+
+
+
+<p>Continuing my series on data architectures, this article explores emerging paradigms like LakeDB and Zero ETL architectures. I examined how the landscape of data architecture is evolving, driven by increasing complexity and the growing adoption of advanced technologies that are reshaping how organizations manage and process data.</p>
+
+
+
+<p><strong>Modern Data Processing Libraries: Beyond Pandas</strong><br><em>Published on DZone | March 2025</em><br><a href="https://dzone.com/articles/modern-data-processing-libraries-beyond-pandas">Read Article</a></p>
+
+
+
+<p>As datasets grow larger and more complex, traditional tools like pandas can struggle with performance. This article explores powerful alternatives including Dask, Polars, and other modern libraries designed to address specific challenges in data manipulation and analysis at scale.</p>
+
+
+
+<h2 class="wp-block-heading">Infrastructure as Code and Automation</h2>
+
+
+
+<p><strong>Formae and PKL: Revolutionizing Infrastructure Automation</strong><br><em>Published on DZone | November 2025</em><br><a href="https://dzone.com/articles/formae-pkl-infrastructure-automation">Read Article</a></p>
+
+
+
+<p>I explored Formae, an open-source platform launched in October 2025 that challenges Infrastructure as Code conventions by leveraging Apple&#8217;s PKL configuration language. This article examines how Formae introduces a stateless, auto-discovering approach to infrastructure management, addressing critical challenges like state file corruption and drift detection.</p>
+
+
+
+<p><strong>Infrastructure as Code: How Automation Evolved to Power AI Workloads</strong></p>
+
+
+
+<p><em>Published on DZone | December 2025</em></p>
+
+
+
+<p><a href="https://dzone.com/articles/infrastructure-as-code-automation-ai-workloads">Read Article</a></p>
+
+
+
+<p>Learn about how Infrastructure as Code progressed in 2025 and how it helped automation, particularly for provisioning AI infrastructure.</p>
+
+
+
+<h2 class="wp-block-heading">Cloud Security, Identity Management, and SSL/TLS</h2>
+
+
+
+<p><strong>A Comprehensive Guide to IAM in Object Storage</strong><br><em>Published on DZone | February 2025</em><br><a href="https://dzone.com/articles/guide-to-iam-in-object-storage">Read Article</a></p>
+
+
+
+<p>Identity and access management (IAM), service IDs, and service credentials are crucial for securing cloud resources. This article provides practical guidance on restricting access to object storage buckets through custom roles, access groups, and service credentials across various cloud platforms.</p>
+
+
+
+<p><strong>Advanced SSL Certificate Troubleshooting for Windows</strong><br><em>Published on DZone | July 2025</em><br><a href="https://dzone.com/articles/advanced-ssl-certificate-troubleshooting-windows">Read Article</a></p>
+
+
+
+<p>Building on my previous SSL fundamentals article, this piece dives deeper into enterprise-grade troubleshooting, addressing incomplete certificate chains, trust store discrepancies, and advanced debugging scenarios specific to Windows environments.</p>
+
+
+
+<p><strong>Configuring SSL for Sybase Databases from macOS</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>A comprehensive step-by-step guide for configuring SSL and securely connecting to Sybase databases from macOS using tools like DataGrip, addressing common challenges in database security configuration and certificate management.</p>
+
+
+
+<h2 class="wp-block-heading">DevOps, Security Testing, and Automation Tools</h2>
+
+
+
+<p><strong>Application Security Testing in Modern Development</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>Application security testing is an integral part of the development process. This article provides a thorough rundown of modern security testing approaches aimed at revealing and addressing security issues early in the development lifecycle, following shift-left security principles.</p>
+
+
+
+<p><strong>Ansible Security and Testing Tools</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>An essential collection of security and testing tools and frameworks for Ansible automation, helping teams ensure their infrastructure-as-code is secure, compliant, and reliable.</p>
+
+
+
+<p></p>
+
+
+
+<h2 class="wp-block-heading">Python Libraries, Data Tools, and Object Storage</h2>
+
+
+
+<p><strong>DSPy: A Comprehensive Guide to Programming Language Models</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>DSPy improves AI development by replacing manual prompt engineering with systematic programming patterns. This comprehensive guide explores how DSPy&#8217;s features enable more robust and maintainable language model applications through structured approaches to AI development.</p>
+
+
+
+<p><strong>Cloud Automation Excellence: Terraform, Ansible, and Nomad for Enterprise Architecture</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>Enterprise cloud architecture demands sophisticated orchestration of infrastructure, configuration, and workload management across diverse computing platforms. This article explores how Terraform, Ansible, and Nomad work together to provide comprehensive automation solutions.</p>
+
+
+
+<p><strong>Pydantic: Powerful Data Validation in Python</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>Pydantic is a powerful Python library that uses type annotations to validate data structures. This article explores Pydantic&#8217;s capabilities with practical code examples, showing how it enhances application reliability through robust data validation and parsing.</p>
+
+
+
+<p></p>
+
+
+
+<p><strong>Top Tools for Object Storage and Data Management</strong><br><em>Published on DZone | 2025</em></p>
+
+
+
+<p>Exploring the best tools for object storage, including MinIO, Cyberduck, s3cmd, and more, to efficiently manage and store unstructured data in modern cloud environments. This comprehensive guide helps teams choose the right tools for their storage needs.</p>
+
+
+
+<p><strong>S3cmd: CLI for Object Storage</strong><br><em>Published on Medium | March 2025</em><br><a href="https://medium.com/vmacwrites/s3cmd-cli-for-object-storage-87a02e4b300b">Read Article</a></p>
+
+
+
+<p>An in-depth exploration of s3cmd, a powerful open-source command-line tool for managing Amazon S3 and S3-compatible object storage services like IBM Cloud Object Storage. The article covers installation, configuration, key commands, and troubleshooting common 403 errors.</p>
+
+
+
+<h2 class="wp-block-heading">GPU Optimization and OpenShift</h2>
+
+
+
+<p><strong>Implementing NVIDIA MIG in Red Hat OpenShift to optimize GPU resources in containerized environments</strong><br><em>Published on IBM Developer | May 2025</em><br><a href="https://developer.ibm.com/articles/implementing-nvidia-mig-openshift">Read Article</a></p>
+
+
+
+<p>Multi-Instance GPU (MIG) technology allows partitioning of a single GPU into multiple smaller, isolated GPU instances. This comprehensive guide explores how MIG enables better GPU utilization in Openshift  environments, covering configuration, operators, and optimization strategies for AI workloads.</p>
+
+
+
+<h2 class="wp-block-heading">Security, Compliance &amp; Infrastructure Protection</h2>
+
+
+
+<p>Security was another pillar of my 2025 publishing. These pieces span both foundational web and infrastructure security, and newer AI-related paradigms that are starting to challenge legacy thinking.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://hackernoon.com/understanding-hsts-the-backbone-of-modern-web-security" target="_blank" rel="noreferrer noopener">Understanding HSTS: The Backbone of Modern Web Security</a>&nbsp;(October 5)</li>
+
+
+
+<li><a href="https://dzone.com/articles/hsts-securing-ai-infrastructure-and-modern-attack-vectors" target="_blank" rel="noreferrer noopener">HSTS: Securing AI Infrastructure and Modern Attack Vectors</a>&nbsp;(October 28)</li>
+
+
+
+<li><a href="https://dev.to/vidyasagar_machupalli/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-4o2h" target="_blank" rel="noreferrer noopener">Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC</a>&nbsp;(August 8)</li>
+
+
+
+<li><a href="https://dzone.com/articles/secure-private-connectivity-between-vmware-object-storage-an-enterprise-architecture-guide" target="_blank" rel="noreferrer noopener">Secure Private Connectivity Between VMware, Object Storage: An Enterprise Architecture Guide</a>&nbsp;(August 12)</li>
+</ul>
+
+
+
+<p>These articles map out a shift: from classic web security (SSL/TLS, HSTS) to the realities of securing fast-moving AI infrastructure. Shadow AI, intent-based governance, and secrets management in IaC reveal core tensions between rapid innovation and sustained security. My troubleshooting pieces anchor these broader topics in actionable guidance.</p>
+
+
+
+<h2 class="wp-block-heading">Professional Growth and Community Engagement</h2>
+
+
+
+<h3 class="wp-block-heading">Conference Attendance and Learning</h3>
+
+
+
+<p><strong>Red Hat Summit 2025</strong><br>This year, I had the privilege of attending the Red Hat Summit 2025, which proved to be an eye-opening experience. The summit&#8217;s focus on post-quantum cryptography and the announcement of RHEL 10&#8217;s native integration of NIST-approved post-quantum cryptography algorithms reinforced the industry&#8217;s serious commitment to preparing for the quantum threat.</p>
+
+
+
+<h3 class="wp-block-heading">Platform Recognition and Impact</h3>
+
+
+
+<p><strong>DZone Featured Articles</strong><br>I&#8217;m thrilled to have been featured multiple times in DZone&#8217;s spotlight throughout 2025. Several of my articles were highlighted for their technical depth, practical value, and contribution to the developer community. Notable spotlight features included my private VPC network architecture article and infrastructure automation pieces.</p>
+
+
+
+<p><strong>Cross-Platform Presence</strong><br>Throughout 2025, I maintained an active and growing presence across multiple technical writing platforms:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Substack (VMacWrites)</strong>: My primary platform for in-depth technical articles on quantum computing, mathematics, AI, and cryptography—4 major articles</li>
+
+
+
+<li><strong>DZone</strong>: Published over 23 comprehensive technical articles, with multiple spotlight features, building on my 530.9K+ cumulative pageviews</li>
+
+
+
+<li><strong>Medium (vmacwrites)</strong>: Published 3+ substantial technical articles reaching thousands of readers, with the last update in August 2025</li>
+
+
+
+<li><strong>Dev.to</strong>: Maintaining engagement with the developer community, building on the 60,000+ total views milestone from previous years</li>
+
+
+
+<li><strong>Hackernoon</strong>: <a href="https://hackernoon.com/u/vidyasagarmsc">Published  cybersecurity articles</a> continuing to explore opportunities for future publications</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Core Focus Areas in 2025</h2>
+
+
+
+<p>My 2025 writings centered around eight interconnected themes that represent the cutting edge of enterprise technology:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Quantum Computing and Post-Quantum Cryptography</strong>: From optimization to quantum-safe cryptography and NIST-approved algorithms</li>
+
+
+
+<li><strong>AI Infrastructure and Agent Architectures</strong>: Comprehensive coverage of building production-grade AI systems, observability, and architectural patterns</li>
+
+
+
+<li><strong>Data Architecture Evolution</strong>: Emerging patterns including LakeDB, Zero ETL, and modern processing libraries</li>
+
+
+
+<li><strong>Infrastructure as Code</strong>: New paradigms in automation, configuration management, and stateless architectures</li>
+
+
+
+<li><strong>Cloud Security and Identity</strong>: IAM, SSL/TLS, certificate management, and enterprise security best practices</li>
+
+
+
+<li><strong>DevOps and Security Testing</strong>: Security testing tools, Ansible automation, and shift-left security practices</li>
+
+
+
+<li><strong>Python Ecosystem</strong>: Libraries and frameworks for scientific computing, data validation, and symbolic mathematics</li>
+
+
+
+<li><strong>GPU Optimization and Kubernetes</strong>: Advanced resource management for AI/ML workloads</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading">Impact and Reach</h2>
+
+
+
+<p>The response to my 2025 articles has been incredibly encouraging and validates the effort put into each piece:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>30+ comprehensive articles</strong> published across Substack, DZone, and Medium</li>
+
+
+
+<li><strong>Multiple DZone spotlight features</strong>&nbsp;recognizing technical excellence and community value</li>
+
+
+
+<li><strong>Thousands of readers</strong>&nbsp;engaging with content on AI infrastructure, quantum computing, data architectures, and cloud security</li>
+
+
+
+<li><strong>Cross-platform synergy</strong>&nbsp;with articles republished and referenced across different platforms</li>
+
+
+
+<li><strong>Deep technical coverage</strong>&nbsp;spanning from mathematical foundations to practical enterprise implementation</li>
+
+
+
+<li><strong>Community impact</strong>&nbsp;through comments, shares, and discussions on LinkedIn and other social platforms</li>
+</ul>
+
+
+
+<p>The focus on emerging technologies like AI infrastructure, quantum computing, post-quantum cryptography, and modern data architectures resonated strongly with the tech community, reflecting the growing industry interest in these transformative areas.</p>
+
+
+
+<h2 class="wp-block-heading">Looking Ahead to 2026</h2>
+
+
+
+<p>Several exciting themes are emerging for continued exploration in the coming year:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Quantum Algorithm Implementation</strong>: Moving from theory to practical quantum programming with real-world applications</li>
+
+
+
+<li><strong>AI Infrastructure at Scale</strong>: Production patterns, cost optimization, and performance tuning for enterprise AI deployments</li>
+
+
+
+<li><strong>Data Architecture Evolution</strong>: Following the rapid evolution of LakeDB, Zero ETL patterns, and real-time data platforms</li>
+
+
+
+<li><strong>Security in the Quantum Era</strong>: Practical implementation guides for post-quantum cryptography across different platforms</li>
+
+
+
+<li><strong>Infrastructure Automation 2.0</strong>: Exploring stateless approaches, GitOps, and modern IaC tools like Formae and PKL</li>
+
+
+
+<li><strong>GPU Optimization Strategies</strong>: Advanced techniques for maximizing GPU utilization in Kubernetes and AI workloads</li>
+
+
+
+<li><strong>Observability for AI Systems</strong>: Monitoring, debugging, and optimizing complex AI agent architectures</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Gratitude and Appreciation</h2>
+
+
+
+<p>To my readers, the technical community, and everyone who engaged with my 25+ articles in 2025—thank you from the bottom of my heart. Your feedback, thoughtful questions, insightful comments, and shared enthusiasm continue to inspire deeper exploration and drive me to produce better content. Every article represents not just a technical exploration, but a learning journey that I&#8217;m grateful to share with such an engaged and knowledgeable audience.</p>
+
+
+
+<h3 class="wp-block-heading">Special Thanks To:</h3>
+
+
+
+<ul class="wp-block-list">
+<li><strong>My IBM colleagues</strong>&nbsp;for their continued support, inspiration, and collaborative spirit</li>
+
+
+
+<li><strong>The DZone editorial team</strong> for featuring my work multiple times and providing an excellent platform</li>
+
+
+
+<li><strong>The quantum computing and AI communities</strong>&nbsp;for pushing the boundaries of what&#8217;s possible</li>
+
+
+
+<li><strong>The open-source ecosystem</strong>&nbsp;for making innovation accessible and collaborative</li>
+
+
+
+<li><strong>Red Hat and conference organizers</strong>&nbsp;who create spaces for knowledge sharing and networking</li>
+
+
+
+<li><strong>My mentors, friends, and family</strong>&nbsp;whose unwavering support has been my greatest strength</li>
+
+
+
+<li><strong>My LinkedIn network</strong>&nbsp;for the engagement, shares, and meaningful discussions around my articles</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Closing Thoughts</h2>
+
+
+
+<p>2025 has truly been a year of quantum leaps—both in the topics I explored and in my professional growth as a technical writer and technologist. As quantum computing moves from theoretical promise toward practical reality, as AI infrastructure matures into enterprise-grade systems, as data architectures evolve to meet modern demands, and as security paradigms shift to address quantum threats, I&#8217;m excited and honored to continue documenting this transformation.</p>
+
+
+
+<p>The intersection of mathematics, quantum physics, computer science, artificial intelligence, and infrastructure automation has never been more relevant, exciting, or critical to our technological future. With over 28 comprehensive articles published this year spanning these domains, I&#8217;m proud of the contribution to our collective technical knowledge and the conversations these articles have sparked.</p>
+
+
+
+<h3 class="wp-block-heading">Key Achievements:</h3>
+
+
+
+<ul class="wp-block-list">
+<li>30+ published articles across three major platforms</li>
+
+
+
+<li>Multiple DZone spotlight features</li>
+
+
+
+<li>Thousands of engaged readers</li>
+
+
+
+<li>Coverage of 8 major technical domains</li>
+
+
+
+<li>Attendance at Red Hat Summit 2025</li>
+
+
+
+<li>Continued contribution to the tech community</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading">Personal Reflection:</h3>
+
+
+
+<p>As a multi-faceted professional—an architect, speaker, writer, and technologist—I&#8217;ve been fortunate to explore technologies that can truly transform our world. My goal remains consistent: to develop solutions that solve real-world problems, mentor emerging talents, contribute to open-source projects, and share knowledge that empowers others.</p>
+
+
+
+<p>Here&#8217;s to continued learning, innovation, and contributing to the tech community in 2026 and beyond! The best is yet to come.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p><strong>Stay Connected and Updated:</strong></p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>Substack</strong>:&nbsp;<a href="https://vmacwrites.substack.com/">vmacwrites.substack.com</a>&nbsp;&#8211; Subscribe for in-depth technical articles</li>
+
+
+
+<li><strong>DZone Profile</strong>:&nbsp;<a href="https://dzone.com/authors/vidyasagarmsc">dzone.com/authors/vidyasagarmsc</a>&nbsp;&#8211; Follow for latest publications</li>
+
+
+
+<li><strong>Medium</strong>:&nbsp;<a href="https://medium.com/@vidyasagarmsc">medium.com/@vidyasagarmsc</a>&nbsp;&#8211; Read vmacwrites publication</li>
+
+
+
+<li><strong>Personal Website</strong>:&nbsp;<a href="https://vidyasagarmsc.github.io/">vidyasagarmsc.github.io</a>&nbsp;&#8211; Connect and explore my portfolio</li>
+
+
+
+<li><strong>LinkedIn</strong>:&nbsp;<a href="https://linkedin.com/in/vidyasagarmsc">linkedin.com/in/vidyasagarmsc</a>&nbsp;&#8211; Professional updates and networking</li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2025/11/19/reflecting-on-my-2025-journey-a-year-of-innovation-learning-and-technical-excellence/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2828</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2025/11/image.png" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2025/11/image.png" medium="image">
+			<media:title type="html">image</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Reflecting on My 2024 Journey: Achievements and Growth</title>
+		<link>https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/</link>
+					<comments>https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/#comments</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Sun, 08 Dec 2024 17:13:01 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[2024]]></category>
+		<category><![CDATA[education]]></category>
+		<category><![CDATA[learning]]></category>
+		<category><![CDATA[reflection]]></category>
+		<category><![CDATA[technology]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2795</guid>
+
+					<description><![CDATA[In 2024, I celebrated significant professional achievements, including prestigious certifications and awards while engaging deeply in community initiatives. My passion for technology spurred contributions to influential platforms, reaching vast audiences. Gratitude fills me for the support received from mentors and peers, fueling my commitment to innovation and knowledge sharing in the tech world.]]></description>
+										<content:encoded><![CDATA[
+<p>As I think on 2024, I’m overwhelmed with gratitude and excitement for the incredible journey I’ve experienced. This year has been a remarkable chapter in my professional and personal growth. I have achieved significant milestones. I have received heartwarming support from my incredible network.</p>
+
+
+
+<figure class="wp-block-image size-large"><img width="1024" height="1024" data-attachment-id="2800" data-permalink="https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/tempimagea7ox5o/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg" data-orig-size="1120,1120" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="tempImagea7ox5o" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=1024" alt="" class="wp-image-2800" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=1024 1024w, https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=150 150w, https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=300 300w, https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=768 768w, https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg 1120w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<h2 class="wp-block-heading"><a></a>Professional Milestones</h2>
+
+
+
+<p>This year brought some extraordinary recognition that I’m truly humbled by:</p>
+
+
+
+<ul class="wp-block-list">
+<li>The <strong>Most Admired Global Indian 2024</strong> &#8211; <a href="https://www.passionvista.com/sarath-chandra-vidya-sagar-machupalli/">https://www.passionvista.com/sarath-chandra-vidya-sagar-machupalli/</a></li>
+
+
+
+<li><strong>BCS Fellowship</strong> acknowledging my contributions to the IT industry in June 2024</li>
+
+
+
+<li><strong>Distinguished Architect Certification</strong>&nbsp;from The Open Group in March 2024</li>
+
+
+
+<li>Member of <strong>Association of Enterprise Architects AEA</strong></li>
+</ul>
+
+
+
+<figure class="wp-block-image size-large"><img src="https://www.passionvista.com/wp-content/uploads/2024/09/SARATH-CHANDRA-VIDYA-SAGAR-MACHUPALLI.jpg" alt="" /></figure>
+
+
+
+<h2 class="wp-block-heading"><a></a>My Passion and Purpose</h2>
+
+
+
+<p>At IBM, I’ve continued to dive deep into my core passions:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Quantum computing</li>
+
+
+
+<li>Data science</li>
+
+
+
+<li>Machine learning</li>
+
+
+
+<li>Cloud technologies</li>
+
+
+
+<li>Solution architecture</li>
+</ul>
+
+
+
+<p>Reflecting on my recent experiences, I had the incredible opportunity to attend the&nbsp;<strong>Quantum Ideas Summer School</strong>. This immersive event featured sessions led by renowned quantum professors and researchers, focusing on the fundamentals of quantum computation and its potential applications. Engaging with experts in the field not only deepened my understanding of quantum technologies but also inspired me to explore innovative solutions that harness these advancements.</p>
+
+
+
+<p>Throughout my journey, I have continuously sought to expand my skill set, particularly in emerging technologies. My commitment to lifelong learning has led me to earn several certifications that enhance my expertise. Notably, I completed a&nbsp;<strong>Practical Introduction to Quantum-Safe Cryptography</strong>&nbsp;certification from IBM in April 2024, which has equipped me with valuable insights into the intersection of quantum computing and cybersecurity.</p>
+
+
+
+<p>In addition to my quantum-focused skills, I have developed a comprehensive portfolio of technical competencies:</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong>AI and Machine Learning</strong>: I hold the &#8220;<a href="http://watsonx.ai/">watsonx.ai</a>&nbsp;Data Science and MLOps Sales Foundation&#8221; certification from IBM, which has broadened my understanding of machine learning models and their deployment.</li>
+
+
+
+<li><strong>Cloud Technologies</strong>: My experience with IBM Cloud continues to grow, allowing me to design and implement cloud-native solutions effectively.</li>
+
+
+
+<li><strong>Software Development</strong>: With over 17 years in software development, I am proficient in multiple programming languages and frameworks, enabling me to tackle diverse projects.</li>
+
+
+
+<li><strong>Solution Architecture</strong>: As a Senior Certified Solutions Architect at IBM, I focus on creating scalable and efficient architectures that meet client needs.</li>
+</ul>
+
+
+
+<p>These skills not only empower me to contribute effectively to my current role but also position me as a thought leader in the tech community. I remain dedicated to sharing knowledge through speaking engagements, writing articles, and participating in open-source projects. My goal is to inspire others while driving digital transformation through innovative technology solutions.</p>
+
+
+
+<p>My journey has always been about more than just technical expertise. It’s about creating&nbsp;<strong>innovative solutions</strong>&nbsp;that bridge technology and human potential.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Community Engagement</h2>
+
+
+
+<p>In 2024, I had the privilege of serving as a judge for multiple prestigious awards, including:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Globee® Awards for Technology in May 2024</li>
+
+
+
+<li>Globee® Awards for Customer Excellence in May 2024</li>
+
+
+
+<li>Golden Bridge Awards® in June 2024</li>
+</ul>
+
+
+
+<p>I continued to engage with the community. I served as a core member and organizer of the BlueCoders Meetup Community. I fostered collaboration and innovation among peers.</p>
+
+
+
+<h2 class="wp-block-heading">I’m excited to share some of the technical articles I published in 2024:</h2>
+
+
+
+<ul class="wp-block-list">
+<li>“Latest Data Architectures, Tools, and Technologies: Emerging Trends” (October 23, 2024)</li>
+
+
+
+<li>“Nurturing the Developer Within: A Journey of Growth and Community” (December 1, 2024)</li>
+</ul>
+
+
+
+<p>These articles show my ongoing commitment to sharing knowledge and insights with the tech community. I’m particularly proud of reaching over <strong>60,000 total </strong>views on my&nbsp;<a href="https://dev.to/vidyasagarmsc/nurturing-the-developer-within-a-journey-of-growth-and-2n9o">Dev.to</a>&nbsp;posts, a milestone that underscores the value of community engagement and knowledge sharing.</p>
+
+
+
+<p>Throughout the year, I continued to contribute to DZone as an expert, with my articles accumulating<strong> 428.9K </strong>pageviews across <strong>72 </strong>publications. This platform has been an excellent avenue for discussing cloud technologies, AI, and various other tech topics.</p>
+
+
+
+<p>I’m grateful for the opportunity to contribute to the tech community through these publications. I look forward to sharing more insights in the coming year.</p>
+
+
+
+<figure class="wp-block-embed is-type-rich is-provider-bluesky-embed wp-block-embed-bluesky-embed"><div class="wp-block-embed__wrapper">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:s56vjrjpief27hfjjsp3rdey/app.bsky.feed.post/3lcq7bv2xks2h" data-bluesky-cid="bafyreiafxbvvrxstccp4tiiv7ipoozxvdn23owp2zshsc2f656vhsjge3e"><p lang="en"></p>&mdash; <a href="https://bsky.app/profile/did:plc:s56vjrjpief27hfjjsp3rdey?ref_src=embed">VidyaSagar Machupalli (@vidyasagarmsc.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:s56vjrjpief27hfjjsp3rdey/post/3lcq7bv2xks2h?ref_src=embed">2024-12-07T17:17:51.550Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+</div></figure>
+
+
+
+<h2 class="wp-block-heading"><a></a>Personal Reflection</h2>
+
+
+
+<p>As a multi-faceted professional &#8211; an architect, speaker, writer, and photographer &#8211; I’ve been fortunate to explore technologies that can truly transform our world. My goal remains consistent: to develop solutions that solve real-world problems, mentor emerging talents, and contribute to open-source projects.</p>
+
+
+
+<h2 class="wp-block-heading"><a></a>Social Media Highlights</h2>
+
+
+
+<p>Throughout the year, I shared insights and updates on my social media platforms &#8211; <a href="https://vidyasagarmsc.github.io/#connect">https://vidyasagarmsc.github.io/#connect</a></p>
+
+
+
+<h2 class="wp-block-heading"><a></a>A Heartfelt Thank You</h2>
+
+
+
+<p>To my mentors, colleagues, friends, and family:<br>Your unwavering support has been my greatest strength. Each challenge, each opportunity has been a stepping stone, and I’m grateful for every moment of this incredible journey.</p>
+
+
+
+<p>To the tech community that has embraced me:<br>Your collaboration, feedback, and shared passion continue to inspire me. Together, we’re not just developing technology &#8211; we’re shaping the future.</p>
+
+
+
+<p><strong>Here’s to continuous learning, innovation, and creating a better tomorrow!</strong></p>
+
+
+
+<h2 class="wp-block-heading">Blogs </h2>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://dzone.com/authors/vidyasagarmsc" rel="nofollow">https://dzone.com/authors/vidyasagarmsc</a> </li>
+
+
+
+<li><a href="https://dev.to/vidyasagarmsc/nurturing-the-developer-within-a-journey-of-growth-and-2n9o" rel="nofollow">https://dev.to/vidyasagarmsc/nurturing-the-developer-within-a-journey-of-growth-and-2n9o</a></li>
+
+
+
+<li><a href="https://vidyasagarmsc.github.io" rel="nofollow">https://vidyasagarmsc.github.io</a></li>
+</ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2795</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/image.png" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/image.png" medium="image">
+			<media:title type="html">image</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2024/12/tempimagea7ox5o.jpg?w=1024" medium="image" />
+
+		<media:content url="https://www.passionvista.com/wp-content/uploads/2024/09/SARATH-CHANDRA-VIDYA-SAGAR-MACHUPALLI.jpg" medium="image" />
+	</item>
+		<item>
+		<title>2023: A year in retrospective</title>
+		<link>https://vmacwrites.wordpress.com/2023/12/16/2023-a-year-in-retrospective/</link>
+					<comments>https://vmacwrites.wordpress.com/2023/12/16/2023-a-year-in-retrospective/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Sat, 16 Dec 2023 15:18:10 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[automation]]></category>
+		<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[aws]]></category>
+		<category><![CDATA[AZURE]]></category>
+		<category><![CDATA[Cloud computing]]></category>
+		<category><![CDATA[terraform]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2755</guid>
+
+					<description><![CDATA[I enjoy interacting with people and sharing my thoughts through my blogs. This year, it&#8217;s no different. I learnt new technologies. I explored interesting tools. I had a lot of conversations with colleagues and friends around AI and Quantum. If I travel back in time taking a trip through my memory lane in 2023, here [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<h2 class="wp-block-heading">I enjoy interacting with people and sharing my thoughts through my blogs. This year, it&#8217;s no different. I learnt new technologies. I explored interesting tools. I had a lot of conversations with colleagues and friends around AI and Quantum. </h2>
+
+
+
+<p>If I travel back in time taking a trip through my memory lane in 2023, here are my accomplishments &amp; learnings</p>
+
+
+
+<figure class="wp-block-image size-large"><img width="1024" height="768" data-attachment-id="2762" data-permalink="https://vmacwrites.wordpress.com/2023/12/16/2023-a-year-in-retrospective/a24affeb-c886-4eed-8ec3-e91c15190141/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg" data-orig-size="4032,3024" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;1.78&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 14 Pro Max&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1694979997&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6.86&quot;,&quot;iso&quot;:&quot;100&quot;,&quot;shutter_speed&quot;:&quot;0.0082644628099174&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="a24affeb-c886-4eed-8ec3-e91c15190141" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=1024" alt="" class="wp-image-2762" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=1024 1024w, https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=2048 2048w, https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=150 150w, https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=300 300w, https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=768 768w, https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=1440 1440w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption class="wp-element-caption">Photo courtesy: VmacFotography by Vidyasagar Machupalli</figcaption></figure>
+
+
+
+<h2 class="wp-block-heading">Matrix multiplication in Python </h2>
+
+
+
+<p><strong>Published on Dev.to </strong></p>
+
+
+
+<h4 class="wp-block-heading">I started exploring numpy and learnt about a new operator to do matrix multiplication.</h4>
+
+
+
+<p><a href="https://dev.to/vidyasagarmsc/matrix-multiplication-in-python-3icc" target="_blank" rel="noreferrer noopener">https://dev.to/vidyasagarmsc/matrix-multiplication-in-python-3icc</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading"><strong>Lessons while building a static website</strong></h2>
+
+
+
+<p><strong>Published on Dev.to</strong></p>
+
+
+
+<p>I loved designing &amp; developing websites in my free time. One place, I always experiment with new web tools is on&nbsp;<a href="https://vidyasagarmsc.github.io/" target="_blank" rel="noreferrer noopener">my profile</a>. Recently, I started designing and coding another personal website for an event and here are some important take ways from the effort </p>
+
+
+
+<p><a href="https://dev.to/vidyasagarmsc/lessons-while-building-a-static-website-8g3" target="_blank" rel="noreferrer noopener">https://dev.to/vidyasagarmsc/lessons-while-building-a-static-website-8g3 </a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading">Must have Terraform tools to make your coding journey smoother</h2>
+
+
+
+<p><strong>Published on </strong>Medium.com</p>
+
+
+
+<p>After a long gap of 11 months, I am back into my coding boots as I started building Terraform for a complex deployment project. Here are some handy tools that made my Terraform coding journey smoother <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<h4 class="wp-block-heading">A small set of tools to make your Terraform coding journey smoother. Tools to Lint, visualize, document, and clean your Terraform HCL2 code. </h4>
+
+
+
+<p><a href="https://medium.com/vmacwrites/must-have-terraform-tools-4197971f00c" target="_blank" rel="noreferrer noopener"> https://medium.com/vmacwrites/must-have-terraform-tools-4197971f00c</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading">Automation, Ansible, AI</h2>
+
+
+
+<p><strong>Published on </strong>Dzone.com</p>
+
+
+
+<h4 class="wp-block-heading">Ansible is one of the many new tools / technologies I picked up this year as part of my learning. I added it to my automation bag and continued investing time on. </h4>
+
+
+
+<p>Learn about how Ansible is bringing AI tools to your Integrated Development Environment to make your automation coding experience simpler, smoother, and more efficient </p>
+
+
+
+<p><a href="https://dzone.com/articles/automation-ansible-ai" target="_blank" rel="noreferrer noopener">https://dzone.com/articles/automation-ansible-ai</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading">Ansible code snippets in YAML</h2>
+
+
+
+<p><strong>Published on Dev.to</strong></p>
+
+
+
+<h4 class="wp-block-heading">I have been learning and writing Ansible for Cloud automation. Created this&nbsp;<a href="https://github.com/VidyasagarMSC/ansible-yaml-snippets">code repository</a>&nbsp;to share my Ansible automation learnings as snippets.</h4>
+
+
+
+<p>As I explore and learn Ansible, I will be adding the simple and easy to use Ansible code snippets written in YAML.</p>
+
+
+
+<p><a href="https://dev.to/vidyasagarmsc/ansible-code-snippets-in-yaml-5a23" target="_blank" rel="noreferrer noopener">https://dev.to/vidyasagarmsc/ansible-code-snippets-in-yaml-5a23</a></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading">Securely record SSH sessions on RHEL in a private VPC network</h2>
+
+
+
+<p><strong>Published on </strong>IBM Cloud blog</p>
+
+
+
+<h4 class="wp-block-heading">As an architect, I enjoy designing and architecting solutions with security at the centre. One such architecture that I enjoyed the most this year is designing a completely private only Virtual Private Cloud network.</h4>
+
+
+
+<p>In this blog post, you’ll learn how to record SSH sessions on a Red Hat Enterprise Linux (RHEL) VSI in a private VPC network using in-built packages. The VPC private network is provisioned through Terraform and the RHEL packages are installed using Ansible automation. Additionally, you’ll learn how to set up a highly available bastion host.</p>
+
+
+
+<figure class="wp-block-embed is-type-wp-embed is-provider-ibm-blog wp-block-embed-ibm-blog"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="xEJLESEcd4"><a href="https://www.ibm.com/blog/securely-record-ssh-sessions-on-rhel-in-a-private-vpc-network/">Securely record SSH sessions on RHEL in a private VPC network</a></blockquote><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted"  title="&#8220;Securely record SSH sessions on RHEL in a private VPC network&#8221; &#8212; IBM Blog" src="https://www.ibm.com/blog/securely-record-ssh-sessions-on-rhel-in-a-private-vpc-network/embed/#?secret=eZAUNXjwY4#?secret=xEJLESEcd4" data-secret="xEJLESEcd4" width="500" height="282" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div></figure>
+
+
+
+<hr class="wp-block-coblocks-dynamic-separator" style="height:50px" />
+
+
+
+<h2 class="wp-block-heading">Deploy a Session Recording Solution Using Ansible and Audit Your Bastion Host</h2>
+
+
+
+<h4 class="wp-block-heading">Learn how to record&nbsp;<a href="https://dzone.com/articles/ssh-tutorial-nice-amp-easy-video">SSH</a>&nbsp;sessions on a Red Hat Enterprise Linux VSI in a Private VPC network using in-built packages. The VPC private network is provisioned through&nbsp;<a href="https://dzone.com/articles/terraform-explained-in-5-minutes">Terraform</a>&nbsp;and the RHEL packages are installed using Ansible automation.</h4>
+
+
+
+<p><a href="https://dzone.com/articles/deploy-a-session-recording-solution-using-ansible" target="_blank" rel="noreferrer noopener">https://dzone.com/articles/deploy-a-session-recording-solution-using-ansible</a></p>
+
+
+
+<figure class="wp-block-image size-large"><img src="https://dz2cdn1.dzone.com/storage/temp/17203840-screenshot-2023-09-11-at-43405-pm.png" alt="" /></figure>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots" />
+
+
+
+<h2 class="wp-block-heading">Ansible Automation with Generative AI</h2>
+
+
+
+<h4 class="wp-block-heading">Today, we are living in the world of artificial intelligence (AI). With&nbsp;<a href="https://research.ibm.com/blog/what-is-generative-AI" rel="noreferrer noopener" target="_blank">Generative AI</a>, writing code has become simpler. Coding is not about linting, formatting, and debugging anymore.</h4>
+
+
+
+<p>In this article, you will learn about how Ansible is bringing AI tools to your Integrated Development Environment to make your automation coding experience simpler, smoother, and more efficient.</p>
+
+
+
+<p><a href="https://community.ibm.com/community/user/aiops/blogs/sarath-chandra-vidya-sagar-machupalli/2023/11/26/ansible-automation-with-generative-ai?CommunityKey=55a5dd31-6f4a-4e21-b1fd-018896595b91" target="_blank" rel="noreferrer noopener">https://community.ibm.com/community/user/aiops/blogs/sarath-chandra-vidya-sagar-machupalli/2023/11/26/ansible-automation-with-generative-ai?CommunityKey=55a5dd31-6f4a-4e21-b1fd-018896595b91</a></p>
+
+
+
+<p>If you have any queries or feedback, feel free to reach out to me on&nbsp;<a href="https://twitter.com/VidyasagarMSC" target="_blank" rel="noreferrer noopener">Twitter</a>&nbsp;or on&nbsp;<a href="https://www.linkedin.com/in/vidyasagarmsc/" target="_blank" rel="noreferrer noopener">LinkedIn</a>.&nbsp;</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2023/12/16/2023-a-year-in-retrospective/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2755</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg" medium="image">
+			<media:title type="html">a24affeb-c886-4eed-8ec3-e91c15190141</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2023/12/a24affeb-c886-4eed-8ec3-e91c15190141.jpg?w=1024" medium="image" />
+
+		<media:content url="https://dz2cdn1.dzone.com/storage/temp/17203840-screenshot-2023-09-11-at-43405-pm.png" medium="image" />
+	</item>
+		<item>
+		<title>Ansible code snippets for automation</title>
+		<link>https://vmacwrites.wordpress.com/2023/07/01/ansible-code-snippets-for-automation/</link>
+					<comments>https://vmacwrites.wordpress.com/2023/07/01/ansible-code-snippets-for-automation/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Sat, 01 Jul 2023 17:01:15 +0000</pubDate>
+				<category><![CDATA[Artificial Intelligence]]></category>
+		<category><![CDATA[automation]]></category>
+		<category><![CDATA[Ansible]]></category>
+		<category><![CDATA[yaml]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2725</guid>
+
+					<description><![CDATA[I have been learning and writing Ansible for Cloud automation. Created this&#160;code repository&#160;to share my Ansible automation learnings as snippets. As I explore and learn Ansible, I will be adding the simple and easy to use Ansible code snippets written in YAML. 🚧 The snippets include generic yaml code for you to understand the Ansible [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>I have been learning and writing Ansible for Cloud automation. Created this&nbsp;<a href="https://github.com/VidyasagarMSC/ansible-yaml-snippets">code repository</a>&nbsp;to share my Ansible automation learnings as snippets.</p>
+
+
+
+<p>As I explore and learn Ansible, I will be adding the simple and easy to use Ansible code snippets written in YAML.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p><img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f6a7.png" alt="🚧" class="wp-smiley" style="height: 1em; max-height: 1em;" /> The snippets include generic yaml code for you to understand the Ansible in-built modules and how to use them for your Ansible automation. More code snippets to come. So, <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/2b50.png" alt="⭐" class="wp-smiley" style="height: 1em; max-height: 1em;" /> this repository <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f60a.png" alt="😊" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</blockquote>
+
+
+
+<h2 class="wp-block-heading"><a href="https://dev.to/#run-locally"></a>Run locally</h2>
+
+
+
+<ol class="wp-block-list">
+<li>Install and setup&nbsp;<a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a></li>
+
+
+
+<li>Command to run locally on your terminal or command prompt</li>
+</ol>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: bash; title: ; notranslate">
+ ansible-playbook list_files.yaml -i hosts.ini --flush-cache 
+</pre></div>
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow">
+<p>For verbose output, use&nbsp;<code>-vvvv</code>&nbsp;flag in the ansible command</p>
+</blockquote>
+
+
+
+<p>Expected output:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: yaml; title: ; notranslate">
+    PLAY &#91;List files] *****************************************************************************************************************************************************************************
+
+    TASK &#91;List files in the current directory] ****************************************************************************************************************************************************
+    changed: &#91;localhost]
+
+    TASK &#91;debug] **********************************************************************************************************************************************************************************
+    ok: &#91;localhost] =&gt; {
+        &quot;output.stdout_lines&quot;: &#91;
+            &quot;LICENSE&quot;,
+            &quot;README.md&quot;,
+            &quot;add_user_to_os.yaml&quot;,
+            &quot;ansible.cfg&quot;,
+            &quot;curl_requests.yaml&quot;,
+            &quot;hosts.ini&quot;,
+            &quot;list_files.yaml&quot;,
+            &quot;yum_install_dependencies.yaml&quot;
+        ]
+    }
+
+    PLAY RECAP ************************************************************************************************************************************************************************************
+    localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+</pre></div>
+
+
+<ol class="wp-block-list">
+<li>cURL requests: add&nbsp;<code>--ask-become-pass</code>&nbsp;flag prompting for a root user password</li>
+</ol>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: bash; title: ; notranslate">
+    ansible-playbook curl_requests.yaml -i hosts.ini --flush-cache --ask-become-pass
+
+</pre></div>
+
+
+<p>Expected output:</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: yaml; title: ; notranslate">
+    BECOME password: 
+
+    PLAY &#91;CURL GET and POST requests] *************************************************************************************************************************************************************
+
+    TASK &#91;POST request with JSON and bearer token] ************************************************************************************************************************************************
+    ok: &#91;localhost]
+
+    TASK &#91;Print return information from the previous task] ****************************************************************************************************************************************
+    ok: &#91;localhost] =&gt; {
+        &quot;result.json&quot;: {
+            &quot;success&quot;: &quot;true&quot;
+        }
+    }
+
+    TASK &#91;GET request to download a file] *********************************************************************************************************************************************************
+    ok: &#91;localhost]
+
+    TASK &#91;debug] **********************************************************************************************************************************************************************************
+    ok: &#91;localhost] =&gt; {
+        &quot;result&quot;: {
+            &quot;changed&quot;: false,
+            &quot;dest&quot;: &quot;./filename.txt&quot;,
+            &quot;elapsed&quot;: 0,
+            &quot;failed&quot;: false,
+            &quot;gid&quot;: 0,
+            &quot;group&quot;: &quot;wheel&quot;,
+            &quot;mode&quot;: &quot;0644&quot;,
+            &quot;msg&quot;: &quot;HTTP Error 304: Not Modified&quot;,
+            &quot;owner&quot;: &quot;root&quot;,
+            &quot;size&quot;: 10612,
+            &quot;state&quot;: &quot;file&quot;,
+            &quot;status_code&quot;: 304,
+            &quot;uid&quot;: 0,
+            &quot;url&quot;: &quot;https://reqbin.com/echo&quot;
+        }
+    }
+
+    PLAY RECAP ************************************************************************************************************************************************************************************
+    localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+</pre></div>
+
+
+<p>Simple and easy-to-use Ansible code snippets in YAML&nbsp;<a href="https://github.com/VidyasagarMSC/ansible-yaml-snippets">https://github.com/VidyasagarMSC/ansible-yaml-snippets</a>@ansible @RedHat&nbsp;</p>
+
+
+
+<p><a href="https://twitter.com/VidyasagarMSC/status/1667645736857501698?s=20">Tweet</a></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2023/07/01/ansible-code-snippets-for-automation/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2725</post-id>
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Adjust the speaking rate</title>
+		<link>https://vmacwrites.wordpress.com/2020/11/09/adjust-the-speaking-rate/</link>
+					<comments>https://vmacwrites.wordpress.com/2020/11/09/adjust-the-speaking-rate/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Mon, 09 Nov 2020 12:13:23 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<category><![CDATA[curl]]></category>
+		<category><![CDATA[speaking-rate]]></category>
+		<category><![CDATA[ssml]]></category>
+		<category><![CDATA[Text-to-Speech]]></category>
+		<category><![CDATA[TTS]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2679</guid>
+
+					<description><![CDATA[Stackoverflow is an ocean for learning and exploring. How? Try answering a question and you will understand 🙂&#160; A few weeks ago, I saw this question on StackOverflow &#8211;&#160; How to adjust the speaking rate in Watson Text-to-Speech using cURL POST? I coded an&#160;Android chatbot&#160;that uses Speech-to-Text and Text-to-speech as add-ons. But, I never bothered [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>Stackoverflow is an ocean for learning and exploring. How? Try answering a question and you will understand <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" />&nbsp;</p>
+
+
+
+<p>A few weeks ago, I saw this question on StackOverflow &#8211;&nbsp;</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>How to adjust the speaking rate in Watson Text-to-Speech using cURL POST?</p></blockquote>
+
+
+
+<p>I coded an&nbsp;<a href="https://www.youtube.com/watch?v=hLETr8t7_bU">Android chatbot</a>&nbsp;that uses Speech-to-Text and Text-to-speech as add-ons. But, I never bothered about the speaking rate and Speech Synthesis Markup Language (SSML).&nbsp;</p>
+
+
+
+<figure class="wp-block-image"><a href="https://res.cloudinary.com/practicaldev/image/fetch/s--bxtclhVj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zjkkpp9jsmenq41gtk74.png"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--bxtclhVj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zjkkpp9jsmenq41gtk74.png" alt="Courtesy: unDraw" /></a></figure>
+
+
+
+<h2 class="wp-block-heading">So, what is this speaking rate and SSML?</h2>
+
+
+
+<p>According to&nbsp;<a href="https://virtualspeech.com/blog/average-speaking-rate-words-per-minute">Virtualspeech</a>,</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Speaking rate is often expressed in words per minute (wpm). To calculate this value, you’ll need to record yourself talking for a few minutes and then add up the number of words in your speech. Divide the total number of words by the number of minutes your speech took.</p><p>Speaking rate (wpm) = total words / number of minutes</p></blockquote>
+
+
+
+<p>and according to&nbsp;<a href="https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-ssml">IBM Cloud docs</a></p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>The Speech Synthesis Markup Language (SSML) is an XML-based markup language that provides annotations of text for speech-synthesis applications. It is a recommendation of the W3C Voice-Browser Working Group that has been adopted as the standard markup language for speech synthesis by the VoiceXML 2.0 specification. SSML provides developers of speech applications with a standard way to control aspects of the synthesis process by enabling them to specify pronunciation, volume, pitch, speed, and other attributes via markup.</p></blockquote>
+
+
+
+<p>OK, I understood the terms.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading">What&#8217;s the answer to the Stackoverflow question</h3>
+
+
+
+<p>Here&#8217;s a working example with the&nbsp;<code>POST</code>&nbsp;call,</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+curl -X POST -u "apikey:{API_KEY}" \
+--header "Accept: audio/wav" \
+--header "Content-Type: application/json" \
+--data '{"text": "&lt;p&gt;&lt;s&gt;&lt;prosody rate=\"+50%\"&gt;This is the first sentence of the paragraph.&lt;/prosody&gt;&lt;/s&gt;&lt;s&gt;Here is another sentence.&lt;/s&gt;&lt;s&gt;Finally, this is the last sentence.&lt;/s&gt;&lt;/p&gt;"}' \
+--output result.wav \
+"{URL}/v1/synthesize" -v
+
+</pre></div>
+
+
+<p>on a Windows command prompt(cmd), create a JSON file&nbsp;<code>input.json</code>&nbsp;with the below command</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+echo {"text": "&lt;p&gt;&lt;s&gt;&lt;prosody rate='+50%'&gt;This is the first sentence of the paragraph.&lt;/prosody&gt;&lt;/s&gt;&lt;s&gt;Here is another sentence.&lt;/s&gt;&lt;s&gt;Finally, this is the last sentence.&lt;/s&gt;&lt;/p&gt;"} &gt; input.json
+
+</pre></div>
+
+
+<p>and then cURL to see result.wav file</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+curl -X POST -u "apikey:{API_KEY}" ^
+--header "Accept: audio/wav" ^
+--header "Content-Type: application/json" ^
+--data @input.json ^
+--output result.wav ^
+"{URL}/v1/synthesize" -v
+
+</pre></div>
+
+
+<p>For the sentence in the actual&nbsp;<a href="https://stackoverflow.com/questions/64185972/ibm-cloud-how-to-adjust-speaking-rate-in-watson-tts-using-curl-post">question</a>, replace the JSON above with yours</p>
+
+
+<div class="wp-block-syntaxhighlighter-code "><pre class="brush: plain; title: ; notranslate">
+{"text":"&lt;prosody rate='fast'&gt;Adult capybaras are one meter long.&lt;/prosody&gt;"}
+
+</pre></div>
+
+
+<p>Here are some useful links I followed to create the above code sample that will help you in understanding the SSML attributes. Also, check the limitations of&nbsp;<code>&lt;prosody&gt;</code>&nbsp;in the links below</p>
+
+
+
+<ul class="wp-block-list"><li><a href="https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-usingHTTP#usingHTTP">https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-usingHTTP#usingHTTP</a></li><li><a href="https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-elements#break_element">https://cloud.ibm.com/docs/text-to-speech?topic=text-to-speech-elements#break_element</a></li><li><a href="https://text-to-speech-demo.ng.bluemix.net/">https://text-to-speech-demo.ng.bluemix.net</a></li></ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2020/11/09/adjust-the-speaking-rate/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2679</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2020/11/undraw_chatting_re_j55r.png" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2020/11/undraw_chatting_re_j55r.png" medium="image">
+			<media:title type="html">undraw_Chatting_re_j55r</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://res.cloudinary.com/practicaldev/image/fetch/s--bxtclhVj--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zjkkpp9jsmenq41gtk74.png" medium="image">
+			<media:title type="html">Courtesy: unDraw</media:title>
+		</media:content>
+	</item>
+		<item>
+		<title>Container to container communication with bridge network</title>
+		<link>https://vmacwrites.wordpress.com/2020/04/09/container-to-container-communication-with-bridge-network/</link>
+					<comments>https://vmacwrites.wordpress.com/2020/04/09/container-to-container-communication-with-bridge-network/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Thu, 09 Apr 2020 07:31:04 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[Docker]]></category>
+		<category><![CDATA[networking]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2665</guid>
+
+					<description><![CDATA[In this post, you will learn how to establish container to container communication by creating a bridge network. The back story Currently, I am working on a sample code that includes a frontend (web) and a backend (API). The frontend provides UI to upload an image and passes the image to the backend for external [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap has-text-align-center"><span class="uppercase">I</span>n this post, you will learn how to establish container to container communication by creating a bridge network.</p>
+
+
+
+<figure class="wp-block-image"><img width="1024" height="1024" data-attachment-id="2673" data-permalink="https://vmacwrites.wordpress.com/deva-darshan-sxqn-or41ok-unsplash/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg" data-orig-size="2711,2711" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="deva-darshan-sxqn-or41ok-unsplash" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=1024" alt="" class="wp-image-2673" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=1024 1024w, https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=2048 2048w, https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=150 150w, https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=300 300w, https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=768 768w, https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=1440 1440w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>source:<a href="https://unsplash.com/photos/SxQn-Or41ok" rel="nofollow">https://unsplash.com/photos/SxQn-Or41ok</a></figcaption></figure>
+
+
+
+<h3 class="wp-block-heading">The back story</h3>
+
+
+
+<p>Currently, I am working on a sample code that includes a frontend (web) and a backend (API). The frontend provides UI to upload an image and passes the image to the backend for external storage. So, I decided to go with to container images as per user requirement.</p>
+
+
+
+<p>Built the individual container images</p>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<pre class="wp-block-preformatted">docker build . -t &lt;DockerID&gt;/frontend
+docker build . -t &lt;DockerID&gt;/backend </pre>
+</div></div>
+</div></div>
+
+
+
+<p>Time to create containers from the respective images. But, before doing that we need to establish communication between these two containers. </p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>The frontend talks to the backend through the backend URL set as an environment variable in the frontend. So, we need to create the backend first and set the frontend env variable with the backend URL. </p></blockquote>
+
+
+
+<h3 class="wp-block-heading">The climax</h3>
+
+
+
+<p>To do that, the option I am aware was using <em>&#8211;link</em> flag. But, as I hit the <em><a rel="noreferrer noopener" href="https://docs.docker.com/network/links/" target="_blank">documentation</a></em>, I could see that the option is now deprecated and tagged as legacy.</p>
+
+
+
+<p>Digging through Docker&#8217;s documentation, I landed on the <a rel="noreferrer noopener" href="https://docs.docker.com/network/" target="_blank"><em>ne</em>t<em>working</em></a><em> </em>page. Where on of the options is <em>bridge network</em></p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p><code>bridge</code>: The default network driver. If you don’t specify a driver, this is the type of network you are creating. <strong>Bridge networks are usually used when your applications run in standalone containers that need to communicate.</strong> See <a href="https://docs.docker.com/network/bridge/">bridge networks</a>.</p><cite><a href="https://docs.docker.com/network/" rel="nofollow">https://docs.docker.com/network/</a> </cite></blockquote>
+
+
+
+<p>So, here&#8217;s how I established the communication between the frontend and backend containers</p>
+
+
+
+<p>Create a bridge called <em>mybridge</em>:</p>
+
+
+
+<pre class="wp-block-preformatted">docker network create -d bridge mybridge</pre>
+
+
+
+<p>Run the backend container by adding it to the bridge. Don&#8217;t forget to give a <em>&#8211;name</em>:</p>
+
+
+
+<pre class="wp-block-preformatted">docker run -p 3001:3001 --name=backend --network=mybridge -d &lt;DockerID&gt;/backend</pre>
+
+
+
+<p>Run the frontend container also by adding it to the bridge:</p>
+
+
+
+<pre class="wp-block-preformatted">docker run -p 3000:3000 --name=frontend --network=mybridge -d &lt;DockerID&gt;/frontend</pre>
+
+
+
+<p>The env variable on the frontend will be set to <em><a href="http://backend:3001/" rel="nofollow">http://backend:3001/</a></em> and Hola! everything works.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2020/04/09/container-to-container-communication-with-bridge-network/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2665</post-id>
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2020/04/deva-darshan-sxqn-or41ok-unsplash.jpg?w=1024" medium="image" />
+	</item>
+		<item>
+		<title>Container registry unauthorized: authentication required</title>
+		<link>https://vmacwrites.wordpress.com/2019/04/05/icr-io-unauthorized-authentication-required/</link>
+					<comments>https://vmacwrites.wordpress.com/2019/04/05/icr-io-unauthorized-authentication-required/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Fri, 05 Apr 2019 11:06:59 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[container registry]]></category>
+		<category><![CDATA[Containers]]></category>
+		<category><![CDATA[IBM Cloud]]></category>
+		<category><![CDATA[private registry]]></category>
+		<category><![CDATA[unauthorised]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2641</guid>
+
+					<description><![CDATA[IBM Cloud container registry(ICR) imagepull fails on IBM Cloud Kubernetes(IKS) cluster with Unauthorized: authentication required error. Here&#8217;s what you did You have pushed an image to IBM Cloud container registry ( *.icr.io). Added the image name to your deployment.yaml file With the KUBECONFIG set to the cluster, you run kubectl create -f deployment.yaml You check [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p class="has-drop-cap">IBM Cloud <a href="https://vmacwrites.wordpress.com/tag/containers/" target="_blank" rel="noreferrer noopener" aria-label="container (opens in a new tab)">container</a> registry(ICR) imagepull fails on IBM Cloud Kubernetes(IKS) cluster with Unauthorized: authentication required error. Here&#8217;s what you did </p>
+
+
+
+<ul class="wp-block-list"><li>You have pushed an image to IBM Cloud container registry ( *.icr.io).</li><li>Added the image name to your <em>deployment.yaml</em> file</li><li> With the KUBECONFIG set to the cluster, you run</li></ul>
+
+
+
+<pre class="wp-block-preformatted">kubectl create -f deployment.yaml</pre>
+
+
+
+<p>You check for the pod name and then for the logs</p>
+
+
+
+<pre class="wp-block-preformatted">kubectl get po </pre>
+
+
+
+<pre class="wp-block-preformatted">kubectl logs &lt;POD_NAME&gt;</pre>
+
+
+
+<p>And there&#8217;s the error </p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>Failed to pull image &#8220;us.icr.io/vmac/application-log-analysis:v1.0.0&#8221;: rpc error: code = Unknown desc = Error response from daemon: Get <a href="https://us.icr.io/v2/vmac/application-log-analysis/manifests/v1.0.0" rel="nofollow">https://us.icr.io/v2/vmac/application-log-analysis/manifests/v1.0.0</a>: unauthorized: authentication required</p></blockquote>
+
+
+
+<h2 class="wp-block-heading">So, what can be the reason? </h2>
+
+
+
+<p>I am not logged into the container registry? <em>I did. just to verify </em></p>
+
+
+
+<pre class="wp-block-preformatted">ibmcloud cr login</pre>
+
+
+
+<p>I am logged-in and still see the error.<em> Hmmm&#8230;.let&#8217;s dig deep into the documentation</em></p>
+
+
+
+<p>Oh, I think I found the root cause </p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>For clusters that were created before&nbsp;<strong>25 February 2019</strong>, you must update your cluster to store an API key instead of a registry token in the image pull secret.</p></blockquote>
+
+
+
+<p>Oh Ok. How can I check that?</p>
+
+
+
+<p> Just run </p>
+
+
+
+<pre class="wp-block-preformatted">kubectl get secrets</pre>
+
+
+
+<figure class="wp-block-image is-resized"><a href="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png" target="_blank" rel="noreferrer noopener"><img loading="lazy" data-attachment-id="2642" data-permalink="https://vmacwrites.wordpress.com/screenshot-2019-04-05-at-3-39-04-pm/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png" data-orig-size="2880,1800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2019-04-05-at-3.39.04-pm" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png" alt="" class="wp-image-2642" width="720" height="450" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=720&amp;h=450 720w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=1440&amp;h=900 1440w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=150&amp;h=94 150w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=300&amp;h=188 300w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=768&amp;h=480 768w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png?w=1024&amp;h=640 1024w" sizes="(max-width: 720px) 100vw, 720px" /></a><figcaption>NO icr.io related secrets</figcaption></figure>
+
+
+
+<p>Oh, no *-icr-io related secrets. </p>
+
+
+
+<h2 class="wp-block-heading">How can I fix this?</h2>
+
+
+
+<p>Follow the instructions mentioned here &#8211; <a href="https://cloud.ibm.com/docs/containers?topic=containers-images#imagePullSecret_migrate_api_key" rel="nofollow">https://cloud.ibm.com/docs/containers?topic=containers-images#imagePullSecret_migrate_api_key</a> </p>
+
+
+
+<p>once everything is done. Here&#8217;s what you should see</p>
+
+
+
+<figure class="wp-block-image is-resized"><a href="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png" target="_blank" rel="noreferrer noopener"><img loading="lazy" data-attachment-id="2643" data-permalink="https://vmacwrites.wordpress.com/screenshot-2019-04-05-at-4-13-16-pm/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png" data-orig-size="2880,1800" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="screenshot-2019-04-05-at-4.13.16-pm" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png" alt="" class="wp-image-2643" width="723" height="451" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=723&amp;h=452 723w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=1446&amp;h=904 1446w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=150&amp;h=94 150w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=300&amp;h=188 300w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=768&amp;h=480 768w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=1024&amp;h=640 1024w, https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png?w=1440&amp;h=900 1440w" sizes="(max-width: 723px) 100vw, 723px" /></a></figure>
+
+
+
+<p>Ya, now I see *-icr-io secrets. Cool.</p>
+
+
+
+<p>If this post fixed your issue. Share it with the world.</p>
+
+
+
+<blockquote class="wp-block-quote is-style-large is-layout-flow wp-block-quote-is-layout-flow"><p>Happy Coding <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> </p></blockquote>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2019/04/05/icr-io-unauthorized-authentication-required/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2641</post-id>
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-3.39.04-pm.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/04/screenshot-2019-04-05-at-4.13.16-pm.png" medium="image" />
+	</item>
+		<item>
+		<title>Istio on Windows 10</title>
+		<link>https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/</link>
+					<comments>https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/#comments</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Wed, 06 Feb 2019 04:58:09 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[cmd]]></category>
+		<category><![CDATA[howto]]></category>
+		<category><![CDATA[istio]]></category>
+		<category><![CDATA[istioctl]]></category>
+		<category><![CDATA[windows 10]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2626</guid>
+
+					<description><![CDATA[In this post, you will learn how to setup Istioctl on Windows 10 to run Istio service mesh commands on your command prompt(CMD). Before jumping into the setup steps, let&#8217;s recap What is Istio? Cloud platforms provide a wealth of benefits for the organizations that use them. There’s no denying, however, that adopting the cloud [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>In this post, you will learn how to setup Istioctl on Windows 10 to run <a href="https://vmacwrites.wordpress.com/?s=istio">Istio </a>service mesh commands on your command prompt(CMD).</p>
+
+
+
+<p>Before jumping into the setup steps, let&#8217;s recap </p>
+
+
+
+<h2 class="wp-block-heading">What is Istio?</h2>
+
+
+
+<p>Cloud platforms provide a wealth of benefits for the organizations that use them. There’s no denying, however, that adopting the cloud can put strains on DevOps teams. Developers must use microservices to architect for portability, meanwhile operators are managing extremely large hybrid and multi-cloud deployments. Istio lets you connect, secure, control, and observe services.</p>
+
+
+
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>At a high level, Istio helps reduce the complexity of these deployments, and eases the strain on your development teams. It is a completely open source service mesh that layers transparently onto existing distributed applications. It is also a platform, including APIs that let it integrate into any logging platform, or telemetry or policy system. Istio’s diverse feature set lets you successfully, and efficiently, run a distributed microservice architecture, and provides a uniform way to secure, connect, and monitor microservices.</p></blockquote>
+
+
+
+<h2 class="wp-block-heading">What is a service mesh?</h2>
+
+
+
+<p>The term service mesh is used to describe the network of microservices that make up such applications and the interactions between them. As a service mesh grows in size and complexity, it can become harder to understand and manage. Its requirements can include discovery, load balancing, failure recovery, metrics, and monitoring. A service mesh also often has more complex operational requirements, like A/B testing, canary releases, rate limiting, access control, and end-to-end authentication.</p>
+
+
+
+<p><strong><em>Source</em></strong>: Istio.io</p>
+
+
+
+<h2 class="wp-block-heading">Setup Istioctl on Windows 10</h2>
+
+
+
+<p>It all started when one of colleague asked for help quoting </p>
+
+
+
+<p><em>&#8221; I cant setup and run istioctl command on windows10, can anybody guide me with this..</em></p>
+
+
+
+<p>Then, I started exploring on my Windows 10 VM and drafted a quick <a href="https://gist.github.com/VidyasagarMSC/2dcb760297f97220fb5e24621c606d76" target="_blank" rel="noreferrer noopener" aria-label="GitHub Gist  (opens in a new tab)">GitHub Gist </a></p>
+
+
+
+<h3 class="wp-block-heading">Download Istio</h3>
+
+
+
+<ul class="wp-block-list"><li>Download the latest stable version of&nbsp;<a href="https://github.com/istio/istio/releases">Istio for windows zip</a>&nbsp;and extract the contents by unzipping the zip file.</li></ul>
+
+
+
+<h3 class="wp-block-heading"><a href="https://gist.github.com/VidyasagarMSC/2dcb760297f97220fb5e24621c606d76#set-the-environment-variable"></a>Set the environment variable</h3>
+
+
+
+<ul class="wp-block-list"><li>Copy the absolute path to the&nbsp;<code>bin</code>&nbsp;folder under the downloaded istio-&lt;VERSION_NUMBER&gt; folder e.g., <em>C:/Users/Administrator/</em><em>istio</em><em>-1.0.5-win/</em><em>istio</em><em>-1.0.5/bin</em></li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img data-attachment-id="2627" data-permalink="https://vmacwrites.wordpress.com/istio_windows_10/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istio_windows_10.png" data-orig-size="2234,1048" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="istio_windows_10" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istio_windows_10.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istio_windows_10.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istio_windows_10.png" alt="" class="wp-image-2627" /></figure></div>
+
+
+
+<ul class="wp-block-list"><li>In the Search on the taskbar, look and open &#8220;Edit environment variables for your account&#8221;.</li></ul>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img data-attachment-id="2629" data-permalink="https://vmacwrites.wordpress.com/windows10_search/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/windows10_search.png" data-orig-size="1682,1348" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="windows10_search" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/windows10_search.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/windows10_search.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/windows10_search.png" alt="" class="wp-image-2629" /></figure></div>
+
+
+
+<ul class="wp-block-list"><li>Under User variables, edit&nbsp;<code>path</code>&nbsp;environment variable and add a new entry pointing to the bin folder as copied above. Save the entries.</li></ul>
+
+
+
+<div data-carousel-extra='{&quot;blog_id&quot;:133654057,&quot;permalink&quot;:&quot;https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/&quot;}'  class="wp-block-jetpack-tiled-gallery is-style-rectangular"><div class="tiled-gallery__gallery"><div class="tiled-gallery__row"><div class="tiled-gallery__col"><figure class="tiled-gallery__item"><img data-attachment-id="2630" data-permalink="https://vmacwrites.wordpress.com/environment_variables_1/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png" data-orig-size="1230,1148" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="environment_variables_1" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?w=1024" data-attachment-id="2630" data-permalink="https://vmacwrites.wordpress.com/environment_variables_1/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png" data-orig-size="1230,1148" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="environment_variables_1" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?w=1024" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?strip=info&#038;w=600 600w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?strip=info&#038;w=900 900w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?strip=info&#038;w=1200 1200w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png?strip=info&#038;w=1230 1230w" alt="" data-height="1148" data-id="2630" data-link="https://vmacwrites.wordpress.com/environment_variables_1/" data-url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png" data-width="1230" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png" /></figure></div><div class="tiled-gallery__col"><figure class="tiled-gallery__item"><img data-attachment-id="2631" data-permalink="https://vmacwrites.wordpress.com/environment_variables_2/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png" data-orig-size="1230,1156" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="environment_variables_2" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?w=1024" data-attachment-id="2631" data-permalink="https://vmacwrites.wordpress.com/environment_variables_2/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png" data-orig-size="1230,1156" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="environment_variables_2" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?w=1024" srcset="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?strip=info&#038;w=600 600w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?strip=info&#038;w=900 900w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?strip=info&#038;w=1200 1200w,https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png?strip=info&#038;w=1230 1230w" alt="" data-height="1156" data-id="2631" data-link="https://vmacwrites.wordpress.com/environment_variables_2/" data-url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png" data-width="1230" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png" /></figure></div></div></div></div>
+
+
+
+<p></p>
+
+
+
+<h3 class="wp-block-heading"><a href="https://gist.github.com/VidyasagarMSC/2dcb760297f97220fb5e24621c606d76#test-istioctl"></a>Test Istioctl</h3>
+
+
+
+<ul class="wp-block-list"><li>Open command prompt and run&nbsp;<code>istioctl</code>.</li><li>To Check the version, run&nbsp;<code>istioctl version</code></li></ul>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="2632" data-permalink="https://vmacwrites.wordpress.com/istioctl_command_prompt/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png" data-orig-size="1948,1018" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="istioctl_command_prompt" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png" alt="" class="wp-image-2632" /></figure>
+
+
+
+<figure class="wp-block-image"><img data-attachment-id="2633" data-permalink="https://vmacwrites.wordpress.com/istioctl_version/" data-orig-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_version.png" data-orig-size="1952,760" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="istioctl_version" data-image-description="" data-image-caption="" data-medium-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_version.png?w=300" data-large-file="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_version.png?w=1024" src="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_version.png" alt="" class="wp-image-2633" /></figure>
+
+
+
+<p>You are now set to run any istioctl commands on your command prompt.</p>
+
+
+
+<p>Happy learning and sharing <img src="https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> </p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2626</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_command_prompt.png" medium="image">
+			<media:title type="html">istioctl_command_prompt</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istio_windows_10.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/windows10_search.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_1.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/environment_variables_2.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2019/02/istioctl_version.png" medium="image" />
+	</item>
+		<item>
+		<title>Create a presigned URL to download an object in Python 3.x</title>
+		<link>https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/</link>
+					<comments>https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Mon, 05 Nov 2018 05:39:08 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Cloud computing]]></category>
+		<category><![CDATA[IBM Cloud]]></category>
+		<category><![CDATA[object storage]]></category>
+		<category><![CDATA[python]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2606</guid>
+
+					<description><![CDATA[Presigned URLs in Cloud Object Storage create a temporary link that can be used to share an object publicly for direct download. In one of my serverless(IBM Cloud Functions) proof of concepts, I had an idea of creating a presigned URL. As all my actions are written in Python 3.x, I decided to automate the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<section class="section section--body">
+<div class="section-divider">
+<hr class="section-divider" />
+</div>
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<h3 class="graf graf--p graf--hasDropCapModel graf--hasDropCap"><span class="graf-dropCap">P</span>resigned URLs in Cloud Object Storage create a temporary link that can be used to share an object publicly for direct download.</h3>
+<p class="graf graf--p">In one of my serverless(IBM Cloud Functions) proof of concepts, I had an idea of creating a presigned URL. As all my actions are written in Python 3.x, I decided to automate the presigned URL creation. Before migrating the Python 2.x code provided in the link <a class="markup--anchor markup--p-anchor" href="https://console.bluemix.net/docs/services/cloud-object-storage/hmac/presigned-urls.html#create-a-presigned-url" target="_blank" rel="noopener">here</a>, I realised that there is one more additional step needed i.e., the creation of HMAC (Access/Secret key) credentials.</p>
+<p class="graf graf--p">To generate new credential with HMAC,</p>
+<ul class="postList">
+<li class="graf graf--li">Navigate to your Cloud Object Storage service on your <a class="markup--anchor markup--li-anchor" href="https://console.bluemix.net/dashboard/apps/" target="_blank" rel="noopener">IBM Cloud dashboard</a>and under Service credentials, click New Credential.</li>
+<li class="graf graf--li">Under <strong class="markup--strong markup--li-strong">Add Inline Configuration Parameters, </strong>add<strong class="markup--strong markup--li-strong"> </strong></li>
+</ul>
+<pre class="graf graf--pre">{“HMAC”:true}</pre>
+</div>
+<div class="section-inner sectionLayout--outsetColumn">
+<figure class="graf graf--figure graf--layoutOutsetCenter"><img class="graf-image aligncenter" src="https://vmacwrites.wordpress.com/wp-content/uploads/2018/11/30293-1szsktodieks3dt094u3quw.png" /></figure>
+</div>
+<div class="section-inner sectionLayout--insetColumn">
+<ul class="postList">
+<li class="graf graf--li">Click Add to create.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section section--body">
+<div class="section-divider">
+<hr class="section-divider" />
+</div>
+<div class="section-content">
+<div class="section-inner sectionLayout--insetColumn">
+<p class="graf graf--p">Here an example for basic <code class="markup--code markup--p-code">GET</code>operation written in Python 3.x</p>
+<blockquote class="graf graf--blockquote"><p>Pass the required <strong class="markup--strong markup--blockquote-strong">request elements</strong>before using this code</p></blockquote>
+<figure class="graf graf--figure graf--iframe">
+<div class="aspectRatioPlaceholder is-locked">
+<div class="aspectRatioPlaceholder-fill">
+<pre>import datetime
+import hashlib
+import hmac
+import requests
+from requests.utils import quote
+
+access_key = '&lt;ACCESS_KEY&gt;'
+secret_key = '&lt;SECRET_KEY&gt;'
+
+# request elements
+http_method = 'GET'
+region = '&lt;REGION_NAME&gt;' # us-south
+bucket = '&lt;BUCKET_NAME&gt;'
+cos_endpoint = '&lt;ENDPOINT_WITHOUT_HTTPS&gt;'
+host = cos_endpoint
+endpoint = 'https://' + host
+object_key = '&lt;OBJECT_NAME&gt;'
+expiration = 86400  # time in seconds
+
+
+# hashing methods
+def hash(key, msg):
+    return hmac.new(key, msg.encode('utf-8'), hashlib.sha256).digest()
+
+
+# region is a wildcard value that takes the place of the AWS region value
+# as COS doen't use regions like AWS, this parameter can accept any string
+def createSignatureKey(key, datestamp, region, service):
+    keyDate = hash(('AWS4' + key).encode('utf-8'), datestamp)
+    keyRegion = hash(keyDate, region)
+    keyService = hash(keyRegion, service)
+    keySigning = hash(keyService, 'aws4_request')
+    return keySigning
+
+
+# assemble the standardized request
+time = datetime.datetime.utcnow()
+timestamp = time.strftime('%Y%m%dT%H%M%SZ')
+datestamp = time.strftime('%Y%m%d')
+
+standardized_querystring = ('X-Amz-Algorithm=AWS4-HMAC-SHA256' +
+                            '&amp;X-Amz-Credential=' + access_key + '/' + datestamp + '/' + region + '/s3/aws4_request' +
+                            '&amp;X-Amz-Date=' + timestamp +
+                            '&amp;X-Amz-Expires=' + str(expiration) +
+                            '&amp;X-Amz-SignedHeaders=host')
+standardized_querystring_url_encoded = quote(standardized_querystring, safe='&amp;=')
+
+standardized_resource = '/' + bucket + '/' + object_key
+standardized_resource_url_encoded = quote(standardized_resource, safe='&amp;')
+
+payload_hash = 'UNSIGNED-PAYLOAD'
+standardized_headers = 'host:' + host
+signed_headers = 'host'
+
+standardized_request = (http_method + '\n' +
+                        standardized_resource + '\n' +
+                        standardized_querystring_url_encoded + '\n' +
+                        standardized_headers + '\n' +
+                        '\n' +
+                        signed_headers + '\n' +
+                        payload_hash).encode('utf-8')
+
+# assemble string-to-sign
+hashing_algorithm = 'AWS4-HMAC-SHA256'
+credential_scope = datestamp + '/' + region + '/' + 's3' + '/' + 'aws4_request'
+sts = (hashing_algorithm + '\n' +
+       timestamp + '\n' +
+       credential_scope + '\n' +
+       hashlib.sha256(standardized_request).hexdigest())
+
+# generate the signature
+signature_key = createSignatureKey(secret_key, datestamp, region, 's3')
+signature = hmac.new(signature_key,
+                     (sts).encode('utf-8'),
+                     hashlib.sha256).hexdigest()
+
+# create and send the request
+# the 'requests' package autmatically adds the required 'host' header
+request_url = (endpoint + '/' +
+               bucket + '/' +
+               object_key + '?' +
+               standardized_querystring_url_encoded +
+               '&amp;X-Amz-Signature=' +
+               signature)
+
+print(('request_url: %s' % request_url))
+
+print(('\nSending `%s` request to IBM COS -----------------------' % http_method))
+print(('Request URL = ' + request_url))
+request = requests.get(request_url)
+
+print('\nResponse from IBM COS ---------------------------------')
+print(('Response code: %d\n' % request.status_code))
+print((request.text))
+
+# this information can be helpful in troubleshooting, or to better
+# understand what goes into signature creation
+print('These are the values used to construct this request.')
+print('Request details -----------------------------------------')
+print(('http_method: %s' % http_method))
+print(('host: %s' % host))
+print(('region: %s' % region))
+print(('endpoint: %s' % endpoint))
+print(('bucket: %s' % bucket))
+print(('object_key: %s' % object_key))
+print(('timestamp: %s' % timestamp))
+print(('datestamp: %s' % datestamp))
+
+print('Standardized request details ----------------------------')
+print(('standardized_resource: %s' % standardized_resource_url_encoded))
+print(('standardized_querystring: %s' % standardized_querystring_url_encoded))
+print(('standardized_headers: %s' % standardized_headers))
+print(('signed_headers: %s' % signed_headers))
+print(('payload_hash: %s' % payload_hash))
+print(('standardized_request: %s' % standardized_request))
+
+print('String-to-sign details ----------------------------------')
+print(('credential_scope: %s' % credential_scope))
+print(('string-to-sign: %s' % sts))
+print(('signature_key: %s' % signature_key))
+print(('signature: %s' % signature))
+
+print('Because the signature key has non-ASCII characters, it is')
+print('necessary to create a hexadecimal digest for the purposes')
+print('of checking against this example.')
+
+
+def hex_hash(key, msg):
+    return hmac.new(b'key', msg.encode('utf-8'), hashlib.sha256).hexdigest()
+
+
+def createHexSignatureKey(key, datestamp, region, service):
+    keyDate = hex_hash(('AWS4' + key).encode('utf-8'), datestamp)
+    keyRegion = hex_hash(keyDate, region)
+    keyService = hex_hash(keyRegion, service)
+    keySigning = hex_hash(keyService, 'aws4_request')
+    return keySigning
+
+
+signature_key_hex = createHexSignatureKey(secret_key, datestamp, region, 's3')
+
+print(('signature_key (hexidecimal): %s' % signature_key_hex))
+
+print('Header details ------------------------------------------')
+print(('pre-signed url: %s' % request_url))</pre>
+</div>
+<blockquote>
+<div class="iframeContainer">For raw code, refer this <a href="https://gist.github.com/VidyasagarMSC/f7f5a3f36cc238d860a30cb00bdec542" target="_blank" rel="noopener">GitHub Gist link</a></div>
+</blockquote>
+</div>
+</figure>
+<p class="graf graf--p">Once you pass the required elements in the placeholders provided and execute the code. You should see your <strong class="markup--strong markup--p-strong">pre-signed url </strong>in the console.</p>
+<blockquote class="graf graf--blockquote"><p>You can set the expiration time in seconds</p></blockquote>
+</div>
+<div class="section-inner sectionLayout--outsetColumn">
+<figure class="graf graf--figure graf--layoutOutsetCenter"><img class="graf-image aligncenter" src="https://vmacwrites.wordpress.com/wp-content/uploads/2018/11/33a05-1zqlldfxtkhxgdgq5h2wysg.png" /></figure>
+</div>
+<div class="section-inner sectionLayout--insetColumn"></div>
+</div>
+</section>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2606</post-id>
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/11/30293-1szsktodieks3dt094u3quw.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/11/33a05-1zqlldfxtkhxgdgq5h2wysg.png" medium="image" />
+	</item>
+		<item>
+		<title>Install Knative with Istio on IBM Cloud</title>
+		<link>https://vmacwrites.wordpress.com/2018/10/09/install-knative-with-istio-on-ibm-cloud/</link>
+					<comments>https://vmacwrites.wordpress.com/2018/10/09/install-knative-with-istio-on-ibm-cloud/#respond</comments>
+		
+		<dc:creator><![CDATA[Vidyasagar MSC]]></dc:creator>
+		<pubDate>Tue, 09 Oct 2018 08:07:09 +0000</pubDate>
+				<category><![CDATA[Cloud]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[programming languages]]></category>
+		<category><![CDATA[IBM Cloud]]></category>
+		<category><![CDATA[istio]]></category>
+		<category><![CDATA[knative]]></category>
+		<category><![CDATA[Kubernetes]]></category>
+		<category><![CDATA[Serverless Computing]]></category>
+		<guid isPermaLink="false">http://vmacwrites.wordpress.com/?p=2568</guid>
+
+					<description><![CDATA[This post provides you step-by-step instructions to install Knative with Istio on IBM Cloud Kubernetes Service(IKS), build and push your image to IBM Cloud Container Registry and deploy the app. Before jumping into the instructions, let’s quickly understand what Knative is and what are its key components. Knative extends Kubernetes to provide the missing building [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p id="aca6" class="graf graf--p graf-after--h3">This post provides you step-by-step instructions to install Knative with Istio on IBM Cloud Kubernetes Service(IKS), build and push your image to IBM Cloud Container Registry and deploy the app.</p>
+<p id="612d" class="graf graf--p graf-after--p">Before jumping into the instructions, let’s quickly understand what Knative is and what are its key components.</p>
+<p id="2415" class="graf graf--p graf-after--p">Knative extends Kubernetes to provide the missing building blocks that developers need to create modern, source-centric, container-based, cloud-native applications.</p>
+<figure id="2773" class="graf graf--figure graf-after--p">
+<div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded"><img class="progressiveMedia-image js-progressiveMedia-image aligncenter" src="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/dc618-1pzf__5c3gxd8phf0pcbcfq.png" /></div>
+</div>
+</figure>
+<p id="13c6" class="graf graf--p graf-after--figure">Each of the components under the Knative project attempt to identify common patterns and codify the best practices shared by successful real-world Kubernetes-based frameworks and applications, such as:</p>
+<ul class="postList">
+<li id="624d" class="graf graf--li graf-after--p">orchestrating source-to-container workflows</li>
+<li id="246e" class="graf graf--li graf-after--li">routing and managing traffic during deployment</li>
+<li id="220a" class="graf graf--li graf-after--li">scaling and sizing resources based on demand</li>
+<li id="c4a1" class="graf graf--li graf-after--li">binding running services to eventing ecosystems</li>
+</ul>
+<p id="a253" class="graf graf--p graf-after--li">Knative focuses on the “boring but difficult” parts that everyone needs, but no one benefits from doing over again on their own. This in turn frees developers to spend more time writing application code, not worrying about how they are going to build, deploy, monitor, and debug it.</p>
+<h3 id="3770" class="graf graf--h3 graf-after--p">What are the Knative components?</h3>
+<p id="b98e" class="graf graf--p graf-after--h3">Currently, Knative consists of the following top-level repositories:</p>
+<ul class="postList">
+<li id="ab39" class="graf graf--li graf-after--p"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/build" target="_blank" rel="nofollow noopener">build</a> and <a class="markup--anchor markup--li-anchor" href="https://github.com/knative/build-templates" target="_blank" rel="nofollow noopener">build-templates</a> — automatic, repeatable server-side container builds</li>
+<li id="d66f" class="graf graf--li graf-after--li"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/serving" target="_blank" rel="nofollow noopener">serving</a> — scale to zero, request-driven compute</li>
+<li id="c5f6" class="graf graf--li graf-after--li"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/eventing" target="_blank" rel="nofollow noopener">eventing</a> — management and delivery of events</li>
+</ul>
+<p id="5b5a" class="graf graf--p graf-after--li">We expect this list to grow as more areas are identified.</p>
+<h3 id="2840" class="graf graf--h3 graf-after--p">Prerequisites</h3>
+<ul class="postList">
+<li id="605b" class="graf graf--li graf-after--h3"><a class="markup--anchor markup--li-anchor" href="https://www.npmjs.com/get-npm" target="_blank" rel="nofollow noopener">Node and npm</a></li>
+<li id="62ec" class="graf graf--li graf-after--li"><a class="markup--anchor markup--li-anchor" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" rel="nofollow noopener">Download and install the ibmcloud command line tool</a></li>
+</ul>
+<h3 id="90c1" class="graf graf--h3 graf-after--li">Setup CLI</h3>
+<blockquote id="9554" class="graf graf--blockquote graf-after--h3"><p><em class="markup--em markup--blockquote-em">If you already have ibmcloud CLI installed with the ibmcloud plugins, you can skip these steps.</em></p></blockquote>
+<ul class="postList">
+<li id="dd74" class="graf graf--li graf-after--blockquote">Install the cs (container-service) and cr (container-registry) plugins</li>
+</ul>
+<div>
+<pre> ibmcloud plugin install container-service -r Bluemix
+
+ ibmcloud plugin install container-registry -r Bluemix</pre>
+</div>
+<ul class="postList">
+<li id="a662" class="graf graf--li graf-after--pre">Authorize ibmcloud:</li>
+</ul>
+<div>
+<pre>  ibmcloud login</pre>
+</div>
+<h3 id="2c14" class="graf graf--h3 graf-after--pre">Create a Kubernetes cluster and setup Istio</h3>
+<p id="1cb4" class="graf graf--p graf-after--h3">In this section, you will provision a Kubernetes cluster on IBM Cloud Kubernetes service(IKS) and install Istio + Knative components.</p>
+<ul class="postList">
+<li id="8054" class="graf graf--li graf-after--p"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/docs/blob/master/install/Knative-with-IKS.md#setting-environment-variables" target="_blank" rel="nofollow noopener">Setup environment variables</a></li>
+<li id="5ea1" class="graf graf--li graf-after--li"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/docs/blob/master/install/Knative-with-IKS.md#creating-a-kubernetes-cluster" target="_blank" rel="nofollow noopener">Create a Kubernetes Cluster</a></li>
+<li id="2808" class="graf graf--li graf-after--li">As Knative depends on Istio, let’s install the latest version of Istio</li>
+</ul>
+<div>
+<pre>kubectl apply --filename https://raw.githubusercontent.com/knative/serving/master/third_party/istio-1.0.2/istio.yaml</pre>
+</div>
+<figure id="fa6c" class="graf graf--figure graf-after--pre">
+<div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded">
+<p><figure style="width: 1600px" class="wp-caption alignnone"><img class="progressiveMedia-image js-progressiveMedia-image" src="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/b6de7-1ogetr49jlqdlmjea9sj87q.png" width="1600" height="1000" /><figcaption class="wp-caption-text">Install Istio</figcaption></figure></p>
+</div>
+</div><figcaption class="imageCaption"></figcaption></figure>
+<ul class="postList">
+<li id="7d3e" class="graf graf--li graf-after--figure">Label the default namespace with istio-injection=enabled: <code class="markup--code markup--li-code">kubectl label namespace default istio-injection=enabled</code></li>
+<li id="6731" class="graf graf--li graf-after--li">Monitor the Istio components until all of the components show a STATUS of Running or Completed: <code class="markup--code markup--li-code">kubectl get pods --namespace istio-system</code></li>
+<li id="dccf" class="graf graf--li graf-after--li"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/docs/blob/master/install/Knative-with-IKS.md#installing-knative-components" target="_blank" rel="nofollow noopener">Installing Knative components</a></li>
+</ul>
+<figure id="9634" class="graf graf--figure graf-after--li">
+<div class="aspectRatioPlaceholder is-locked">
+<div class="progressiveMedia js-progressiveMedia graf-image is-canvasLoaded is-imageLoaded">
+<p><figure style="width: 1600px" class="wp-caption aligncenter"><img class="progressiveMedia-image js-progressiveMedia-image" src="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/84aa8-1vso4zx1lyis-uldattpfyg.png" width="1600" height="211" /><figcaption class="wp-caption-text">To check Knative installation (kubectl client version 1.11 or above)</figcaption></figure></p>
+</div>
+</div><figcaption class="imageCaption"></figcaption></figure>
+<h3 id="4f4e" class="graf graf--h3 graf-after--figure">Build and Deploy the app</h3>
+<p id="75b9" class="graf graf--p graf-after--h3">This section uses a rehash of <a class="markup--anchor markup--p-anchor" href="https://github.com/knative/docs/tree/master/serving/samples/helloworld-nodejs" target="_blank" rel="nofollow noopener">helloworld-nodejs</a> app. For code samples in other programming languages(Go, Python, C#, Java etc.,), refer <a class="markup--anchor markup--p-anchor" href="https://github.com/knative/docs/tree/master/serving/samples" target="_blank" rel="nofollow noopener">Knative serving sample applications</a></p>
+<ul class="postList">
+<li id="daf4" class="graf graf--li graf-after--p">Clone the <a class="markup--anchor markup--li-anchor" href="https://github.com/VidyasagarMSC/knative-deploy" target="_blank" rel="nofollow noopener">repo</a> and <code class="markup--code markup--li-code">cd</code> into the folder</li>
+</ul>
+<div>
+<pre> git clone https://github.com/VidyasagarMSC/knative-deploy.git
+
+ cd knative-deploy</pre>
+</div>
+<ul class="postList">
+<li id="3e9d" class="graf graf--li graf-after--pre">Install dependencies</li>
+</ul>
+<pre id="31e1" class="graf graf--pre graf-after--li"> npm install</pre>
+<ul class="postList">
+<li id="602d" class="graf graf--li graf-after--pre">Build and Push the Docker image to IBM Cloud Container Registry by replacing <code class="markup--code markup--li-code">&lt;region&gt;</code> and <code class="markup--code markup--li-code">&lt;namespace&gt;</code> values</li>
+</ul>
+<div>
+<pre>ibmcloud cr build -t registry.&lt;region&gt;.bluemix.net/&lt;namespace&gt;/knative-node-app .</pre>
+</div>
+<ul class="postList">
+<li id="88aa" class="graf graf--li graf-after--pre">In <code class="markup--code markup--li-code"><a href="https://github.com/VidyasagarMSC/knative-deploy/blob/master/service.yaml" target="_blank" rel="noopener">service.yaml</a></code>, replace <code class="markup--code markup--li-code">image</code> value and run the below command</li>
+</ul>
+<figure id="3325" class="graf graf--figure graf--iframe graf-after--li"></figure>
+<div>
+<pre> kubectl apply --filename service.yaml</pre>
+</div>
+<ul class="postList">
+<li id="a1da" class="graf graf--li graf-after--pre">To find the IP address for your service, use <code class="markup--code markup--li-code">kubectl get svc knative-ingressgateway -n istio-system</code> to get the ingress IP for your cluster. If your cluster is new, it may take sometime for the service to get assigned an external IP address.</li>
+</ul>
+<div>
+<pre>export IP_ADDRESS=$(kubectl get svc knative-ingressgateway --namespace istio-system --output 'jsonpath={.status.loadBalancer.ingress[0].ip}')</pre>
+</div>
+<ul class="postList">
+<li id="173e" class="graf graf--li graf-after--pre">To find the URL for your service, use <code class="markup--code markup--li-code">kubectl get services.serving.knative.dev knative-node-app --output jsonpath='{.status.domain}'</code></li>
+</ul>
+<div>
+<pre>export HOST_URL=$(kubectl get services.serving.knative.dev knative-node-app  --output jsonpath='{.status.domain}')</pre>
+</div>
+<ul class="postList">
+<li id="df54" class="graf graf--li graf-after--pre">Now you can make a request to your app to see the result.</li>
+</ul>
+<div>
+<pre> curl -H "Host: ${HOST_URL}" http://${IP_ADDRESS}</pre>
+</div>
+<pre id="45bc" class="graf graf--pre graf-after--pre">Knative Node App running on IBM Cloud</pre>
+<blockquote><p>To Build a source into a container image from a Dockerfile inside a kubernetes cluster and push the image to IBM Cloud Container registry; all of this using Google’s Kaniko tool, follow the steps <a class="markup--anchor markup--pullquote-anchor" href="https://medium.com/@VidyasagarMSC/build-a-container-image-inside-a-k8s-cluster-and-push-it-to-ibm-cloud-container-registry-abac9b1e5246" target="_blank" rel="noopener">in the post</a></p></blockquote>
+<h3 id="f947" class="graf graf--h3 graf-after--pre">Cleanup</h3>
+<ul class="postList">
+<li id="d2c9" class="graf graf--li graf-after--h3">Run the below command to remove the sample app from your cluster</li>
+</ul>
+<div>
+<pre>kubectl delete --filename service.yaml</pre>
+</div>
+<ul class="postList">
+<li id="2e5c" class="graf graf--li graf-after--pre">To delete the cluster (removes everything), enter the following command:</li>
+</ul>
+<div>
+<pre> ibmcloud cs cluster-rm $CLUSTER_NAME</pre>
+</div>
+<h3 id="0f1b" class="graf graf--h3 graf-after--pre">Further reading</h3>
+<ul class="postList">
+<li id="de4e" class="graf graf--li graf-after--h3">Using Kaniko — <a class="markup--anchor markup--li-anchor" href="https://medium.com/@VidyasagarMSC/build-a-container-image-inside-a-k8s-cluster-and-push-it-to-ibm-cloud-container-registry-abac9b1e5246" target="_blank" rel="noopener">Build a container image inside a K8s cluster and push it to IBM Cloud Container Registry</a></li>
+<li id="6565" class="graf graf--li graf-after--li">Knative <a class="markup--anchor markup--li-anchor" href="https://medium.com/@VidyasagarMSC/knative-monitoring-with-grafana-zipkin-weavescope-other-plugins-30a2d8d20344" target="_blank" rel="noopener">Monitoring</a></li>
+<li id="68a8" class="graf graf--li graf-after--h3"><a class="markup--anchor markup--li-anchor" href="http://www.eweek.com/development/ibm-google-give-birth-to-knative-serverless-cloud-project" target="_blank" rel="nofollow noopener">IBM, Google Give Birth to Knative Serverless Cloud Project</a></li>
+<li id="cb70" class="graf graf--li graf-after--li graf--trailing"><a class="markup--anchor markup--li-anchor" href="https://github.com/knative/docs" target="_blank" rel="nofollow noopener">Knative Docs</a></li>
+</ul>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://vmacwrites.wordpress.com/2018/10/09/install-knative-with-istio-on-ibm-cloud/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2568</post-id>
+		<media:thumbnail url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/05/cloud-3.png" />
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/05/cloud-3.png" medium="image">
+			<media:title type="html">cloud-3</media:title>
+		</media:content>
+
+		<media:content url="https://0.gravatar.com/avatar/fb18d15d8d0571247eee5de122a44183d946637ee882c4aed5e917112b6f0fdc?s=96&#38;d=identicon&#38;r=G" medium="image">
+			<media:title type="html">aficionadovmac</media:title>
+		</media:content>
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/dc618-1pzf__5c3gxd8phf0pcbcfq.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/b6de7-1ogetr49jlqdlmjea9sj87q.png" medium="image" />
+
+		<media:content url="https://vmacwrites.wordpress.com/wp-content/uploads/2018/10/84aa8-1vso4zx1lyis-uldattpfyg.png" medium="image" />
+	</item>
+	</channel>
+</rss>

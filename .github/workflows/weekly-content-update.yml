@@ -167,12 +167,17 @@ jobs:
             } catch (e) { console.log(`${feed.platform} parse error:`, e.message); }
           }
 
-          // Deduplicate by URL and sort by date descending
-          const seen = new Set();
+          // Deduplicate by URL and Title, sorting by date descending
+          const seenUrl = new Set();
+          const seenTitle = new Set();
           const unique = allArticles
             .filter(a => {
-              if (!a.url || seen.has(a.url)) return false;
-              seen.add(a.url);
+              if (!a.url || !a.title) return false;
+              const cleanTitle = a.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+              if (seenUrl.has(a.url) || seenTitle.has(cleanTitle)) return false;
+              
+              seenUrl.add(a.url);
+              seenTitle.add(cleanTitle);
               return true;
             })
             .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
@@ -258,5 +263,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add src/data/portfolio.ts
-          git commit -m "chore: auto-update articles from Dev.to, Medium, WordPress, Substack, Hackernoon & DZone [skip ci]"
+          git commit -m "chore: auto-update articles dataset ⚡️"
+          
+          # Push the changes. Removing skip-ci so that standard Vercel/NextJS deployments actually trigger!
           git push origin HEAD
