@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { portfolioData } from "@/data/portfolio"
 import { ArrowRight, MapPin, Zap, Code2, Globe, BookOpen } from "lucide-react"
+import { SpotlightCard } from "@/components/ui/SpotlightCard"
+import { Magnetic } from "@/components/ui/Magnetic"
 
 const BIG_STATS = [
     { value: "18+",   label: "Years of impact",    sub: "Enterprise to startup",  icon: Zap,      color: "var(--primary)" },
@@ -27,7 +29,7 @@ const staggerChild = (i: number) => ({
 
 export function About() {
     return (
-        <section id="about" className="py-28 sm:py-36 relative overflow-hidden">
+        <section id="about" className="relative overflow-hidden" style={{ paddingBlock: 'var(--section-py)' }}>
             {/* Subtle background accent */}
             <div
                 className="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none -z-10 opacity-40 dark:opacity-20"
@@ -71,9 +73,9 @@ export function About() {
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true as const }}
                             transition={{ delay: 0.3 }}
-                            className="flex flex-wrap gap-2 mt-8"
+                            className="flex flex-wrap gap-x-2 gap-y-2.5 mt-8"
                         >
                             {portfolioData.about.interests.map((interest, i) => (
                                 <motion.span
@@ -82,7 +84,7 @@ export function About() {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.06, type: "spring", bounce: 0.35 }}
-                                    className="skill-chip"
+                                    className="badge bg-muted/50"
                                 >
                                     {interest}
                                 </motion.span>
@@ -97,24 +99,25 @@ export function About() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, type: "spring", bounce: 0.16 }}
                     >
-                        <div className="glass-card card-accent-top gradient-border p-7 sm:p-9 depth-shadow-lg">
+                        <SpotlightCard className="p-7 sm:p-9">
                             {/* Identity header */}
                             <div className="flex items-center gap-4 pb-6 border-b border-border mb-7">
-                                <div
-                                    className="h-14 w-14 rounded-2xl flex items-center justify-center font-black text-xl text-white flex-shrink-0"
-                                    style={{
-                                        background: "linear-gradient(135deg, var(--primary), var(--secondary))",
-                                        boxShadow: "0 6px 20px rgba(var(--primary-rgb), 0.35)",
-                                    }}
-                                    aria-label="VM initials"
-                                >
-                                    VM
-                                </div>
+                                <Magnetic strength={0.1}>
+                                    <div
+                                        className="h-14 w-14 rounded-2xl flex items-center justify-center font-black text-xl text-primary-foreground flex-shrink-0"
+                                        style={{
+                                            background: "var(--primary)",
+                                        }}
+                                        aria-label="VM initials"
+                                    >
+                                        VM
+                                    </div>
+                                </Magnetic>
                                 <div className="min-w-0">
                                     <p className="font-bold text-foreground truncate">{portfolioData.personal.name}</p>
                                     <p className="text-xs text-foreground/55 mt-0.5 truncate leading-snug">{portfolioData.personal.role}</p>
-                                    <div className="flex items-center gap-1 mt-1.5 text-xs text-foreground/40">
-                                        <MapPin className="h-2.5 w-2.5 flex-shrink-0" aria-hidden="true" />
+                                    <div className="flex items-center gap-1.5 mt-1.5 text-xs text-muted-foreground font-semibold">
+                                        <MapPin className="h-3 w-3 flex-shrink-0" aria-hidden="true" />
                                         <span>Global · IBM</span>
                                     </div>
                                 </div>
@@ -127,8 +130,7 @@ export function About() {
                                     return (
                                         <div
                                             key={i}
-                                            className="rounded-xl p-4 border border-border hover:border-primary/20 transition-colors cursor-default"
-                                            style={{ background: "rgba(var(--primary-rgb), 0.03)" }}
+                                            className="card p-4 transition-colors cursor-default"
                                         >
                                             <div
                                                 className="h-6 w-6 rounded-lg flex items-center justify-center mb-2.5"
@@ -137,7 +139,7 @@ export function About() {
                                             >
                                                 <Icon className="h-3 w-3" style={{ color: s.color }} />
                                             </div>
-                                            <div className="text-2xl font-black gradient-text">{s.value}</div>
+                                            <div className="text-2xl font-black text-foreground">{s.value}</div>
                                             <div className="text-xs font-semibold text-foreground mt-0.5">{s.label}</div>
                                             <div className="text-[10px] text-foreground/40 font-mono mt-0.5">{s.sub}</div>
                                         </div>
@@ -163,7 +165,7 @@ export function About() {
                                     Contact <ArrowRight className="h-3 w-3" aria-hidden="true" />
                                 </a>
                             </div>
-                        </div>
+                        </SpotlightCard>
                     </motion.div>
                 </div>
             </div>

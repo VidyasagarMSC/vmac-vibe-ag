@@ -91,6 +91,7 @@ export const metadata: Metadata = {
 };
 
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider"
+import { CustomCursor } from "@/components/ui/CustomCursor"
 
 export default function RootLayout({
   children,
@@ -101,6 +102,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
@@ -108,8 +110,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="grain-overlay" aria-hidden="true" />
+          <CustomCursor />
           <SmoothScrollProvider>
-            <div className="scroll-prog" aria-hidden />
             {children}
           </SmoothScrollProvider>
         </ThemeProvider>

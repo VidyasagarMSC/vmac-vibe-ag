@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { portfolioData } from "@/data/portfolio"
 import { MessageSquare, Mic, Sparkles, Mail, Github, Linkedin, Globe, ExternalLink } from "lucide-react"
+import { SpotlightCard } from "@/components/ui/SpotlightCard"
+import { Magnetic } from "@/components/ui/Magnetic"
 
 const SOCIALS = [
     {
@@ -70,7 +72,7 @@ const SOCIALS = [
 
 export function Contact() {
     return (
-        <section id="contact" className="py-28 sm:py-36 relative overflow-hidden">
+        <section id="contact" className="relative overflow-hidden" style={{ paddingBlock: 'var(--section-py)' }}>
             {/* Clean indigo radial background */}
             <div
                 className="absolute inset-0 -z-10 pointer-events-none"
@@ -121,7 +123,7 @@ export function Contact() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.12, duration: 0.5 }}
-                            className="text-foreground/60 text-base leading-[1.8] mb-8 max-w-md"
+                            className="text-muted-foreground text-sm font-medium leading-relaxed max-w-sm"
                         >
                             Whether you need a keynote speaker, enterprise architect, or developer advocate —
                             I&apos;m connecting global teams with transformative ideas.
@@ -133,16 +135,15 @@ export function Contact() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.18 }}
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold mb-8"
-                            style={{
-                                background: "rgba(var(--primary-rgb), 0.08)",
-                                border: "1px solid rgba(var(--primary-rgb), 0.18)",
-                                color: "var(--primary)",
-                            }}
+                            className="w-full sm:w-auto mt-8"
                         >
-                            <Mic className="h-3.5 w-3.5" aria-hidden="true" />
-                            Available for global speaking engagements
-                            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+                            <Magnetic strength={0.1}>
+                                <div className="btn-primary w-full sm:w-auto">
+                                    <Mic className="h-3.5 w-3.5" aria-hidden="true" />
+                                    Available for global speaking engagements
+                                    <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+                                </div>
+                            </Magnetic>
                         </motion.div>
 
                         {/* Primary CTA */}
@@ -151,17 +152,20 @@ export function Contact() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.22 }}
+                            className="mt-8"
                         >
-                            <a
-                                href="https://www.linkedin.com/in/vidyasagarmsc"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Get in touch via LinkedIn"
-                                className="btn-primary inline-flex"
-                            >
-                                <Mail className="h-4 w-4" aria-hidden="true" />
-                                Get in touch
-                            </a>
+                            <Magnetic strength={0.2}>
+                                <a
+                                    href="https://www.linkedin.com/in/vidyasagarmsc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Get in touch via LinkedIn"
+                                    className="btn-primary inline-flex"
+                                >
+                                    <Mail className="h-4 w-4" aria-hidden="true" />
+                                    Get in touch
+                                </a>
+                            </Magnetic>
                         </motion.div>
 
                         <p className="text-[10px] text-foreground/30 font-mono mt-6">
@@ -175,37 +179,32 @@ export function Contact() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.65, type: "spring", bounce: 0.16 }}
-                        className="glass-card card-accent-top gradient-border p-8 depth-shadow-lg"
+                        className="relative h-full"
                     >
-                        <h3 className="text-sm font-bold text-foreground/60 font-mono uppercase tracking-widest mb-6">
-                            Find me on
-                        </h3>
+                        <SpotlightCard className="p-8">
+                            <h3 className="text-sm font-bold text-foreground/60 font-mono uppercase tracking-widest mb-6">
+                                Find me on
+                            </h3>
 
                         <div className="grid grid-cols-2 gap-3">
                             {SOCIALS.map(({ key, label, displayLabel, color, bg, icon }) => {
                                 const link = portfolioData.personal.social[key as keyof typeof portfolioData.personal.social]
                                 if (!link) return null
                                 return (
-                                    <motion.a
-                                        key={key}
-                                        href={link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label={`${label} profile`}
-                                        whileHover={{ y: -4, scale: 1.04 }}
-                                        whileTap={{ scale: 0.97 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 22 }}
-                                        className="inline-flex items-center gap-2.5 h-12 px-4 rounded-xl text-xs font-bold shadow-md"
-                                        style={{
-                                            color,
-                                            background: `${bg}e8`,
-                                            border: `1px solid ${bg}44`,
-                                            boxShadow: `0 3px 12px ${bg}30`,
-                                        }}
-                                    >
-                                        {icon}
-                                        <span>{displayLabel}</span>
-                                    </motion.a>
+                                    <Magnetic key={key} strength={0.15}>
+                                        <motion.a
+                                            href={link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={`${label} profile`}
+                                            className="inline-flex items-center gap-3 h-12 w-full px-4 rounded-xl text-xs font-bold shadow-sm hover:bg-muted border border-border bg-card text-foreground transition-colors group"
+                                        >
+                                            <div style={{ color: bg }} className="flex-shrink-0">
+                                                {icon}
+                                            </div>
+                                            <span>{displayLabel}</span>
+                                        </motion.a>
+                                    </Magnetic>
                                 )
                             })}
                         </div>
@@ -220,6 +219,7 @@ export function Contact() {
                                 Active across all platforms
                             </p>
                         </div>
+                        </SpotlightCard>
                     </motion.div>
                 </div>
             </div>

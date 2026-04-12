@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { portfolioData } from "@/data/portfolio"
 import { Cpu, Database, Layout, Server, Award, Trophy, Star, Sparkles, Zap } from "lucide-react"
+import { SpotlightCard } from "@/components/ui/SpotlightCard"
 
 const CAT_CONFIG = [
     { icon: Layout,   color: "#818cf8", bg: "rgba(129,140,248,0.08)", name: "Languages"         },
@@ -30,16 +31,8 @@ const getAward = (title: string) => {
 
 export function Skills() {
     return (
-        <section id="skills" className="py-28 sm:py-36 relative overflow-hidden">
-            {/* Background accent */}
-            <div
-                className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none opacity-30 dark:opacity-20"
-                style={{
-                    background: "radial-gradient(circle, rgba(var(--primary-rgb),0.08) 0%, transparent 70%)",
-                    filter: "blur(70px)",
-                }}
-                aria-hidden="true"
-            />
+        <section id="skills" className="relative overflow-hidden" style={{ paddingBlock: 'var(--section-py)' }}>
+            {/* Background accent removed for solid flat UI */}
 
             <div className="container mx-auto max-w-6xl">
                 {/* Header */}
@@ -71,8 +64,9 @@ export function Skills() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: ci * 0.07, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-                                className="glass-card card-accent-top p-6"
+                                className="h-full"
                             >
+                                <SpotlightCard className="p-6 h-full">
                                 <div className="flex items-center gap-2.5 mb-5">
                                     <div
                                         className="p-1.5 rounded-lg"
@@ -96,12 +90,13 @@ export function Skills() {
                                             whileInView={{ opacity: 1, scale: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: si * 0.04 + ci * 0.05, type: "spring", bounce: 0.3 }}
-                                            className="skill-chip"
+                                            className="badge"
                                         >
                                             {skill}
                                         </motion.span>
                                     ))}
                                 </div>
+                                </SpotlightCard>
                             </motion.div>
                         )
                     })}
@@ -112,8 +107,8 @@ export function Skills() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ type: "spring", bounce: 0.16, delay: 0.2 }}
-                        className="glass-card card-accent-top p-6"
                     >
+                        <SpotlightCard className="p-6">
                         <h3 className="font-bold text-base mb-5 flex items-center gap-2">
                             <Award className="h-4 w-4 text-primary" aria-hidden="true" /> Recognition
                         </h3>
@@ -123,12 +118,11 @@ export function Skills() {
                             {portfolioData.awards.slice(0, 2).map((a, i) => (
                                 <div
                                     key={i}
-                                    className="rounded-xl p-3.5 text-center cursor-default card-hover border border-border"
-                                    style={{ background: "rgba(var(--primary-rgb), 0.04)" }}
+                                    className="rounded-xl p-3.5 text-center cursor-default bg-muted hover:bg-muted/80 border border-border"
                                 >
                                     <Trophy className="h-5 w-5 text-amber-400 mx-auto mb-2" aria-hidden="true" />
                                     <p className="text-[10px] font-bold text-foreground leading-tight">{a.title}</p>
-                                    <p className="text-[9px] text-foreground/40 font-mono mt-1">{a.year}</p>
+                                    <p className="text-[9px] text-muted-foreground font-mono mt-1 font-semibold">{a.year}</p>
                                 </div>
                             ))}
                         </div>
@@ -156,7 +150,7 @@ export function Skills() {
                                             <p className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors truncate leading-snug">
                                                 {award.title}
                                             </p>
-                                            <p className="text-[9px] text-foreground/40 font-mono truncate">
+                                            <p className="text-[9px] text-muted-foreground font-mono truncate font-semibold">
                                                 {award.issuer} · {award.year}
                                             </p>
                                         </div>
@@ -164,6 +158,7 @@ export function Skills() {
                                 )
                             })}
                         </div>
+                        </SpotlightCard>
                     </motion.div>
                 </div>
             </div>

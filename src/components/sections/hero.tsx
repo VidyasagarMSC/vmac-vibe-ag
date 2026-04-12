@@ -6,6 +6,8 @@ import { portfolioData } from "@/data/portfolio"
 import { useEffect, useState } from "react"
 import { ChevronDown, Github, Linkedin, ExternalLink, Sparkles, ArrowUpRight } from "lucide-react"
 import Link from "next/link"
+import { Magnetic } from "@/components/ui/Magnetic"
+import { SpotlightCard } from "@/components/ui/SpotlightCard"
 
 const HeroScene = dynamic(
     () => import("@/components/canvas/HeroScene").then((m) => ({ default: m.HeroScene })),
@@ -40,7 +42,7 @@ function Typewriter({ words }: { words: string[] }) {
 
     return (
         <>
-            <span className="gradient-text">{txt || "\u00A0"}</span>
+            <span className="text-primary">{txt || "\u00A0"}</span>
             <span className="tw-cursor" />
         </>
     )
@@ -99,24 +101,12 @@ export function Hero() {
     const y = useTransform(scrollY, [0, 400], [0, 60])
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
             {/* Background canvas */}
-            <div className="hero-canvas-wrap" aria-hidden="true">
+            {/* Background canvas constrained to right half behind stat card */}
+            <div className="hero-canvas-wrap hidden lg:block opacity-60 dark:opacity-80 absolute top-0 right-0 w-1/2 h-full z-0 clip-path-right" aria-hidden="true">
                 <HeroScene />
             </div>
-
-            {/* Vignette — lighter in light mode */}
-            <div className="absolute inset-0 z-10 pointer-events-none transition-colors duration-500 bg-gradient-to-br from-background/95 via-background/60 to-background/80 dark:from-background/55 dark:via-background/10 dark:to-background/70" />
-
-            {/* Subtle indigo radial */}
-            <div
-                className="absolute top-0 right-0 w-[700px] h-[700px] pointer-events-none z-10 opacity-30 dark:opacity-20"
-                style={{
-                    background: "radial-gradient(circle, rgba(var(--primary-rgb), 0.12) 0%, transparent 65%)",
-                    filter: "blur(80px)",
-                }}
-                aria-hidden="true"
-            />
 
             {/* Main content */}
             <motion.div
@@ -134,48 +124,44 @@ export function Hero() {
                                 initial={{ opacity: 0, y: -16 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="flex items-center gap-2.5 w-fit px-4 py-1.5 rounded-full glass border text-xs font-mono text-foreground/60"
+                                className="flex items-center gap-2.5 w-fit px-4 py-1.5 rounded-full card border text-xs font-mono text-foreground/60 shadow-sm"
                                 style={{ borderColor: "rgba(var(--primary-rgb), 0.2)" }}
                             >
                                 <span className="relative flex h-2 w-2" aria-hidden="true">
-                                    <span className="ping-ring" style={{ color: "var(--primary)" }} />
-                                    <span className="relative rounded-full h-2 w-2 bg-primary" />
+                                    <span className="ping-ring bg-emerald-500" />
+                                    <span className="relative rounded-full h-2 w-2 bg-emerald-500" />
                                 </span>
                                 Available for Architecture &amp; Consulting
-                                <Sparkles className="h-3 w-3 text-primary/60" />
+                                <Sparkles className="h-3 w-3 text-emerald-500" />
                             </motion.div>
 
                             {/* Name monogram */}
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                transition={{ delay: 0.1 }}
-                                className="flex items-center gap-3"
-                            >
-                                <div
-                                    className="h-10 w-10 rounded-2xl flex items-center justify-center font-black text-sm text-white flex-shrink-0 shadow-lg"
-                                    style={{ background: "linear-gradient(135deg, var(--primary), var(--secondary))" }}
-                                >
+                             <motion.div
+                                 initial={{ opacity: 0, scale: 0.95 }}
+                                 animate={{ opacity: 1, scale: 1 }}
+                                 transition={{ duration: 0.8, delay: 0.1, ease: [0.2, 0, 0, 1] }}
+                                 className="flex items-center gap-3"
+                             >
+                                <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center font-black text-sm text-primary-foreground shadow-sm">
                                     VM
                                 </div>
-                                <span className="text-xs font-mono tracking-[0.35em] uppercase text-foreground/40">
+                                <span className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-muted-foreground">
                                     {portfolioData.personal.name}
                                 </span>
                             </motion.div>
 
                             {/* Giant headline */}
                             <motion.h1
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.18, duration: 0.75, type: "spring", bounce: 0.18 }}
-                                className="display text-5xl sm:text-6xl md:text-7xl lg:text-[80px] text-foreground"
+                                transition={{ delay: 0.18, duration: 0.75, type: "spring", bounce: 0 }}
+                                className="display text-4xl sm:text-5xl md:text-7xl lg:text-[76px] text-foreground leading-[1.05] tracking-tight"
                             >
                                 I{" "}
                                 <Typewriter words={["Architect", "Advocate", "Innovate", "Empower", "Build"]} />
                                 <br />
-                                <span className="text-foreground/65">Digital</span>{" "}
-                                <span className="gradient-text">Excellence</span>
-                                <span className="text-primary/50">.</span>
+                                <span className="text-foreground">Digital</span>{" "}
+                                <span className="text-foreground">Excellence</span><span className="text-primary">.</span>
                             </motion.h1>
 
                             {/* Tagline */}
@@ -183,7 +169,7 @@ export function Hero() {
                                 initial={{ opacity: 0, y: 16 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.32, duration: 0.6 }}
-                                className="text-foreground/55 text-base md:text-lg max-w-lg leading-[1.75]"
+                                className="text-muted-foreground font-medium text-base md:text-lg max-w-lg leading-relaxed"
                             >
                                 {portfolioData.personal.summary}
                             </motion.p>
@@ -195,13 +181,17 @@ export function Hero() {
                                 transition={{ delay: 0.44 }}
                                 className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-1"
                             >
-                                <div className="flex gap-3">
-                                    <Link href="#projects" className="btn-primary">
-                                        View Work <ArrowUpRight className="h-4 w-4" />
-                                    </Link>
-                                    <Link href="#articles" className="btn-outline">
-                                        550K+ Reads
-                                    </Link>
+                                <div className="flex gap-4">
+                                    <Magnetic strength={0.2}>
+                                        <Link href="#projects" className="btn-primary">
+                                            View Work <ArrowUpRight className="h-4 w-4" />
+                                        </Link>
+                                    </Magnetic>
+                                    <Magnetic strength={0.2}>
+                                        <Link href="#articles" className="btn-outline">
+                                            550K+ Reads
+                                        </Link>
+                                    </Magnetic>
                                 </div>
 
                                 <div className="flex items-center gap-5 sm:border-l sm:border-border sm:pl-6">
@@ -237,18 +227,17 @@ export function Hero() {
                                     ].map(
                                         (s, i) =>
                                             s.href && (
-                                                <motion.a
-                                                    key={i}
-                                                    href={s.href}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    aria-label={s.label}
-                                                    whileHover={{ y: -3, scale: 1.15 }}
-                                                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                                                    className={`text-foreground/40 transition-colors ${s.cls}`}
-                                                >
-                                                    {s.icon}
-                                                </motion.a>
+                                                <Magnetic key={i} strength={0.3}>
+                                                    <motion.a
+                                                        href={s.href}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        aria-label={s.label}
+                                                        className={`text-muted-foreground transition-colors p-2 rounded-md hover:bg-muted ${s.cls}`}
+                                                    >
+                                                        {s.icon}
+                                                    </motion.a>
+                                                </Magnetic>
                                             )
                                     )}
                                 </div>
@@ -262,30 +251,29 @@ export function Hero() {
                             transition={{ delay: 0.5, duration: 0.7, type: "spring", bounce: 0.18 }}
                             className="hidden lg:block"
                         >
-                            <div className="glass-card card-accent-top gradient-border depth-shadow-lg p-8 rounded-2xl">
+                            <SpotlightCard className="p-8">
                                 {/* Header */}
                                 <div className="flex items-center gap-3 mb-8 pb-6 border-b border-border">
-                                    <div
-                                        className="h-12 w-12 rounded-2xl flex items-center justify-center font-black text-lg text-white flex-shrink-0"
-                                        style={{ background: "linear-gradient(135deg, var(--primary), var(--secondary))", boxShadow: "0 4px 16px rgba(var(--primary-rgb),0.35)" }}
-                                    >
-                                        VM
-                                    </div>
+                                    <Magnetic strength={0.15}>
+                                        <div className="h-12 w-12 rounded-xl flex items-center justify-center font-black text-lg bg-primary text-primary-foreground shadow-sm">
+                                            VM
+                                        </div>
+                                    </Magnetic>
                                     <div>
                                         <p className="font-bold text-foreground text-sm">{portfolioData.personal.name}</p>
-                                        <p className="text-xs text-foreground/50 mt-0.5 leading-tight">{portfolioData.personal.role}</p>
+                                        <p className="text-xs text-muted-foreground font-medium mt-0.5 leading-tight">{portfolioData.personal.role}</p>
                                     </div>
                                 </div>
 
                                 {/* Stats grid */}
                                 <div className="grid grid-cols-2 gap-4 mb-8">
                                     {STATS.map((s, i) => (
-                                        <div key={i} className="text-center p-4 rounded-xl bg-muted/50 hover:bg-primary/5 transition-colors cursor-default">
-                                            <div className="text-2xl font-black gradient-text font-heading">
+                                        <div key={i} className="text-center p-4 rounded-xl bg-muted transition-colors cursor-default">
+                                            <div className="text-2xl font-black text-primary font-heading">
                                                 <Counter to={s.to} suffix={s.suffix} />
                                             </div>
-                                            <div className="text-xs font-semibold text-foreground mt-1">{s.label}</div>
-                                            <div className="text-[10px] text-foreground/40 font-mono mt-0.5">{s.sub}</div>
+                                            <div className="text-xs font-bold text-foreground mt-1">{s.label}</div>
+                                            <div className="text-[10px] text-muted-foreground font-mono font-medium mt-0.5">{s.sub}</div>
                                         </div>
                                     ))}
                                 </div>
@@ -301,7 +289,7 @@ export function Hero() {
                                             className="flex items-center gap-3 group"
                                         >
                                             <span className="text-base leading-none">{c.emoji}</span>
-                                            <span className="text-xs font-medium text-foreground/65 group-hover:text-foreground transition-colors">
+                                            <span className="text-xs font-semibold text-muted-foreground group-hover:text-foreground transition-colors">
                                                 {c.text}
                                             </span>
                                         </motion.div>
@@ -314,9 +302,9 @@ export function Hero() {
                                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                                         <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                                     </span>
-                                    <span className="text-xs font-semibold text-foreground/60">Currently building at IBM</span>
+                                    <span className="text-xs font-bold text-muted-foreground">Currently building at IBM</span>
                                 </div>
-                            </div>
+                            </SpotlightCard>
                         </motion.div>
                     </div>
                 </div>
@@ -328,7 +316,7 @@ export function Hero() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.2 }}
                 style={{ opacity }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/25 z-30 pointer-events-none"
+                className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-foreground/25 z-30 pointer-events-none"
                 aria-hidden="true"
             >
                 <span className="text-[9px] font-mono tracking-[0.3em] uppercase">Scroll</span>

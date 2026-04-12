@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Briefcase, Calendar } from "lucide-react"
 import { portfolioData } from "@/data/portfolio"
+import { SpotlightCard } from "@/components/ui/SpotlightCard"
 
 const COMPANY_STYLES: Record<string, { color: string }> = {
     "ibm":              { color: "#6366f1" },
@@ -16,10 +17,16 @@ const getStyle = (name: string) =>
     COMPANY_STYLES[name.toLowerCase()] ?? { color: "var(--primary)" }
 
 export function Experience() {
-    const containerRef = useRef<HTMLElement>(null)
+    const sectionRef = useRef<HTMLElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start end", "end start"],
+    })
+
+    const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
     return (
-        <section id="experience" ref={containerRef} className="py-28 sm:py-36 relative overflow-hidden">
+        <section id="experience" ref={sectionRef} className="relative overflow-hidden" style={{ paddingBlock: 'var(--section-py)' }}>
             <div className="container mx-auto max-w-4xl relative z-10 px-4 sm:px-6">
 
                 {/* Header */}
@@ -41,12 +48,15 @@ export function Experience() {
 
                 {/* Left-rail Timeline */}
                 <div className="relative">
-                    {/* Single left rail line */}
+                    {/* Base rail */}
                     <div
-                        className="absolute left-5 top-2 bottom-2 w-px"
-                        style={{
-                            background: "linear-gradient(to bottom, var(--primary), rgba(var(--accent-rgb),0.3), transparent)",
-                        }}
+                        className="absolute left-5 top-2 bottom-2 w-[2px] bg-border/30 rounded-full"
+                        aria-hidden="true"
+                    />
+                    {/* Progress rail */}
+                    <motion.div
+                        className="absolute left-5 top-2 bottom-2 w-[2px] bg-primary origin-top rounded-full"
+                        style={{ scaleY }}
                         aria-hidden="true"
                     />
 
@@ -60,41 +70,27 @@ export function Experience() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-60px" }}
                                     transition={{ duration: 0.55, delay: i * 0.07, ease: [0.2, 0, 0, 1] }}
-                                    className="relative pl-14"
+                                    className="relative pl-14 sm:pl-0"
                                 >
                                     {/* Timeline dot */}
-                                    <div
-                                        className="absolute left-[14px] top-6 h-3 w-3 rounded-full -translate-x-1/2 z-10 ring-2 ring-background"
-                                        style={{ background: s.color, boxShadow: `0 0 10px ${s.color}80` }}
-                                        aria-hidden="true"
-                                    />
+                                    <div className="absolute left-0 sm:left-1/2 top-0 w-8 h-8 rounded-full bg-card border-[3px] border-primary z-10 flex items-center justify-center shadow-sm sm:-translate-x-1/2">
+                                        <div className="w-2 h-2 rounded-full bg-primary" />
+                                    </div>
 
-                                    {/* Card */}
-                                    <div
-                                        className="glass-card card-hover p-6 sm:p-7 relative overflow-hidden group border-l-2"
-                                        style={{ borderLeftColor: `${s.color}70` }}
+                                    <SpotlightCard
+                                        className="p-6 sm:p-7 relative overflow-hidden group border-l-2"
+                                        containerClassName="card-hover"
+                                        style={{ borderLeftColor: `var(--border)` }}
                                     >
-                                        {/* Hover glow */}
-                                        <div
-                                            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[inherit]"
-                                            style={{ background: `radial-gradient(circle at top left, ${s.color}0c 0%, transparent 65%)` }}
-                                            aria-hidden="true"
-                                        />
-
-                                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3 relative z-10">
+                                        <div className="flex flex-wrap flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3 relative z-10">
                                             <div>
                                                 <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
                                                     {job.role}
                                                 </h3>
-                                                <div
-                                                    className="text-sm font-semibold font-mono mt-1"
-                                                    style={{ color: s.color }}
-                                                >
-                                                    {job.company}
-                                                </div>
+                                                <p className="text-sm font-medium text-muted-foreground mt-0.5">{job.company}</p>
                                             </div>
                                             <div
-                                                className="flex items-center gap-1.5 shrink-0 text-[10px] font-mono text-foreground/50 glass-panel px-2.5 py-1.5 rounded-full self-start"
+                                                className="flex items-center gap-1.5 shrink-0 px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-medium w-fit"
                                                 aria-label={`Employment period: ${job.period}`}
                                             >
                                                 <Calendar className="h-2.5 w-2.5" aria-hidden="true" />
@@ -102,10 +98,10 @@ export function Experience() {
                                             </div>
                                         </div>
 
-                                        <p className="text-sm text-foreground/65 leading-relaxed relative z-10">
+                                        <p className="text-sm text-foreground/80 leading-relaxed relative z-10">
                                             {job.description}
                                         </p>
-                                    </div>
+                                    </SpotlightCard>
                                 </motion.div>
                             )
                         })}

@@ -6,6 +6,7 @@ import { useTheme } from "next-themes"
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { Magnetic } from "@/components/ui/Magnetic"
 
 const NAV = [
     { name: "About", href: "#about" },
@@ -62,28 +63,30 @@ export function Navbar() {
 
             <header className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-                scrolled ? "glass-nav" : "bg-transparent"
+                scrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent"
             )}>
                 <div className="container mx-auto max-w-6xl flex items-center justify-between h-16 px-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2.5 group">
-                        <motion.div
-                            whileHover={{ scale: 1.08, rotate: -3 }}
-                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                            className="h-8 w-8 rounded-xl flex items-center justify-center font-black text-sm font-heading"
-                            style={{
-                                background: "linear-gradient(135deg, var(--primary), var(--secondary))",
-                                color: "#fff",
-                                boxShadow: "0 2px 12px rgba(var(--primary-rgb), 0.4)"
-                            }}
-                        >
-                            VM
-                        </motion.div>
-                        <span className="hidden sm:inline font-bold font-heading text-foreground/80 group-hover:text-foreground transition-colors">
-                            Vidyasagar
-                        </span>
-                        <span className="gradient-text text-2xl font-black leading-none">.</span>
-                    </Link>
+                    <Magnetic strength={0.2}>
+                        <Link href="/" className="flex items-center gap-2.5 group">
+                            <motion.div
+                                whileHover={{ scale: 1.08, rotate: -3 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                className="h-8 w-8 rounded-xl flex items-center justify-center font-black text-sm font-heading"
+                                style={{
+                                    background: "linear-gradient(135deg, var(--primary), var(--secondary))",
+                                    color: "#fff",
+                                    boxShadow: "0 2px 12px rgba(var(--primary-rgb), 0.4)"
+                                }}
+                            >
+                                VM
+                            </motion.div>
+                            <span className="hidden sm:inline font-bold font-heading text-foreground/80 group-hover:text-foreground transition-colors">
+                                Vidyasagar
+                            </span>
+                            <span className="gradient-text text-2xl font-black leading-none">.</span>
+                        </Link>
+                    </Magnetic>
 
                     {/* Desktop nav */}
                     <nav className="hidden md:flex items-center gap-0.5">
@@ -91,27 +94,28 @@ export function Navbar() {
                             const id = href.replace("#", "")
                             const isActive = active === id
                             return (
-                                <Link
-                                    key={name}
-                                    href={href}
-                                    className={cn(
-                                        "relative px-3.5 py-1.5 text-sm font-mono rounded-xl transition-colors duration-200",
-                                        isActive ? "text-primary" : "text-foreground/75 hover:text-foreground"
-                                    )}
-                                >
-                                    {name}
-                                    {isActive && (
-                                        <motion.div
-                                            layoutId="nav-active"
-                                            className="absolute inset-0 rounded-xl -z-10"
-                                            style={{
-                                                background: "rgba(var(--primary-rgb), 0.1)",
-                                                border: "1px solid rgba(var(--primary-rgb), 0.2)"
-                                            }}
-                                            transition={{ type: "spring", stiffness: 400, damping: 40 }}
-                                        />
-                                    )}
-                                </Link>
+                                <Magnetic key={name} strength={0.15}>
+                                    <Link
+                                        href={href}
+                                        className={cn(
+                                            "relative px-3.5 py-1.5 text-sm font-mono rounded-xl transition-colors duration-200",
+                                            isActive ? "text-primary" : "text-foreground/75 hover:text-foreground"
+                                        )}
+                                    >
+                                        {name}
+                                        {isActive && (
+                                            <motion.div
+                                                layoutId="nav-active"
+                                                className="absolute inset-0 rounded-xl -z-10"
+                                                style={{
+                                                    background: "rgba(var(--primary-rgb), 0.1)",
+                                                    border: "1px solid rgba(var(--primary-rgb), 0.2)"
+                                                }}
+                                                transition={{ type: "spring", stiffness: 400, damping: 40 }}
+                                            />
+                                        )}
+                                    </Link>
+                                </Magnetic>
                             )
                         })}
 
@@ -119,37 +123,39 @@ export function Navbar() {
 
                         {/* Theme toggle */}
                         {mounted && (
-                            <motion.button
-                                onClick={() => setTheme(isDark ? "light" : "dark")}
-                                whileTap={{ scale: 0.88, rotate: isDark ? -30 : 30 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                                className="h-9 w-9 rounded-xl flex items-center justify-center glass-panel border border-border/60 hover:border-primary/30 transition-colors relative overflow-hidden"
-                                aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-                            >
-                                <AnimatePresence mode="wait" initial={false}>
-                                    {isDark ? (
-                                        <motion.div
-                                            key="sun"
-                                            initial={{ rotate: -90, opacity: 0, y: 8 }}
-                                            animate={{ rotate: 0, opacity: 1, y: 0 }}
-                                            exit={{ rotate: 90, opacity: 0, y: -8 }}
-                                            transition={{ duration: 0.2 }}
-                                        >
-                                            <Sun className="h-4 w-4 text-amber-400" />
-                                        </motion.div>
-                                    ) : (
-                                        <motion.div
-                                            key="moon"
-                                            initial={{ rotate: 90, opacity: 0, y: 8 }}
-                                            animate={{ rotate: 0, opacity: 1, y: 0 }}
-                                            exit={{ rotate: -90, opacity: 0, y: -8 }}
-                                            transition={{ duration: 0.2 }}
-                                        >
-                                            <Moon className="h-4 w-4 text-blue-400" />
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.button>
+                            <Magnetic strength={0.25}>
+                                <motion.button
+                                    onClick={() => setTheme(isDark ? "light" : "dark")}
+                                    whileTap={{ scale: 0.88, rotate: isDark ? -30 : 30 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                                    className="h-9 w-9 rounded-xl flex items-center justify-center bg-card border border-border hover:border-muted-foreground transition-colors relative overflow-hidden"
+                                    aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+                                >
+                                    <AnimatePresence mode="wait" initial={false}>
+                                        {isDark ? (
+                                            <motion.div
+                                                key="sun"
+                                                initial={{ rotate: -90, opacity: 0, y: 8 }}
+                                                animate={{ rotate: 0, opacity: 1, y: 0 }}
+                                                exit={{ rotate: 90, opacity: 0, y: -8 }}
+                                                transition={{ duration: 0.2 }}
+                                            >
+                                                <Sun className="h-4 w-4 text-foreground" />
+                                            </motion.div>
+                                        ) : (
+                                            <motion.div
+                                                key="moon"
+                                                initial={{ rotate: 90, opacity: 0, y: 8 }}
+                                                animate={{ rotate: 0, opacity: 1, y: 0 }}
+                                                exit={{ rotate: -90, opacity: 0, y: -8 }}
+                                                transition={{ duration: 0.2 }}
+                                            >
+                                                <Moon className="h-4 w-4 text-foreground" />
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.button>
+                            </Magnetic>
                         )}
                     </nav>
 
@@ -158,7 +164,7 @@ export function Navbar() {
                         {mounted && (
                             <button
                                 onClick={() => setTheme(isDark ? "light" : "dark")}
-                                className="h-10 w-10 flex items-center justify-center rounded-xl glass-panel border border-border/50 relative overflow-hidden"
+                                className="h-10 w-10 flex items-center justify-center rounded-xl bg-card border border-border relative overflow-hidden"
                                 aria-label="Toggle theme"
                             >
                                 <AnimatePresence mode="wait" initial={false}>
@@ -182,7 +188,7 @@ export function Navbar() {
                             onClick={() => setOpen(!open)}
                             aria-label="Toggle navigation menu"
                             aria-expanded={open}
-                            className="h-10 w-10 flex items-center justify-center rounded-xl glass-panel border border-border/50 transition-colors"
+                            className="h-10 w-10 flex items-center justify-center rounded-xl bg-card border border-border transition-colors"
                         >
                             <AnimatePresence mode="wait">
                                 {open
@@ -206,7 +212,7 @@ export function Navbar() {
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.22, ease: "easeInOut" }}
-                            className="md:hidden glass-nav border-t border-border/40 overflow-hidden"
+                            className="md:hidden bg-background border-t border-border overflow-hidden shadow-lg"
                         >
                             <nav className="flex flex-col px-4 py-3 gap-1">
                                 {NAV.map(({ name, href }) => {
