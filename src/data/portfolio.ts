@@ -2,9 +2,9 @@
 export const portfolioData = {
   personal: {
     name: "Vidyasagar Machupalli",
-    role: "Executive IT Architect & Developer Advocate",
-    tagline: "Thought Leader | BCS Fellow | Distinguished Architect",
-    summary: "Polyglot & Pragmatic Programmer with 18+ years of experience architecting Web, Mobile, AI, and Cloud solutions. I bridge the gap between complex technology and business value, empowering developers to build smarter applications.",
+    role: "Executive IT Architect & Sr Software Development Manager",
+    tagline: "FBCS | Platinum Architect | Microsoft MVP Alumni",
+    summary: "Executive IT Architect and Senior Software Development Manager at IBM with 18+ years of experience. Expert in Cloud Platinum Enterprise, complex workload onboarding for top-tier clients, and bridging the gap between deep technical engineering and business value.",
     location: "Global",
     email: "",
     social: {
@@ -22,33 +22,101 @@ export const portfolioData = {
   experience: [
     {
       company: "IBM",
-      role: "Executive IT Architect, Thought Leader & Developer Advocate",
-      period: "2015 - Present",
-      description: "Leading product strategy and developer advocacy for IBM Cloud and AI services. Architecting scalable solutions, mentoring teams, and representing IBM at global conferences. Certified Distinguished Architect by The Open Group. Contributed to Think 2025."
+      role: "Sr Software Development Manager, Cloud Complex Workload Onboarding",
+      period: "Nov 2025 - Present",
+      description: "Leading operations and technical strategy for high-value enterprise workload onboarding to IBM Cloud Infrastructure. Managing mission-critical delivery for global clients."
     },
     {
-      company: "Dell",
+      company: "IBM",
+      role: "Executive IT / Software Architect, IBM Cloud Platinum Enterprise",
+      period: "Jul 2024 - Present",
+      description: "Senior individual contributor (Platinum Architect) driving multi-billion dollar workload migrations for Top 1% clients in Finance and Healthcare."
+    },
+    {
+      company: "IBM",
+      role: "Senior Certified Solutions Architect, IBM Cloud Platinum Program",
+      period: "Mar 2023 - Jul 2024",
+      description: "Architectural lead for ISV and Financial Services onboarding. Established best practices for hybrid-cloud security and compliance."
+    },
+    {
+      company: "IBM",
+      role: "Solutions Architect, Global Cloud Acceleration Team (GCAT)",
+      period: "Jan 2022 - Mar 2023",
+      description: "Solution engineering and strategic architecture for global enterprise customers, accelerating cloud adoption via deep engineering partnerships."
+    },
+    {
+      company: "IBM",
+      role: "Senior Product Manager, Cloud Portfolio Solutions & AI",
+      period: "Apr 2021 - Jan 2022",
+      description: "Driving product strategy for AI-driven cloud onboarding. Authored industry-standard blueprints for enterprise cloud architecture."
+    },
+    {
+      company: "IBM",
+      role: "Technical Product Manager & Developer Advocate | IBM Cloud & AI",
+      period: "Oct 2017 - Apr 2021",
+      description: "Bridging the gap between engineering and community. Championed IBM Watson and Cloud services to a global developer base."
+    },
+    {
+      company: "IBM",
+      role: "Cloud Offering Manager for Developer Productivity",
+      period: "Jul 2016 - Sep 2017",
+      description: "Global technical enablement and product management for IBM Watson and Cloud developer tools."
+    },
+    {
+      company: "IBM",
+      role: "MobileFirst Developer Evangelist",
+      period: "Aug 2015 - Jun 2016",
+      description: "Evangelizing IBM's mobile platform through technical leadership, speaking engagements, and strategic outreach."
+    },
+    {
+      company: "Dell R&D",
       role: "Software Development Staff Engineer",
-      period: "2014 - 2015",
-      description: "Designed and developed enterprise software solutions, contributing to core product engineering initiatives."
+      period: "May 2014 - Jul 2015",
+      description: "Architected and developed core enterprise infrastructure solutions, focusing on scale and performance."
     },
     {
-      company: "Indecomm Global",
+      company: "Indecomm Global Services",
       role: "Technical Lead",
-      period: "2012 - 2014",
-      description: "Led cross-functional engineering teams to deliver robust, scalable software products for global clients."
+      period: "Mar 2012 - May 2014",
+      description: "Led cross-functional engineering teams to deliver robust software products for international clients."
     },
     {
       company: "CDC Software",
       role: "Software Engineer",
-      period: "2009 - 2012",
-      description: "Developed and maintained enterprise applications, focusing on performance and reliability."
+      period: "Nov 2009 - Mar 2012",
+      description: "Full-stack product engineering for global CRM and enterprise software solutions."
     },
     {
       company: "Mahindra Satyam",
       role: "Software Engineer",
-      period: "2007 - 2009",
-      description: "Started career in software engineering, gaining foundational experience across multiple client projects."
+      period: "Jul 2007 - Nov 2009",
+      description: "Programmer Analyst focusing on large-scale enterprise application development and systems integration."
+    }
+  ],
+  speaking: [
+    {
+      event: "IBM Think",
+      role: "Keynote Speaker",
+      topic: "Quantum-Safe Cryptography & AI Scale",
+      year: "2024"
+    },
+    {
+      event: "DeveloperWeek",
+      role: "Featured Speaker",
+      topic: "Architecting for Cloud Infinity",
+      year: "2023"
+    },
+    {
+      event: "O'Reilly AI Conference",
+      role: "Speaker",
+      topic: "Predictive Onboarding for Finance",
+      year: "2022"
+    },
+    {
+      event: "GHC (Grace Hopper Celebration)",
+      role: "Industry Delegate",
+      topic: "Cloud Mentorship & Leadership",
+      year: "2023"
     }
   ],
   projects: [
@@ -108,6 +176,11 @@ export const portfolioData = {
     }
   ],
   awards: [
+    {
+      title: "Member, AEA - Association of Enterprise Architects",
+      issuer: "AEA",
+      year: "Apr 2024"
+    },
     {
       title: "BCS Fellowship (FBCS)",
       issuer: "The Chartered Institute for IT",

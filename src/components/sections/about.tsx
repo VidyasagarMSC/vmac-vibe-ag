@@ -32,138 +32,115 @@ export function About() {
         <section id="about" className="relative overflow-hidden" style={{ paddingBlock: 'var(--section-py)' }}>
             {/* Subtle background accent */}
             <div
-                className="absolute top-0 left-0 w-[600px] h-[600px] pointer-events-none -z-10 opacity-40 dark:opacity-20"
+                className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none -z-10 opacity-30"
                 style={{
-                    background: "radial-gradient(circle, rgba(var(--primary-rgb), 0.07) 0%, transparent 65%)",
-                    filter: "blur(80px)",
+                    background: "radial-gradient(circle, rgba(var(--primary-rgb), 0.1) 0%, transparent 70%)",
+                    filter: "blur(60px)",
                 }}
                 aria-hidden="true"
             />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <div className="grid lg:grid-cols-2 gap-14 lg:gap-24 items-start">
+                <div className="grid lg:grid-cols-12 gap-10 xl:gap-20 items-stretch">
 
-                    {/* Left — bio */}
-                    <div>
-                        <motion.div {...fadeUp(0)} className="mb-5">
-                            <span className="label"><Zap className="h-3 w-3" aria-hidden="true" /> The Story</span>
+                    {/* Left 7/12 — Narrative & Mastery */}
+                    <div className="lg:col-span-7 flex flex-col justify-center">
+                        <motion.div {...fadeUp(0)} className="mb-4">
+                            <span className="label font-bold uppercase tracking-widest text-[10px]"><Zap className="h-2.5 w-2.5" aria-hidden="true" /> The Mission</span>
                         </motion.div>
 
                         <motion.h2
                             {...fadeUp(0.06)}
-                            className="display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-8 tracking-tighter"
+                            className="display text-5xl md:text-6xl xl:text-8xl mb-10 tracking-tighter leading-[0.9]"
                         >
-                            The mind<br />
-                            <span className="gradient-text">behind the code</span>.
+                            Bridging <span className="text-muted-foreground/40">binary</span><br />
+                            with <span className="gradient-text">business value</span>.
                         </motion.h2>
 
-                        <div className="space-y-5 text-foreground/65 leading-[1.8] text-sm sm:text-base">
-                            {[
-                                "I'm an Executive IT Architect, Senior Product Manager & Developer Advocate at IBM — a role I've held since 2015, building on experience at Mahindra Satyam, CDC Software, Indecomm, and Dell.",
-                                "I specialize in AI, Quantum Computing, Cloud Architecture, and Developer Experience — translating theoretical complexity into real-world business value, then writing about it for 550K+ readers worldwide.",
-                                "In 2024 I was elected a BCS Fellow (FBCS) and certified as Distinguished Architect by The Open Group — two of the field's highest independent recognitions.",
-                            ].map((para, i) => (
-                                <motion.p key={i} {...staggerChild(i)} className="leading-[1.8]">
-                                    {para}
-                                </motion.p>
-                            ))}
+                        <div className="space-y-6 text-foreground/75 leading-relaxed text-sm sm:text-lg max-w-2xl">
+                            <motion.p {...staggerChild(0)}>
+                                As an <span className="text-foreground font-bold">Executive IT Architect & Sr Software Development Manager at IBM</span>, I operate at the intersection of deep technical engineering and strategic leadership. Since 2007, I've specialized in transforming complex theoretical landscapes—from AI to Quantum Computing—into scalable, enterprise-grade solutions.
+                            </motion.p>
+                            <motion.p {...staggerChild(1)}>
+                                I don't just architect systems; I architect ecosystems. My work involves onboarding the world's most complex workloads for Top 1% clients, ensuring that technology serves as a catalyst for multi-billion dollar digital transformations.
+                            </motion.p>
+                            <motion.p {...staggerChild(2)} className="text-muted-foreground font-medium">
+                                Elected Fellow of the British Computer Society (FBCS) and Distinguished Architect, I am committed to mentorship, global standards, and the relentless pursuit of technical excellence.
+                            </motion.p>
                         </div>
 
-                        {/* Interest chips */}
+                        {/* Domain Chips */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            viewport={{ once: true as const }}
-                            transition={{ delay: 0.3 }}
-                            className="flex flex-wrap gap-x-2 gap-y-2.5 mt-8"
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4 }}
+                            className="flex flex-wrap gap-2 mt-10"
                         >
                             {portfolioData.about.interests.map((interest, i) => (
-                                <motion.span
+                                <span
                                     key={i}
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.06, type: "spring", bounce: 0.35 }}
-                                    className="badge bg-muted/50"
+                                    className="px-3 py-1 rounded-full bg-secondary/30 text-[11px] font-bold text-secondary-foreground border border-border/50"
                                 >
                                     {interest}
-                                </motion.span>
+                                </span>
                             ))}
                         </motion.div>
                     </div>
 
-                    {/* Right — identity card */}
+                    {/* Right 5/12 — Executive Persona Card */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
+                        className="lg:col-span-5 flex"
+                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.7, type: "spring", bounce: 0.16 }}
+                        transition={{ duration: 0.8, type: "spring", bounce: 0.1 }}
                     >
-                        <SpotlightCard className="p-7 sm:p-9">
-                            {/* Identity header */}
-                            <div className="flex items-center gap-4 pb-6 border-b border-border mb-7">
-                                <Magnetic strength={0.1}>
-                                    <div
-                                        className="h-14 w-14 rounded-2xl flex items-center justify-center font-black text-xl text-primary-foreground flex-shrink-0"
-                                        style={{
-                                            background: "var(--primary)",
-                                        }}
-                                        aria-label="VM initials"
-                                    >
-                                        VM
-                                    </div>
-                                </Magnetic>
+                        <SpotlightCard className="p-8 sm:p-10 flex flex-col h-full w-full bg-card/40 backdrop-blur-xl border-border/50">
+                            <div className="flex items-center gap-5 mb-10">
+                                <div className="h-16 w-16 rounded-2xl bg-primary flex items-center justify-center text-white text-2xl font-black shadow-2xl shadow-primary/20">
+                                    VM
+                                </div>
                                 <div className="min-w-0">
-                                    <p className="font-bold text-foreground truncate">{portfolioData.personal.name}</p>
-                                    <p className="text-xs text-foreground/55 mt-0.5 truncate leading-snug">{portfolioData.personal.role}</p>
-                                    <div className="flex items-center gap-1.5 mt-1.5 text-xs text-muted-foreground font-semibold">
-                                        <MapPin className="h-3 w-3 flex-shrink-0" aria-hidden="true" />
-                                        <span>Global · IBM</span>
-                                    </div>
+                                    <h3 className="font-bold text-xl tracking-tight leading-tight">{portfolioData.personal.name}</h3>
+                                    <p className="text-xs text-muted-foreground font-medium mt-1 leading-snug">{portfolioData.personal.role}</p>
                                 </div>
                             </div>
 
-                            {/* Key stats — horizontal row */}
-                            <div className="grid grid-cols-2 gap-3 mb-7">
+                            <div className="grid grid-cols-1 gap-4 flex-grow">
                                 {BIG_STATS.map((s, i) => {
                                     const Icon = s.icon
                                     return (
-                                        <div
-                                            key={i}
-                                            className="card p-4 transition-colors cursor-default"
-                                        >
-                                            <div
-                                                className="h-6 w-6 rounded-lg flex items-center justify-center mb-2.5"
-                                                style={{ background: `${s.color}14` }}
-                                                aria-hidden="true"
-                                            >
-                                                <Icon className="h-3 w-3" style={{ color: s.color }} />
+                                        <div key={i} className="flex items-center justify-between p-4 rounded-2xl bg-background/50 border border-border/40 group hover:border-primary/20 transition-all">
+                                            <div className="flex items-center gap-4">
+                                                <div className="h-10 w-10 rounded-xl bg-muted flex items-center justify-center group-hover:bg-primary/5 transition-colors">
+                                                    <Icon className="h-5 w-5" style={{ color: s.color }} />
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{s.label}</p>
+                                                    <p className="text-lg font-black leading-tight mt-0.5">{s.value}</p>
+                                                </div>
                                             </div>
-                                            <div className="text-2xl font-black text-foreground">{s.value}</div>
-                                            <div className="text-xs font-semibold text-foreground mt-0.5">{s.label}</div>
-                                            <div className="text-[10px] text-foreground/40 font-mono mt-0.5">{s.sub}</div>
+                                            <div className="text-[9px] font-mono text-muted-foreground pr-2 hidden sm:block">
+                                                {s.sub}
+                                            </div>
                                         </div>
                                     )
                                 })}
                             </div>
 
-                            {/* Status bar */}
-                            <div className="flex items-center gap-3 pt-5 border-t border-border">
-                                <span className="relative flex h-2.5 w-2.5 shrink-0" aria-hidden="true">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                                </span>
-                                <div className="min-w-0 flex-1">
-                                    <p className="text-xs font-bold text-foreground">Currently building at IBM</p>
-                                    <p className="text-[10px] text-foreground/40 mt-0.5">Open to speaking engagements worldwide</p>
+                            <div className="mt-10 pt-8 border-t border-border/50 flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                                    <p className="text-[11px] font-bold text-foreground">Active at IBM Global</p>
                                 </div>
-                                <a
-                                    href="#contact"
-                                    className="ml-auto flex items-center gap-1 text-xs font-bold text-primary hover:underline whitespace-nowrap flex-shrink-0"
-                                    aria-label="Jump to contact section"
-                                >
-                                    Contact <ArrowRight className="h-3 w-3" aria-hidden="true" />
-                                </a>
+                                <div className="flex gap-4">
+                                    {Object.entries(portfolioData.personal.social).slice(0, 3).map(([key, url]) => (
+                                        <a key={key} href={url as string} target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+                                            <Globe className="h-4 w-4" />
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         </SpotlightCard>
                     </motion.div>

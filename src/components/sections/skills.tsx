@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { portfolioData } from "@/data/portfolio"
 import { Cpu, Database, Layout, Server, Award, Trophy, Star, Sparkles, Zap } from "lucide-react"
 import { SpotlightCard } from "@/components/ui/SpotlightCard"
+import { cn } from "@/lib/utils"
 
 const CAT_CONFIG = [
     { icon: Layout,   color: "#818cf8", bg: "rgba(129,140,248,0.08)", name: "Languages"         },
@@ -50,118 +51,134 @@ export function Skills() {
                     </h2>
                 </motion.div>
 
-                {/* 4-panel bento: 3 skill categories + 1 awards */}
-                <div className="grid lg:grid-cols-[1fr_1fr_1fr_340px] gap-5">
+                {/* Modern Bento Grid: High-density layout */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 auto-rows-fr">
 
-                    {/* Skill category panels */}
-                    {portfolioData.skills.map((cat, ci) => {
-                        const cfg = CAT_CONFIG[ci] ?? CAT_CONFIG[0]
-                        const Icon = cfg.icon
-                        return (
-                            <motion.div
-                                key={ci}
-                                initial={{ opacity: 0, y: 28 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: ci * 0.07, duration: 0.5, ease: [0.2, 0, 0, 1] }}
-                                className="h-full"
-                            >
-                                <SpotlightCard className="p-6 h-full">
-                                <div className="flex items-center gap-2.5 mb-5">
-                                    <div
-                                        className="p-1.5 rounded-lg"
-                                        style={{ background: cfg.bg }}
-                                        aria-hidden="true"
-                                    >
-                                        <Icon className="h-3.5 w-3.5" style={{ color: cfg.color }} />
-                                    </div>
-                                    <span
-                                        className="text-[10px] font-black font-mono uppercase tracking-widest"
-                                        style={{ color: cfg.color }}
-                                    >
-                                        {cat.category}
-                                    </span>
-                                </div>
-                                <div className="flex flex-wrap gap-2">
-                                    {cat.items.map((skill, si) => (
-                                        <motion.span
-                                            key={si}
-                                            initial={{ opacity: 0, scale: 0.7 }}
-                                            whileInView={{ opacity: 1, scale: 1 }}
-                                            viewport={{ once: true }}
-                                            transition={{ delay: si * 0.04 + ci * 0.05, type: "spring", bounce: 0.3 }}
-                                            className="badge"
-                                        >
-                                            {skill}
-                                        </motion.span>
-                                    ))}
-                                </div>
-                                </SpotlightCard>
-                            </motion.div>
-                        )
-                    })}
-
-                    {/* Awards panel */}
+                    {/* Languages Panel - 4 cols */}
                     <motion.div
-                        initial={{ opacity: 0, x: 28 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        className="lg:col-span-4 h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ type: "spring", bounce: 0.16, delay: 0.2 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <SpotlightCard className="p-6">
-                        <h3 className="font-bold text-base mb-5 flex items-center gap-2">
-                            <Award className="h-4 w-4 text-primary" aria-hidden="true" /> Recognition
-                        </h3>
+                        <SkillCard category={portfolioData.skills[0]} cfg={CAT_CONFIG[0]} />
+                    </motion.div>
 
-                        {/* Top 2 awards */}
-                        <div className="grid grid-cols-2 gap-2.5 mb-5 pb-5 border-b border-border">
-                            {portfolioData.awards.slice(0, 2).map((a, i) => (
-                                <div
-                                    key={i}
-                                    className="rounded-xl p-3.5 text-center cursor-default bg-muted hover:bg-muted/80 border border-border"
-                                >
-                                    <Trophy className="h-5 w-5 text-amber-400 mx-auto mb-2" aria-hidden="true" />
-                                    <p className="text-[10px] font-bold text-foreground leading-tight">{a.title}</p>
-                                    <p className="text-[9px] text-muted-foreground font-mono mt-1 font-semibold">{a.year}</p>
+                    {/* Frameworks Panel - 4 cols */}
+                    <motion.div
+                        className="lg:col-span-4 h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <SkillCard category={portfolioData.skills[2]} cfg={CAT_CONFIG[2]} />
+                    </motion.div>
+
+                    {/* Cloud & AI Panel - 4 cols */}
+                    <motion.div
+                        className="lg:col-span-4 h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                    >
+                        <SkillCard category={portfolioData.skills[1]} cfg={CAT_CONFIG[1]} />
+                    </motion.div>
+
+                    {/* Architecture Panel - 6 cols (Wide) */}
+                    <motion.div
+                        className="lg:col-span-6 h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
+                        <SkillCard category={portfolioData.skills[3]} cfg={CAT_CONFIG[3]} isHorizontal />
+                    </motion.div>
+
+                    {/* Awards panel - 6 cols (Wide) */}
+                    <motion.div
+                        className="lg:col-span-6 h-full"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                        <SpotlightCard className="p-7 h-full flex flex-col">
+                            <h3 className="font-bold text-base mb-6 flex items-center gap-2">
+                                <Award className="h-4 w-4 text-amber-400" aria-hidden="true" /> Global Recognition
+                            </h3>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
+                                {/* Featured Top Award */}
+                                <div className="p-5 rounded-2xl bg-muted border border-border flex flex-col justify-center items-center text-center group hover:border-primary/20 transition-all">
+                                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                        <Trophy className="h-6 w-6 text-primary" />
+                                    </div>
+                                    <p className="text-sm font-bold leading-tight mb-1">{portfolioData.awards[0].title}</p>
+                                    <p className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">{portfolioData.awards[0].year}</p>
                                 </div>
-                            ))}
-                        </div>
 
-                        {/* Remaining awards */}
-                        <div className="space-y-3">
-                            {portfolioData.awards.slice(2).map((award, i) => {
-                                const cfg = getAward(award.title)
-                                const AIcon = cfg.icon
-                                return (
-                                    <motion.div
-                                        key={i}
-                                        whileHover={{ x: 5 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 28 }}
-                                        className="flex items-center gap-3 group cursor-default"
-                                    >
-                                        <div
-                                            className="h-7 w-7 rounded-lg flex items-center justify-center shrink-0"
-                                            style={{ background: `${cfg.color}12` }}
-                                            aria-hidden="true"
-                                        >
-                                            <AIcon className="h-3 w-3" style={{ color: cfg.color }} />
-                                        </div>
-                                        <div className="min-w-0">
-                                            <p className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors truncate leading-snug">
-                                                {award.title}
-                                            </p>
-                                            <p className="text-[9px] text-muted-foreground font-mono truncate font-semibold">
-                                                {award.issuer} · {award.year}
-                                            </p>
-                                        </div>
-                                    </motion.div>
-                                )
-                            })}
-                        </div>
+                                {/* Scrolling/List Recognition */}
+                                <div className="space-y-4 max-h-[140px] overflow-y-auto pr-2 custom-scrollbar">
+                                    {portfolioData.awards.slice(1, 5).map((award, i) => {
+                                        const cfg = getAward(award.title)
+                                        const AIcon = cfg.icon
+                                        return (
+                                            <div key={i} className="flex items-center gap-3">
+                                                <div className="h-8 w-8 rounded-lg bg-background border border-border flex items-center justify-center shrink-0">
+                                                    <AIcon className="h-3.5 w-3.5" style={{ color: cfg.color }} />
+                                                </div>
+                                                <div className="min-w-0">
+                                                    <p className="text-xs font-bold truncate">{award.title}</p>
+                                                    <p className="text-[10px] text-muted-foreground truncate">{award.issuer}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </div>
                         </SpotlightCard>
                     </motion.div>
                 </div>
             </div>
         </section>
+    )
+}
+
+function SkillCard({ category, cfg, isHorizontal = false }: { category: any, cfg: any, isHorizontal?: boolean }) {
+    const Icon = cfg.icon
+    return (
+        <SpotlightCard className="p-7 h-full flex flex-col">
+            <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-xl" style={{ background: cfg.bg }} aria-hidden="true">
+                    <Icon className="h-4 w-4" style={{ color: cfg.color }} />
+                </div>
+                <h3 className="text-xs font-black font-mono uppercase tracking-[0.2em]" style={{ color: cfg.color }}>
+                    {category.category}
+                </h3>
+            </div>
+            <div className={cn(
+                "flex flex-wrap gap-2.5",
+                isHorizontal ? "grid grid-cols-2 sm:grid-cols-3 gap-3" : ""
+            )}>
+                {category.items.map((skill: string, si: number) => (
+                    <motion.span
+                        key={si}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: si * 0.03 }}
+                        className={cn(
+                            "badge px-3 py-1.5 text-[11px] font-semibold",
+                            isHorizontal ? "w-full justify-center" : ""
+                        )}
+                    >
+                        {skill}
+                    </motion.span>
+                ))}
+            </div>
+        </SpotlightCard>
     )
 }

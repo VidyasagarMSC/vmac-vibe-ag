@@ -28,6 +28,7 @@
   --muted-foreground: #71717a;
   --border: #e4e4e7;
   --primary: #4f46e5;
+  --primary-rgb: 79, 70, 229;
   --primary-foreground: #ffffff;
   --radius: 12px;
   --section-py: 5rem;
@@ -44,6 +45,7 @@
   --muted-foreground: #a1a1aa;
   --border: #27272a;
   --primary: #6366f1;
+  --primary-rgb: 99, 102, 241;
   --primary-foreground: #ffffff;
   --section-py: 7rem;
   --hover-bg: rgba(255, 255, 255, 0.02);
