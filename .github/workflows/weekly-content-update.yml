@@ -67,6 +67,40 @@ jobs:
 
           echo "All RSS feeds fetched."
 
+      - name: Fetch LinkedIn profile data
+        continue-on-error: true
+        run: |
+          echo "Fetching LinkedIn profile data..."
+          
+          # Fetch public LinkedIn profile data using RapidAPI or similar service
+          # Note: This requires LINKEDIN_API_KEY secret to be set in repository settings
+          if [ -n "${{ secrets.LINKEDIN_API_KEY }}" ]; then
+            curl -s "https://linkedin-data-api.p.rapidapi.com/get-profile-data-by-url?url=https://www.linkedin.com/in/vidyasagarmsc" \
+              -H "X-RapidAPI-Key: ${{ secrets.LINKEDIN_API_KEY }}" \
+              -H "X-RapidAPI-Host: linkedin-data-api.p.rapidapi.com" \
+              --max-time 30 -o linkedin_profile.json || echo "{}" > linkedin_profile.json
+            echo "LinkedIn data fetched."
+          else
+            echo "LinkedIn API key not configured - skipping LinkedIn fetch."
+            echo "{}" > linkedin_profile.json
+          fi
+
+      - name: Fetch additional platform stats
+        continue-on-error: true
+        run: |
+          echo "Fetching additional platform statistics..."
+          
+          # Fetch Medium stats (followers, etc.)
+          curl -s "https://medium.com/@vidyasagarmsc?format=json" \
+            --max-time 30 -L -o medium_stats.json || echo "{}" > medium_stats.json
+          
+          # Fetch GitHub extended stats
+          curl -s "https://api.github.com/users/vidyasagarmsc" \
+            -H "Accept: application/vnd.github.v3+json" \
+            --max-time 30 -o github_stats.json || echo "{}" > github_stats.json
+          
+          echo "Additional stats fetched."
+
       - name: Parse and merge all articles
         run: |
           node << 'EOF'
@@ -125,6 +159,48 @@ jobs:
           }
 
           let allArticles = [];
+          let profileUpdates = {};
+
+          // === LinkedIn Profile Data ===
+          try {
+            const linkedinRaw = fs.readFileSync('linkedin_profile.json', 'utf8');
+            const linkedinData = JSON.parse(linkedinRaw);
+            if (linkedinData && linkedinData.headline) {
+              profileUpdates.role = linkedinData.headline;
+              console.log(`✓ LinkedIn headline: ${linkedinData.headline}`);
+            }
+            if (linkedinData && linkedinData.summary) {
+              profileUpdates.summary = linkedinData.summary.substring(0, 500);
+              console.log(`✓ LinkedIn summary updated`);
+            }
+          } catch (e) { console.log('LinkedIn parse skipped:', e.message); }
+
+          // === GitHub Extended Stats ===
+          try {
+            const githubRaw = fs.readFileSync('github_stats.json', 'utf8');
+            const githubData = JSON.parse(githubRaw);
+            if (githubData && githubData.followers) {
+              console.log(`✓ GitHub followers: ${githubData.followers}`);
+            }
+            if (githubData && githubData.public_repos) {
+              profileUpdates.githubRepos = githubData.public_repos;
+              console.log(`✓ GitHub repos: ${githubData.public_repos}`);
+            }
+          } catch (e) { console.log('GitHub stats parse error:', e.message); }
+
+          // === Medium Stats ===
+          try {
+            const mediumRaw = fs.readFileSync('medium_stats.json', 'utf8');
+            // Medium returns JSON with ")]}while(1);</x>" prefix
+            const cleanJson = mediumRaw.replace(/^\)\]\}while\(1\);<x>/, '');
+            const mediumData = JSON.parse(cleanJson);
+            if (mediumData && mediumData.payload && mediumData.payload.user) {
+              const followers = mediumData.payload.user.followerCount;
+              if (followers) {
+                console.log(`✓ Medium followers: ${followers}`);
+              }
+            }
+          } catch (e) { console.log('Medium stats parse skipped:', e.message); }
 
           // === Dev.to API ===
           try {
@@ -198,6 +274,23 @@ jobs:
           const portfolioPath = 'src/data/portfolio.ts';
           let portfolioContent = fs.readFileSync(portfolioPath, 'utf8');
 
+          // Update profile information if available
+          if (profileUpdates.role) {
+            portfolioContent = portfolioContent.replace(
+              /role:\s*"[^"]*"/,
+              `role: "${profileUpdates.role}"`
+            );
+            console.log('✓ Updated role from LinkedIn');
+          }
+
+          if (profileUpdates.summary) {
+            portfolioContent = portfolioContent.replace(
+              /summary:\s*"[^"]*"/,
+              `summary: "${profileUpdates.summary}"`
+            );
+            console.log('✓ Updated summary from LinkedIn');
+          }
+
           // Build new featured array string with proper TypeScript formatting
           const formatArticle = (a) => {
             return `      {\n        title: ${JSON.stringify(a.title)},\n        platform: ${JSON.stringify(a.platform)},\n        date: ${JSON.stringify(a.date)},\n        url: ${JSON.stringify(a.url)}\n      }`;
@@ -214,40 +307,103 @@ jobs:
             newFeatured
           );
 
-          // Fetch GitHub Stats
+          // Fetch GitHub Stats and other platform data
           const https = require('https');
-          https.get('https://api.github.com/users/vidyasagarmsc', { headers: { 'User-Agent': 'NodeJS' } }, (res) => {
-            let data = '';
-            res.on('data', chunk => data += chunk);
-            res.on('end', () => {
-              try {
-                const ghData = JSON.parse(data);
-                if (ghData && ghData.public_repos) {
-                   const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n  }`;
-                   updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
-                   console.log(`Updated GitHub repos stat to ${ghData.public_repos}`);
-                }
-              } catch(e) { console.log('GitHub fetch error', e.message); }
-
-              if (updatedContent === portfolioContent) {
-                console.log('No updates required — portfolio unchanged.');
-              } else {
-                fs.writeFileSync(portfolioPath, updatedContent);
-                console.log('\nPortfolio updated successfully!');
-              }
+          
+          // Function to fetch URL with retries
+          function fetchWithRetry(url, headers, retries = 3) {
+            return new Promise((resolve, reject) => {
+              const attempt = (n) => {
+                https.get(url, { headers, timeout: 10000 }, (res) => {
+                  let data = '';
+                  res.on('data', chunk => data += chunk);
+                  res.on('end', () => resolve({ data, statusCode: res.statusCode }));
+                }).on('error', (e) => {
+                  if (n > 0) {
+                    console.log(`Retry ${4-n}/3 for ${url}`);
+                    setTimeout(() => attempt(n - 1), 2000);
+                  } else {
+                    reject(e);
+                  }
+                });
+              };
+              attempt(retries);
             });
-          }).on('error', (e) => {
-             console.log('GitHub fetch error', e.message);
-             if (updatedContent !== portfolioContent) {
-                fs.writeFileSync(portfolioPath, updatedContent);
-             }
-          });
+          }
+
+          // Fetch GitHub stats
+          fetchWithRetry('https://api.github.com/users/vidyasagarmsc', { 'User-Agent': 'NodeJS' })
+            .then(({ data }) => {
+              const ghData = JSON.parse(data);
+              if (ghData && ghData.public_repos) {
+                const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n  }`;
+                updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
+                console.log(`✓ Updated GitHub repos: ${ghData.public_repos}`);
+              }
+            })
+            .catch(e => console.log('GitHub fetch error:', e.message));
+
+          // Fetch Dev.to follower count
+          fetchWithRetry('https://dev.to/api/users/by_username?url=vidyasagarmsc', { 'User-Agent': 'NodeJS' })
+            .then(({ data }) => {
+              const devtoData = JSON.parse(data);
+              if (devtoData && devtoData.followers_count) {
+                const followers = devtoData.followers_count;
+                console.log(`✓ Dev.to followers: ${followers}`);
+                // Update Dev.to stats in platforms array
+                const devtoRegex = /{\s*name:\s*"Dev\.to"[\s\S]*?stats:\s*\{[^}]*\}/;
+                const match = updatedContent.match(devtoRegex);
+                if (match) {
+                  const updated = match[0].replace(
+                    /followers:\s*"[^"]*"/,
+                    `followers: "${(followers/1000).toFixed(1)}K"`
+                  );
+                  updatedContent = updatedContent.replace(match[0], updated);
+                }
+              }
+            })
+            .catch(e => console.log('Dev.to fetch error:', e.message));
+
+          // Fetch DZone profile stats (if available via their API or scraping)
+          fetchWithRetry('https://dzone.com/users/vidyasagarmsc.json', { 'User-Agent': 'NodeJS' })
+            .then(({ data, statusCode }) => {
+              if (statusCode === 200) {
+                try {
+                  const dzoneData = JSON.parse(data);
+                  if (dzoneData && dzoneData.articles_count) {
+                    console.log(`✓ DZone articles: ${dzoneData.articles_count}`);
+                    // Update DZone stats
+                    const dzoneRegex = /{\s*name:\s*"DZone"[\s\S]*?stats:\s*\{[^}]*\}/;
+                    const match = updatedContent.match(dzoneRegex);
+                    if (match) {
+                      const updated = match[0].replace(
+                        /posts:\s*"[^"]*"/,
+                        `posts: "${dzoneData.articles_count}"`
+                      );
+                      updatedContent = updatedContent.replace(match[0], updated);
+                    }
+                  }
+                } catch(e) { console.log('DZone parse error:', e.message); }
+              }
+            })
+            .catch(e => console.log('DZone fetch skipped'));
+
+          // Wait for all async operations to complete before writing
+          setTimeout(() => {
+            if (updatedContent === portfolioContent) {
+              console.log('\nNo updates required — portfolio unchanged.');
+            } else {
+              fs.writeFileSync(portfolioPath, updatedContent);
+              console.log('\n✓ Portfolio updated successfully with latest data!');
+            }
+          }, 5000);
           EOF
 
       - name: Cleanup temp files
         run: |
           rm -f devto_articles.json medium_feed.xml vmacwrites_feed.xml \
-                substack_feed.xml hackernoon_feed.xml dzone_feed.xml
+                substack_feed.xml hackernoon_feed.xml dzone_feed.xml \
+                linkedin_profile.json medium_stats.json github_stats.json
 
       - name: Check for changes
         id: git-check
