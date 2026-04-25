@@ -95,28 +95,16 @@ export const portfolioData = {
   ],
   speaking: [
     {
-      event: "IBM Think",
-      role: "Keynote Speaker",
-      topic: "Quantum-Safe Cryptography & AI Scale",
-      year: "2024"
+      event: "IBM Internal Tech Conferences",
+      role: "Technical Speaker",
+      topic: "Cloud Architecture & Enterprise Solutions",
+      year: "2020-2024"
     },
     {
-      event: "DeveloperWeek",
-      role: "Featured Speaker",
-      topic: "Architecting for Cloud Infinity",
-      year: "2023"
-    },
-    {
-      event: "O'Reilly AI Conference",
-      role: "Speaker",
-      topic: "Predictive Onboarding for Finance",
-      year: "2022"
-    },
-    {
-      event: "GHC (Grace Hopper Celebration)",
-      role: "Industry Delegate",
-      topic: "Cloud Mentorship & Leadership",
-      year: "2023"
+      event: "Developer Community Meetups",
+      role: "Guest Speaker",
+      topic: "AI, Cloud, and Developer Experience",
+      year: "2018-2024"
     }
   ],
   projects: [
