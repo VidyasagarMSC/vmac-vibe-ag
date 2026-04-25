@@ -1,34 +1,19 @@
 # GitHub Action Workflow Setup Guide
 
 ## Overview
-The bi-weekly content update workflow automatically fetches and updates your portfolio with the latest information from multiple platforms.
+The bi-weekly content update workflow automatically fetches and updates your portfolio with the latest information from multiple platforms using web scraping and public APIs.
 
 ## Features
 - **Automated Article Updates**: Fetches latest articles from Dev.to, Medium, VMacWrites, Substack, Hackernoon, and DZone
 - **Platform Statistics**: Updates follower counts, article counts, and engagement metrics
-- **LinkedIn Integration**: Syncs profile headline and summary (requires API key)
-- **GitHub Stats**: Automatically updates repository count
+- **Web Scraping**: Extracts profile information from LinkedIn, DZone, and Dev.to public pages
+- **GitHub Stats**: Automatically updates repository count via GitHub API
 - **Bi-Weekly Schedule**: Runs every Monday and Thursday at midnight UTC
+- **No API Keys Required**: Uses public web scraping (no authentication needed)
 
 ## Setup Instructions
 
-### 1. LinkedIn API Integration (Optional)
-
-To enable LinkedIn profile data synchronization:
-
-1. **Get a RapidAPI Account**:
-   - Sign up at [RapidAPI](https://rapidapi.com/)
-   - Subscribe to [LinkedIn Data API](https://rapidapi.com/rockapis-rockapis-default/api/linkedin-data-api)
-   - Copy your API key
-
-2. **Add Secret to GitHub**:
-   - Go to your repository → Settings → Secrets and variables → Actions
-   - Click "New repository secret"
-   - Name: `LINKEDIN_API_KEY`
-   - Value: Your RapidAPI key
-   - Click "Add secret"
-
-### 2. Manual Trigger
+### 1. Manual Trigger
 
 To manually trigger the workflow:
 
@@ -39,7 +24,7 @@ To manually trigger the workflow:
 5. Select the branch (usually `main`)
 6. Click "Run workflow"
 
-### 3. Monitoring
+### 2. Monitoring
 
 Check workflow runs:
 - Go to Actions tab
@@ -49,17 +34,22 @@ Check workflow runs:
 
 ## Data Sources
 
-### Automatically Fetched
-- ✅ Dev.to articles and follower count
-- ✅ Medium articles
-- ✅ VMacWrites blog posts
-- ✅ Substack newsletter posts
-- ✅ Hackernoon articles
-- ✅ DZone articles and stats
-- ✅ GitHub repository count
+### Automatically Fetched (No API Keys Required)
+- ✅ **Dev.to**: Articles, follower count, post count (via API + web scraping)
+- ✅ **Medium**: Articles and follower statistics (via RSS + web scraping)
+- ✅ **VMacWrites**: Blog posts (via RSS)
+- ✅ **Substack**: Newsletter posts (via RSS)
+- ✅ **Hackernoon**: Articles (via RSS)
+- ✅ **DZone**: Articles, bio, and stats (via RSS + web scraping)
+- ✅ **LinkedIn**: Profile headline and summary (via web scraping)
+- ✅ **GitHub**: Repository count and stats (via public API)
 
-### Requires API Key
-- 🔑 LinkedIn profile headline and summary
+### Web Scraping Details
+The workflow uses intelligent web scraping to extract:
+- **LinkedIn**: Professional headline, current role, and about/summary section
+- **DZone**: Bio, article count, and profile information
+- **Dev.to**: Follower count and published post statistics
+- **Google Search**: Recent mentions and achievements
 
 ## Troubleshooting
 
@@ -67,16 +57,19 @@ Check workflow runs:
 1. Check the Actions tab for error messages
 2. Verify all RSS feeds are accessible
 3. Ensure the portfolio.ts file structure is correct
+4. Check if any platform has changed their HTML structure
 
-### LinkedIn Data Not Updating
-1. Verify `LINKEDIN_API_KEY` secret is set
-2. Check RapidAPI subscription is active
-3. Review workflow logs for LinkedIn fetch errors
+### Profile Data Not Updating
+1. Review workflow logs for web scraping errors
+2. Check if LinkedIn/DZone/Dev.to have changed their page structure
+3. Verify the HTML parsing regex patterns are still valid
+4. The workflow uses `continue-on-error` so partial failures won't stop execution
 
 ### Articles Not Updating
 1. Verify RSS feeds are accessible
 2. Check if platforms have changed their feed URLs
 3. Review the "Parse and merge all articles" step logs
+4. Ensure the XML parsing is working correctly
 
 ## Schedule Details
 

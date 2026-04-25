@@ -67,23 +67,32 @@ jobs:
 
           echo "All RSS feeds fetched."
 
-      - name: Fetch LinkedIn profile data
+      - name: Web scraping for latest profile information
         continue-on-error: true
         run: |
-          echo "Fetching LinkedIn profile data..."
+          echo "Fetching latest information about Vidyasagar Machupalli from web sources..."
           
-          # Fetch public LinkedIn profile data using RapidAPI or similar service
-          # Note: This requires LINKEDIN_API_KEY secret to be set in repository settings
-          if [ -n "${{ secrets.LINKEDIN_API_KEY }}" ]; then
-            curl -s "https://linkedin-data-api.p.rapidapi.com/get-profile-data-by-url?url=https://www.linkedin.com/in/vidyasagarmsc" \
-              -H "X-RapidAPI-Key: ${{ secrets.LINKEDIN_API_KEY }}" \
-              -H "X-RapidAPI-Host: linkedin-data-api.p.rapidapi.com" \
-              --max-time 30 -o linkedin_profile.json || echo "{}" > linkedin_profile.json
-            echo "LinkedIn data fetched."
-          else
-            echo "LinkedIn API key not configured - skipping LinkedIn fetch."
-            echo "{}" > linkedin_profile.json
-          fi
+          # Scrape LinkedIn public profile (no API key needed)
+          curl -s -L "https://www.linkedin.com/in/vidyasagarmsc" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            --max-time 30 -o linkedin_page.html || echo "" > linkedin_page.html
+          
+          # Scrape DZone profile page for bio and stats
+          curl -s -L "https://dzone.com/users/vidyasagarmsc" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            --max-time 30 -o dzone_profile.html || echo "" > dzone_profile.html
+          
+          # Scrape Dev.to profile
+          curl -s -L "https://dev.to/vidyasagarmsc" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            --max-time 30 -o devto_profile.html || echo "" > devto_profile.html
+          
+          # Search for recent mentions and achievements
+          curl -s -L "https://www.google.com/search?q=vidyasagar+machupalli+IBM+architect" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" \
+            --max-time 30 -o google_search.html || echo "" > google_search.html
+          
+          echo "Web scraping completed."
 
       - name: Fetch additional platform stats
         continue-on-error: true
@@ -161,19 +170,75 @@ jobs:
           let allArticles = [];
           let profileUpdates = {};
 
-          // === LinkedIn Profile Data ===
+          // === Web Scraping - Extract Profile Information ===
+          
+          // Extract from LinkedIn page
           try {
-            const linkedinRaw = fs.readFileSync('linkedin_profile.json', 'utf8');
-            const linkedinData = JSON.parse(linkedinRaw);
-            if (linkedinData && linkedinData.headline) {
-              profileUpdates.role = linkedinData.headline;
-              console.log(`✓ LinkedIn headline: ${linkedinData.headline}`);
+            const linkedinHtml = fs.readFileSync('linkedin_page.html', 'utf8');
+            
+            // Extract headline/role (look for common LinkedIn patterns)
+            const headlineMatch = linkedinHtml.match(/<h2[^>]*class="[^"]*top-card[^"]*"[^>]*>([^<]+)<\/h2>/i) ||
+                                 linkedinHtml.match(/<div[^>]*class="[^"]*text-body-medium[^"]*"[^>]*>([^<]+)<\/div>/i);
+            if (headlineMatch && headlineMatch[1]) {
+              const headline = headlineMatch[1].trim();
+              if (headline.length > 10 && headline.length < 200) {
+                profileUpdates.role = headline;
+                console.log(`✓ Extracted role from LinkedIn: ${headline.substring(0, 50)}...`);
+              }
             }
-            if (linkedinData && linkedinData.summary) {
-              profileUpdates.summary = linkedinData.summary.substring(0, 500);
-              console.log(`✓ LinkedIn summary updated`);
+            
+            // Extract summary/about section
+            const summaryMatch = linkedinHtml.match(/<div[^>]*class="[^"]*about[^"]*"[^>]*>([\s\S]{100,1000}?)<\/div>/i) ||
+                                linkedinHtml.match(/<section[^>]*aria-label="About"[^>]*>([\s\S]{100,1000}?)<\/section>/i);
+            if (summaryMatch && summaryMatch[1]) {
+              const summary = summaryMatch[1].replace(/<[^>]+>/g, '').trim();
+              if (summary.length > 50) {
+                profileUpdates.summary = summary.substring(0, 500);
+                console.log(`✓ Extracted summary from LinkedIn`);
+              }
             }
-          } catch (e) { console.log('LinkedIn parse skipped:', e.message); }
+          } catch (e) { console.log('LinkedIn scraping skipped:', e.message); }
+          
+          // Extract from DZone profile
+          try {
+            const dzoneHtml = fs.readFileSync('dzone_profile.html', 'utf8');
+            
+            // Extract bio/description
+            const bioMatch = dzoneHtml.match(/<div[^>]*class="[^"]*bio[^"]*"[^>]*>([^<]+)<\/div>/i) ||
+                            dzoneHtml.match(/<p[^>]*class="[^"]*description[^"]*"[^>]*>([^<]+)<\/p>/i);
+            if (bioMatch && bioMatch[1] && !profileUpdates.summary) {
+              const bio = bioMatch[1].trim();
+              if (bio.length > 50) {
+                profileUpdates.summary = bio.substring(0, 500);
+                console.log(`✓ Extracted bio from DZone`);
+              }
+            }
+            
+            // Extract article count
+            const articleMatch = dzoneHtml.match(/(\d+)\s*articles?/i);
+            if (articleMatch && articleMatch[1]) {
+              console.log(`✓ DZone articles: ${articleMatch[1]}`);
+            }
+          } catch (e) { console.log('DZone scraping skipped:', e.message); }
+          
+          // Extract from Dev.to profile
+          try {
+            const devtoHtml = fs.readFileSync('devto_profile.html', 'utf8');
+            
+            // Extract follower count
+            const followerMatch = devtoHtml.match(/(\d+(?:,\d+)?)\s*followers?/i);
+            if (followerMatch && followerMatch[1]) {
+              const followers = parseInt(followerMatch[1].replace(/,/g, ''));
+              console.log(`✓ Dev.to followers: ${followers}`);
+              profileUpdates.devtoFollowers = followers;
+            }
+            
+            // Extract post count
+            const postMatch = devtoHtml.match(/(\d+)\s*posts?\s*published/i);
+            if (postMatch && postMatch[1]) {
+              console.log(`✓ Dev.to posts: ${postMatch[1]}`);
+            }
+          } catch (e) { console.log('Dev.to scraping skipped:', e.message); }
 
           // === GitHub Extended Stats ===
           try {
@@ -403,7 +468,8 @@ jobs:
         run: |
           rm -f devto_articles.json medium_feed.xml vmacwrites_feed.xml \
                 substack_feed.xml hackernoon_feed.xml dzone_feed.xml \
-                linkedin_profile.json medium_stats.json github_stats.json
+                linkedin_page.html dzone_profile.html devto_profile.html \
+                google_search.html medium_stats.json github_stats.json
 
       - name: Check for changes
         id: git-check
