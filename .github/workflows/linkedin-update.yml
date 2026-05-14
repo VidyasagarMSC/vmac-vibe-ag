@@ -1,0 +1,168 @@
+name: Weekly LinkedIn Profile Update
+
+on:
+  schedule:
+    # Runs every Monday at midnight UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-linkedin:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch LinkedIn profile data
+        id: fetch-linkedin
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          const https = require('https');
+
+          // LinkedIn profile scraping
+          const linkedinUrl = 'https://www.linkedin.com/in/vidyasagarmsc';
+          
+          function fetchWithRetry(url, retries = 3) {
+            return new Promise((resolve, reject) => {
+              const attempt = (n) => {
+                https.get(url, {
+                  headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'en-US,en;q=0.5',
+                  },
+                  timeout: 30000
+                }, (res) => {
+                  let data = '';
+                  res.on('data', chunk => data += chunk);
+                  res.on('end', () => {
+                    if (res.statusCode === 200) {
+                      resolve({ data, statusCode: res.statusCode });
+                    } else if (n > 0) {
+                      setTimeout(() => attempt(n - 1), 2000);
+                    } else {
+                      reject(new Error(`HTTP ${res.statusCode}`));
+                    }
+                  });
+                }).on('error', (e) => {
+                  if (n > 0) {
+                    setTimeout(() => attempt(n - 1), 2000);
+                  } else {
+                    reject(e);
+                  }
+                });
+              };
+              attempt(retries);
+            });
+          }
+
+          async function updateLinkedInData() {
+            console.log('🔄 Fetching LinkedIn profile data...');
+            
+            const profileData = {
+              headline: null,
+              about: null,
+              experience: [],
+              education: [],
+              skills: [],
+              connections: null
+            };
+
+            try {
+              const { data } = await fetchWithRetry(linkedinUrl);
+              
+              // Extract headline
+              const headlineMatch = data.match(/<h1[^>]*class="[^"]*text-[^"]*"[^>]*>([^<]+)<\/h1>/i) ||
+                                    data.match(/<h2[^>]*class="[^"]*headline[^"]*"[^>]*>([^<]+)<\/h2>/i);
+              if (headlineMatch && headlineMatch[1]) {
+                profileData.headline = headlineMatch[1].trim();
+                console.log('✓ Headline extracted');
+              }
+
+              // Extract about/summary
+              const aboutMatch = data.match(/<section[^>]*aria-label="About"[^>]*>([\s\S]{100,2000}?)<\/section>/i) ||
+                                data.match(/<div[^>]*class="[^"]*about[^"]*"[^>]*>([\s\S]{100,1000}?)<\/div>/i);
+              if (aboutMatch && aboutMatch[1]) {
+                const cleanAbout = aboutMatch[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+                if (cleanAbout.length > 20) {
+                  profileData.about = cleanAbout.substring(0, 500);
+                  console.log('✓ About section extracted');
+                }
+              }
+
+              // Extract experience count
+              const expCountMatch = data.match(/(\d+)\s*experience/i);
+              if (expCountMatch && expCountMatch[1]) {
+                profileData.experienceCount = parseInt(expCountMatch[1]);
+                console.log(`✓ Experience: ${expCountMatch[1]} positions`);
+              }
+
+              // Extract education
+              const eduMatch = data.match(/(\d+)\s*education/i);
+              if (eduMatch && eduMatch[1]) {
+                profileData.educationCount = parseInt(eduMatch[1]);
+                console.log(`✓ Education: ${eduMatch[1]} degrees`);
+              }
+
+              // Extract skills
+              const skillsMatch = data.match(/(\d+)\s*skills/i);
+              if (skillsMatch && skillsMatch[1]) {
+                profileData.skillsCount = parseInt(skillsMatch[1]);
+                console.log(`✓ Skills: ${skillsMatch[1]} skills`);
+              }
+
+              // Extract connections (approximate)
+              const connMatch = data.match(/([\d,]+)\s*connections/i);
+              if (connMatch && connMatch[1]) {
+                profileData.connections = connMatch[1].replace(/,/g, '');
+                console.log(`✓ Connections: ${connMatch[1]}`);
+              }
+
+              // Write to a JSON file for the next step
+              fs.writeFileSync('linkedin_profile.json', JSON.stringify(profileData, null, 2));
+              console.log('✓ Profile data saved');
+
+            } catch (e) {
+              console.log('⚠ LinkedIn fetch error:', e.message);
+              // Write empty data to prevent workflow failure
+              fs.writeFileSync('linkedin_profile.json', JSON.stringify(profileData, null, 2));
+            }
+          }
+
+          updateLinkedInData().then(() => process.exit(0)).catch(e => {
+            console.error('Fatal error:', e.message);
+            process.exit(1);
+          });
+          EOF
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if [ -f linkedin_profile.json ]; then
+            git diff --quiet linkedin_profile.json || echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit LinkedIn data
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add linkedin_profile.json
+          git commit -m "chore: update LinkedIn profile data 📊"
+          git push origin HEAD

@@ -10,53 +10,51 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-accent: var(--accent);
   
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
   --font-mono: var(--font-jetbrains-mono);
 }
 
-/* ============================================================
-   DESIGN TOKENS — Dribbble Premium Aesthetic
-   ============================================================ */
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #0a0a0a;
   --card: #ffffff;
   --card-foreground: #0a0a0a;
   --muted: #f5f5f5;
-  --muted-foreground: #666666;
-  --border: #e0e0e0;
-  --primary: #4f46e5;
-  --primary-rgb: 79, 70, 229;
-  --primary-foreground: #ffffff;
-  --radius: 12px;
-  --section-py: 5rem;
-  --hover-bg: rgba(0, 0, 0, 0.03);
-  --hover-border: rgba(0, 0, 0, 0.08);
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --primary: #18181b;
+  --primary-rgb: 24, 24, 27;
+  --primary-foreground: #fafafa;
+  --accent: #f97316;
+  --accent-rgb: 249, 115, 22;
+  --radius: 16px;
+  --section-py: 6rem;
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --card: #141414;
-  --card-foreground: #f5f5f5;
-  --muted: #1a1a1a;
-  --muted-foreground: #a0a0a0;
-  --border: #2a2a2a;
-  --primary: #6366f1;
-  --primary-rgb: 99, 102, 241;
-  --primary-foreground: #ffffff;
-  --section-py: 7rem;
-  --hover-bg: rgba(255, 255, 255, 0.04);
-  --hover-border: rgba(255, 255, 255, 0.12);
+  --background: #09090b;
+  --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --primary: #fafafa;
+  --primary-rgb: 250, 250, 250;
+  --primary-foreground: #18181b;
+  --accent: #fb923c;
+  --accent-rgb: 251, 146, 60;
+  --glass: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-/* ============================================================
-   RESET & BASE UTILITIES
-   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: auto; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--background);
@@ -68,15 +66,11 @@ body {
   line-height: 1.6;
 }
 
-/* ============================================================
-   TYPOGRAPHY
-   ============================================================ */
 .display {
   font-family: var(--font-heading);
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  color: var(--foreground);
 }
 
 .label {
@@ -86,189 +80,239 @@ body {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--primary);
-  background: color-mix(in srgb, var(--primary), transparent 92%);
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid color-mix(in srgb, var(--primary), transparent 85%);
+  color: var(--accent);
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.15), rgba(var(--accent-rgb), 0.05));
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 
-/* Improved text contrast */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--foreground);
-  font-weight: 600;
-}
-
-p {
-  color: var(--foreground);
-  opacity: 0.9;
-}
-
-.dark p {
-  opacity: 0.85;
-}
-
-/* ============================================================
-   COMPONENTS
-   ============================================================ */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   position: relative;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.dark .card:hover {
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.bento-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
-/* Spotlight Effect Base */
-.spotlight-mask {
-  position: absolute;
-  inset: -1px;
-  background: radial-gradient(
-    600px circle at var(--x) var(--y),
-    color-mix(in srgb, var(--primary), transparent 88%),
-    transparent 40%
-  );
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-  z-index: 1;
+.bento-item:hover {
+  border-color: var(--accent);
+  transform: scale(1.01);
 }
 
-/* Light mode hover */
-:root:not(.dark) .card:hover {
-  background: var(--hover-bg);
-  border-color: var(--hover-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.03);
-}
-
-/* Dark mode hover */
-.dark .card:hover {
-  background: var(--hover-bg);
-  border-color: var(--hover-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover .spotlight-mask {
-  opacity: 1;
-}
-
-/* Premium Buttons */
+/* Buttons */
 .btn-primary {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all active:scale-95;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
   background: var(--primary);
   color: var(--primary-foreground);
-  box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.25);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.35);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--accent);
+  color: white;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(var(--accent-rgb), 0.5);
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all border-2 active:scale-95;
-  color: var(--foreground);
-  border-color: var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
   background: transparent;
+  color: var(--foreground);
+  border: 1.5px solid var(--border);
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .btn-outline:hover {
-  background: var(--muted);
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.05);
 }
 
-/* Scroll Progress Bar */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--primary);
-  transform-origin: 0%;
-  z-index: 100;
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent), #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Underline Animation */
-.underline-anim {
+.dark .gradient-text {
+  background: linear-gradient(135deg, var(--accent), #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.glow {
   position: relative;
 }
-.underline-anim::after {
+
+.glow::before {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  transition: width 0.3s ease;
-}
-.underline-anim:hover::after {
-  width: 100%;
-}
-
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
-.fade-in-up {
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--accent), transparent, var(--accent));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   opacity: 0;
-  transform: translateY(20px);
+  transition: opacity 0.3s ease;
 }
 
-/* ============================================================
-   SCROLLBAR
-   ============================================================ */
-::-webkit-scrollbar { width: 6px; }
+.glow:hover::before {
+  opacity: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 10px;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted-foreground);
 }
 
-/* ============================================================
-   MASTERPIECE POLISH — Tactile Depth & Cursor
-   ============================================================ */
-.grain-overlay {
+/* Noise Overlay */
+.noise-overlay {
   position: fixed;
-  inset: -200%;
+  inset: 0;
   pointer-events: none;
   z-index: 9999;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/1993/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.035;
-  animation: noise 0.2s infinite;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.dark .grain-overlay {
-  opacity: 0.045;
+/* Section Styles */
+.section {
+  padding: var(--section-py) 0;
 }
 
-@keyframes noise {
-  0% { transform: translate(0,0) }
-  10% { transform: translate(-5%,-5%) }
-  20% { transform: translate(-10%,5%) }
-  30% { transform: translate(5%,-10%) }
-  40% { transform: translate(-5%,15%) }
-  50% { transform: translate(-10%,5%) }
-  60% { transform: translate(15%,0) }
-  70% { transform: translate(0,10%) }
-  80% { transform: translate(-15%,0) }
-  90% { transform: translate(10%,5%) }
-  100% { transform: translate(5%,0) }
+.container-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.cursor-pointer-active .cursor-inner {
-  @apply scale-150 bg-primary/20 backdrop-blur-sm border-primary/40;
+/* Stagger Animation */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerFadeIn 0.5s ease forwards;
 }
 
-/* Scroll Smoothing */
-html {
-  scroll-behavior: smooth;
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Shimmer Effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+/* Dot Pattern Background */
+.dot-pattern {
+  background-image: radial-gradient(var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Grid Pattern */
+.grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+}

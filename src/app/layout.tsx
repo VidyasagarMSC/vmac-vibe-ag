@@ -110,7 +110,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="grain-overlay" aria-hidden="true" />
+          <div className="noise-overlay" aria-hidden="true" />
           <CustomCursor />
           <SmoothScrollProvider>
             {children}
