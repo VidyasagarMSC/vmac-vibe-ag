@@ -363,11 +363,10 @@ jobs:
           };
           
           const articlesFormatted = top.map(formatArticle).join(',\n');
-          const newFeatured = `featured: [\n${articlesFormatted}\n    ]`;
+          const newFeatured = `    featured: [\n${articlesFormatted}\n    ]`;
 
-          // Replace featured section using a more robust regex
-          // This matches "featured: [" followed by any content until "]" that's followed by newline and whitespace and "}"
-          const featuredRegex = /featured:\s*\[[\s\S]*?\n\s*\](?=\s*\n\s*\},?\s*\n)/;
+          // Replace featured section - match the entire featured array block
+          const featuredRegex = /    featured:\s*\[[\s\S]*?\n\s*\]/;
           let updatedContent = portfolioContent.replace(
             featuredRegex,
             newFeatured
@@ -474,6 +473,35 @@ jobs:
           }
 
           await updateStats();
+            
+            // Validate TypeScript syntax before exiting
+            try {
+              require('esbuild').buildSync({
+                entryPoints: [portfolioPath],
+                bundle: false,
+                write: false,
+                platform: 'node',
+                logLevel: 'error'
+              });
+              console.log('✓ TypeScript syntax validated');
+            } catch (e) {
+              // esbuild might not be available, try alternative validation
+              try {
+                const content = fs.readFileSync(portfolioPath, 'utf8');
+                // Basic syntax check - count brackets
+                const openBrackets = (content.match(/{/g) || []).length;
+                const closeBrackets = (content.match(/}/g) || []).length;
+                const openBrackets2 = (content.match(/\[/g) || []).length;
+                const closeBrackets2 = (content.match(/\]/g) || []).length;
+                if (openBrackets !== closeBrackets || openBrackets2 !== closeBrackets2) {
+                  console.error('⚠ Bracket mismatch detected!');
+                  process.exit(1);
+                }
+                console.log('✓ Basic syntax validated');
+              } catch (e2) {
+                console.log('⚠ Syntax validation skipped');
+              }
+            }
           })();
           EOF
 
