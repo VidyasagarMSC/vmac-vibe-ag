@@ -113,6 +113,7 @@ jobs:
       - name: Parse and merge all articles
         run: |
           node << 'EOF'
+          (async () => {
           const fs = require('fs');
           const { XMLParser } = require('fast-xml-parser');
 
@@ -396,72 +397,84 @@ jobs:
             });
           }
 
-          // Fetch GitHub stats
-          fetchWithRetry('https://api.github.com/users/vidyasagarmsc', { 'User-Agent': 'NodeJS' })
-            .then(({ data }) => {
-              const ghData = JSON.parse(data);
-              if (ghData && ghData.public_repos) {
-                const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n  }`;
-                updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
-                console.log(`✓ Updated GitHub repos: ${ghData.public_repos}`);
-              }
-            })
-            .catch(e => console.log('GitHub fetch error:', e.message));
+          // Async function to handle all fetches and file writing
+          async function updateStats() {
+            const fetchPromises = [];
 
-          // Fetch Dev.to follower count
-          fetchWithRetry('https://dev.to/api/users/by_username?url=vidyasagarmsc', { 'User-Agent': 'NodeJS' })
-            .then(({ data }) => {
-              const devtoData = JSON.parse(data);
-              if (devtoData && devtoData.followers_count) {
-                const followers = devtoData.followers_count;
-                console.log(`✓ Dev.to followers: ${followers}`);
-                // Update Dev.to stats in platforms array
-                const devtoRegex = /{\s*name:\s*"Dev\.to"[\s\S]*?stats:\s*\{[^}]*\}/;
-                const match = updatedContent.match(devtoRegex);
-                if (match) {
-                  const updated = match[0].replace(
-                    /followers:\s*"[^"]*"/,
-                    `followers: "${(followers/1000).toFixed(1)}K"`
-                  );
-                  updatedContent = updatedContent.replace(match[0], updated);
-                }
-              }
-            })
-            .catch(e => console.log('Dev.to fetch error:', e.message));
+            // Fetch GitHub stats
+            fetchPromises.push(
+              fetchWithRetry('https://api.github.com/users/vidyasagarmsc', { 'User-Agent': 'NodeJS' })
+                .then(({ data }) => {
+                  const ghData = JSON.parse(data);
+                  if (ghData && ghData.public_repos) {
+                    const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n                  }`;
+                    updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
+                    console.log(`✓ Updated GitHub repos: ${ghData.public_repos}`);
+                  }
+                })
+                .catch(e => console.log('GitHub fetch error:', e.message))
+            );
 
-          // Fetch DZone profile stats (if available via their API or scraping)
-          fetchWithRetry('https://dzone.com/users/vidyasagarmsc.json', { 'User-Agent': 'NodeJS' })
-            .then(({ data, statusCode }) => {
-              if (statusCode === 200) {
-                try {
-                  const dzoneData = JSON.parse(data);
-                  if (dzoneData && dzoneData.articles_count) {
-                    console.log(`✓ DZone articles: ${dzoneData.articles_count}`);
-                    // Update DZone stats
-                    const dzoneRegex = /{\s*name:\s*"DZone"[\s\S]*?stats:\s*\{[^}]*\}/;
-                    const match = updatedContent.match(dzoneRegex);
+            // Fetch Dev.to follower count
+            fetchPromises.push(
+              fetchWithRetry('https://dev.to/api/users/by_username?url=vidyasagarmsc', { 'User-Agent': 'NodeJS' })
+                .then(({ data }) => {
+                  const devtoData = JSON.parse(data);
+                  if (devtoData && devtoData.followers_count) {
+                    const followers = devtoData.followers_count;
+                    console.log(`✓ Dev.to followers: ${followers}`);
+                    const devtoRegex = /{\s*name:\s*"Dev\.to"[\s\S]*?stats:\s*\{[^}]*\}/;
+                    const match = updatedContent.match(devtoRegex);
                     if (match) {
                       const updated = match[0].replace(
-                        /posts:\s*"[^"]*"/,
-                        `posts: "${dzoneData.articles_count}"`
+                        /followers:\s*"[^"]*"/,
+                        `followers: "${(followers/1000).toFixed(1)}K"`
                       );
                       updatedContent = updatedContent.replace(match[0], updated);
                     }
                   }
-                } catch(e) { console.log('DZone parse error:', e.message); }
-              }
-            })
-            .catch(e => console.log('DZone fetch skipped'));
+                })
+                .catch(e => console.log('Dev.to fetch error:', e.message))
+            );
 
-          // Wait for all async operations to complete before writing
-          setTimeout(() => {
+            // Fetch DZone profile stats
+            fetchPromises.push(
+              fetchWithRetry('https://dzone.com/users/vidyasagarmsc.json', { 'User-Agent': 'NodeJS' })
+                .then(({ data, statusCode }) => {
+                  if (statusCode === 200) {
+                    try {
+                      const dzoneData = JSON.parse(data);
+                      if (dzoneData && dzoneData.articles_count) {
+                        console.log(`✓ DZone articles: ${dzoneData.articles_count}`);
+                        const dzoneRegex = /{\s*name:\s*"DZone"[\s\S]*?stats:\s*\{[^}]*\}/;
+                        const match = updatedContent.match(dzoneRegex);
+                        if (match) {
+                          const updated = match[0].replace(
+                            /posts:\s*"[^"]*"/,
+                            `posts: "${dzoneData.articles_count}"`
+                          );
+                          updatedContent = updatedContent.replace(match[0], updated);
+                        }
+                      }
+                    } catch(e) { console.log('DZone parse error:', e.message); }
+                  }
+                })
+                .catch(e => console.log('DZone fetch skipped'))
+            );
+
+            // Wait for all fetches to complete before writing
+            await Promise.all(fetchPromises);
+            
             if (updatedContent === portfolioContent) {
               console.log('\nNo updates required — portfolio unchanged.');
             } else {
               fs.writeFileSync(portfolioPath, updatedContent);
               console.log('\n✓ Portfolio updated successfully with latest data!');
             }
-          }, 5000);
+          }
+
+          await updateStats();
+          })();
           EOF
 
       - name: Cleanup temp files
