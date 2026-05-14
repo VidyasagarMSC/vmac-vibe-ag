@@ -261,6 +261,12 @@ export const portfolioData = {
     ],
     featured: [
       {
+        title: "From MkDocs 1.6 to Zensical — Here’s Why I Finally Made the Move",
+        platform: "Medium",
+        date: "May 8, 2026",
+        url: "https://medium.com/vmacwrites/from-mkdocs-1-6-to-zensical-heres-why-i-finally-made-the-move-53b273b49cdd?source=rss-12bd87a23883------2"
+      },
+      {
         title: "The Ultimate Terminal Stack in 2026: A Cross-Platform Guide for macOS, Linux, and Windows",
         platform: "Medium",
         date: "Mar 6, 2026",
@@ -275,7 +281,7 @@ export const portfolioData = {
       {
         title: "Finding Today's Changed Files: A Quick Python Script for File Uploads",
         platform: "Dev.to",
-        date: "Nov 2, 2025",
+        date: "Nov 3, 2025",
         url: "https://dev.to/vidyasagarmsc/finding-todays-changed-files-a-quick-python-script-for-file-uploads-13b7"
       },
       {
@@ -285,33 +291,27 @@ export const portfolioData = {
         url: "https://dev.to/vidyasagarmsc/resolving-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-29hj"
       },
       {
-        title: "Resolving Secrets Manager DNS Resolution Errors in Terraform and Pulumi IaC",
-        platform: "Medium",
-        date: "Aug 8, 2025",
-        url: "https://medium.com/vmacwrites/resolving-ibm-secrets-manager-dns-resolution-errors-in-terraform-and-pulumi-iac-631a90d47b7c?source=rss-12bd87a23883------2"
-      },
-      {
         title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
         platform: "Dev.to",
         date: "May 12, 2025",
         url: "https://dev.to/vidyasagarmsc/the-essential-role-of-process-monitoring-scripts-in-linux-environments-2pe5"
       },
       {
-        title: "The Essential Role of Process Monitoring Scripts in Linux Environments",
-        platform: "Medium",
-        date: "May 12, 2025",
-        url: "https://medium.com/vmacwrites/the-essential-role-of-process-monitoring-scripts-in-linux-environments-50d6a241f924?source=rss-12bd87a23883------2"
-      },
-      {
         title: "Podman: Detailed Overview, Advantages, Disadvantages, and Setup",
         platform: "Dev.to",
         date: "May 4, 2025",
         url: "https://dev.to/vidyasagarmsc/podman-detailed-overview-advantages-disadvantages-and-setup-31gg"
+      },
+      {
+        title: "S3cmd: CLI for Object Storage",
+        platform: "Dev.to",
+        date: "Mar 5, 2025",
+        url: "https://dev.to/vidyasagarmsc/s3cmd-cli-for-object-storage-2j02"
       }
     ]
   },
   stats: {
-    githubRepos: 88,
+    githubRepos: 89,
     readers: 550
   }
 };
