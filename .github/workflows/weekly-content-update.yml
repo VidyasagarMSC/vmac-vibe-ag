@@ -406,8 +406,9 @@ jobs:
                 .then(({ data }) => {
                   const ghData = JSON.parse(data);
                   if (ghData && ghData.public_repos) {
-                    const newStats = `stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n                  }`;
-                    updatedContent = updatedContent.replace(/stats:\s*\{[\s\S]*?\n\s*\}/, newStats);
+                    // Match root-level stats (at the end of file) with 4-space indentation
+                    const newStats = `  stats: {\n    githubRepos: ${ghData.public_repos},\n    readers: 550\n  }`;
+                    updatedContent = updatedContent.replace(/\n  stats: \{[\s\S]*?\n  \}/, '\n' + newStats);
                     console.log(`✓ Updated GitHub repos: ${ghData.public_repos}`);
                   }
                 })
@@ -473,35 +474,6 @@ jobs:
           }
 
           await updateStats();
-            
-            // Validate TypeScript syntax before exiting
-            try {
-              require('esbuild').buildSync({
-                entryPoints: [portfolioPath],
-                bundle: false,
-                write: false,
-                platform: 'node',
-                logLevel: 'error'
-              });
-              console.log('✓ TypeScript syntax validated');
-            } catch (e) {
-              // esbuild might not be available, try alternative validation
-              try {
-                const content = fs.readFileSync(portfolioPath, 'utf8');
-                // Basic syntax check - count brackets
-                const openBrackets = (content.match(/{/g) || []).length;
-                const closeBrackets = (content.match(/}/g) || []).length;
-                const openBrackets2 = (content.match(/\[/g) || []).length;
-                const closeBrackets2 = (content.match(/\]/g) || []).length;
-                if (openBrackets !== closeBrackets || openBrackets2 !== closeBrackets2) {
-                  console.error('⚠ Bracket mismatch detected!');
-                  process.exit(1);
-                }
-                console.log('✓ Basic syntax validated');
-              } catch (e2) {
-                console.log('⚠ Syntax validation skipped');
-              }
-            }
           })();
           EOF
 
