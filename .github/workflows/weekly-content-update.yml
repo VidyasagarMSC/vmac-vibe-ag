@@ -297,7 +297,7 @@ jobs:
           for (const feed of rssFeeds) {
             try {
               const xml = fs.readFileSync(feed.file, 'utf8');
-              const items = parseRSSWithRegex(xml, feed.platform, '').slice(0, 4);
+              const items = parseRSSWithRegex(xml, feed.platform, '').slice(0, 20);
               // Add approximate timestamps by parsing date strings
               const withTs = items.map(item => ({
                 ...item,
@@ -325,8 +325,8 @@ jobs:
             })
             .sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
 
-          // Take top 8 articles across all platforms
-          const top = unique.slice(0, 8).map(({ title, platform, date, url }) => ({ title, platform, date, url }));
+          // Take all articles across all platforms
+          const top = unique.map(({ title, platform, date, url }) => ({ title, platform, date, url }));
 
           if (top.length === 0) {
             console.log('No articles found — skipping portfolio update.');
