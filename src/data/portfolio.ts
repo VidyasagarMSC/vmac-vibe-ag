@@ -307,6 +307,90 @@ export const portfolioData = {
         platform: "Dev.to",
         date: "Mar 5, 2025",
         url: "https://dev.to/vidyasagarmsc/s3cmd-cli-for-object-storage-2j02"
+      },
+      {
+        title: "An Introduction to SymPy: A Python Library for Symbolic Mathematics",
+        platform: "Dev.to",
+        date: "Jan 6, 2025",
+        url: "https://dev.to/vidyasagarmsc/an-introduction-to-sympy-a-python-library-for-symbolic-mathematics-4gig"
+      },
+      {
+        title: "Pandas: Conversion using loc and iloc",
+        platform: "Medium",
+        date: "Jan 1, 2025",
+        url: "https://medium.com/vmacwrites/pandas-conversion-using-loc-and-iloc-d89d16010b49?source=rss-12bd87a23883------2"
+      },
+      {
+        title: "Reflecting on My 2024 Journey: Achievements and Growth",
+        platform: "VMacWrites",
+        date: "Dec 8, 2024",
+        url: "https://vmacwrites.wordpress.com/2024/12/08/reflecting-on-my-2024-journey-achievements-and-growth/"
+      },
+      {
+        title: "Nvidia MIG with GPU Optimization in Kubernetes",
+        platform: "Medium",
+        date: "Dec 7, 2024",
+        url: "https://medium.com/vmacwrites/nvidia-mig-with-gpu-optimization-in-kubernetes-09a321b78993?source=rss-12bd87a23883------2"
+      },
+      {
+        title: "Model Context Protocol Overview",
+        platform: "Medium",
+        date: "Dec 1, 2024",
+        url: "https://medium.com/vmacwrites/model-context-protocol-overview-5a15a57e69c4?source=rss-12bd87a23883------2"
+      },
+      {
+        title: "Chain of Trust: Decoding SSL Certificate Security Architecture",
+        platform: "Medium",
+        date: "Nov 18, 2024",
+        url: "https://medium.com/vmacwrites/chain-of-trust-decoding-ssl-certificate-security-architecture-2bde46655d37?source=rss-12bd87a23883------2"
+      },
+      {
+        title: "2023: A year in retrospective",
+        platform: "VMacWrites",
+        date: "Dec 16, 2023",
+        url: "https://vmacwrites.wordpress.com/2023/12/16/2023-a-year-in-retrospective/"
+      },
+      {
+        title: "Ansible code snippets for automation",
+        platform: "VMacWrites",
+        date: "Jul 1, 2023",
+        url: "https://vmacwrites.wordpress.com/2023/07/01/ansible-code-snippets-for-automation/"
+      },
+      {
+        title: "Adjust the speaking rate",
+        platform: "VMacWrites",
+        date: "Nov 9, 2020",
+        url: "https://vmacwrites.wordpress.com/2020/11/09/adjust-the-speaking-rate/"
+      },
+      {
+        title: "Container to container communication with bridge network",
+        platform: "VMacWrites",
+        date: "Apr 9, 2020",
+        url: "https://vmacwrites.wordpress.com/2020/04/09/container-to-container-communication-with-bridge-network/"
+      },
+      {
+        title: "Container registry unauthorized: authentication required",
+        platform: "VMacWrites",
+        date: "Apr 5, 2019",
+        url: "https://vmacwrites.wordpress.com/2019/04/05/icr-io-unauthorized-authentication-required/"
+      },
+      {
+        title: "Istio on Windows 10",
+        platform: "VMacWrites",
+        date: "Feb 6, 2019",
+        url: "https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/"
+      },
+      {
+        title: "Create a presigned URL to download an object in Python 3.x",
+        platform: "VMacWrites",
+        date: "Nov 5, 2018",
+        url: "https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/"
+      },
+      {
+        title: "Install Knative with Istio on IBM Cloud",
+        platform: "VMacWrites",
+        date: "Oct 9, 2018",
+        url: "https://vmacwrites.wordpress.com/2018/10/09/install-knative-with-istio-on-ibm-cloud/"
       }
     ]
   },
