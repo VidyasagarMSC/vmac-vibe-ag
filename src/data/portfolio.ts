@@ -381,7 +381,7 @@ export const portfolioData = {
         url: "https://vmacwrites.wordpress.com/2019/02/06/istio-on-windows-10/"
       },
       {
-        title: "Create a presigned URL to download an object in Python 3.x",
+        title: "Create a presigned URL to download an object in Python 3.x",
         platform: "VMacWrites",
         date: "Nov 5, 2018",
         url: "https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/"
