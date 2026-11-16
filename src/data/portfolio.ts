@@ -261,6 +261,12 @@ export const portfolioData = {
     ],
     featured: [
       {
+        title: "Reflecting on 2026: Agentic AI, Cloud Architecture, and Engineering Excellence",
+        platform: "VMacWrites",
+        date: "Nov 13, 2026",
+        url: "https://vmacwrites.wordpress.com/2026/11/13/reflecting-on-2026-agentic-ai-cloud-architecture-and-engineering-excellence/"
+      },
+      {
         title: "From MkDocs 1.6 to Zensical — Here’s Why I Finally Made the Move",
         platform: "Medium",
         date: "May 8, 2026",
@@ -385,12 +391,6 @@ export const portfolioData = {
         platform: "VMacWrites",
         date: "Nov 5, 2018",
         url: "https://vmacwrites.wordpress.com/2018/11/05/create-a-presigned-url-to-download-an-object-in-python-3-x/"
-      },
-      {
-        title: "Install Knative with Istio on IBM Cloud",
-        platform: "VMacWrites",
-        date: "Oct 9, 2018",
-        url: "https://vmacwrites.wordpress.com/2018/10/09/install-knative-with-istio-on-ibm-cloud/"
       }
     ]
   },
